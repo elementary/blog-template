@@ -1,0 +1,7 @@
+<aside class="tags">
+  {% assign sortedTags = page.tags | sort %}
+  {% for tag in sortedTags %}
+    <a class="tag" href="{{site.baseurl}}/tags/#{{ tag | replace: ' ', '-' }}">#{{ tag }}</a>
+  {% endfor %}
+</aside>
+

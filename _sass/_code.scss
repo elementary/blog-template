@@ -1,0 +1,184 @@
+// Solarized Code Highlighting
+// Adapted from https://gist.github.com/nicolashery/5765395
+
+.highlighter-rouge {
+  margin: 2em auto;
+  text-align: center;
+
+  > .highlight {
+    border-radius: 0.25em;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.05),
+      0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.highlight {
+
+
+  table {
+    margin: auto;
+  }
+}
+
+.rouge-code {
+  padding-left: 0.25em;
+}
+
+
+.highlight {
+  display: inline-block;
+  font-size: 0.85em;
+  line-height: 1.33em;
+  margin: auto;
+  overflow: auto;
+  text-align: left;
+  background-color: var(--solarized-base3);
+  color: var(--solarized-base01);
+
+  .gl {
+    background-color: var(--solarized-base2);
+    padding: 0 0.25em;
+    text-align: right;
+  }
+
+  .c,
+  .c1,
+  .cm,
+  .sb {
+    color: var(--solarized-base1);
+  }
+
+  .err,
+  .g,
+  .ge,
+  .go,
+  .gp,
+  .gs,
+  .gt,
+  .l,
+  .ld,
+  .n,
+  .na,
+  .nl,
+  .nn,
+  .nx,
+  .p,
+  .py,
+  .sd,
+  .sh,
+  .w {
+    color: var(--solarized-base01);
+  }
+
+  .gd,
+  .il,
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .s,
+  .s1,
+  .s2,
+  .sc,
+  .si,
+  .ss,
+  .sx {
+    color: var(--solarized-cyan);
+  }
+
+  .bp,
+  .kd,
+  .kr,
+  .nc,
+  .nd,
+  .nf,
+  .nt,
+  .nv,
+  .vc,
+  .vg,
+  .vi {
+    color: var(--solarized-blue);
+  }
+
+  .cp,
+  .cs,
+  .gi,
+  .k,
+  .kn,
+  .kp,
+  .o,
+  .ow {
+    color: var(--solarized-green);
+  }
+
+  .gh,
+  .gu,
+  .kc,
+  .ne,
+  .ni,
+  .no,
+  .se,
+  .x {
+    color: var(--solarized-orange);
+  }
+
+  .gr,
+  .kt,
+  .sr {
+    color: var(--solarized-red);
+  }
+
+  .nb {
+    color: var(--solarized-yellow);
+  }
+
+  .ge {
+    font-style: italic;
+  }
+
+  .gs {
+    font-weight: bold;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: var(--solarized-base03);
+    color: var(--solarized-base1);
+
+    .gl {
+      background-color: var(--solarized-base02);
+    }
+
+    .c,
+    .c1,
+    .cm,
+    .sb {
+      color: var(--solarized-base01);
+    }
+
+    .err,
+    .g,
+    .ge,
+    .go,
+    .gp,
+    .gs,
+    .gt,
+    .l,
+    .ld,
+    .n,
+    .na,
+    .nl,
+    .nn,
+    .nx,
+    .p,
+    .py,
+    .sd,
+    .sh,
+    .w {
+      color: var(--solarized-base1);
+    }
+  }
+}

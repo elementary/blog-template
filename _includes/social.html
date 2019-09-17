@@ -1,0 +1,94 @@
+<div class="social">
+  <h2>Join the Discussion on Social Media</h2>
+
+  {% if page.twitter or page.mastodon or page.reddit or page.facebook %}
+    <div class="official">
+      <h3>Official Posts</h3>
+
+      {% if page.mastodon %}
+        <a
+          href="{{ page.twitter }}"
+          rel="noreferrer nofollow noopener"
+          target="_blank"
+          title="Twitter"
+        >
+          <img src="{{ '/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter" />
+        </a>
+      {% endif %}
+
+      {% if page.mastodon %}
+        <a
+          href="{{ page.mastodon }}"
+          rel="noreferrer nofollow noopener"
+          target="_blank"
+          title="Mastodon"
+        >
+          <img src="{{ '/images/mastodon.svg' | prepend: site.baseurl }}" alt="Mastodon" />
+        </a>
+      {% endif %}
+
+      {% if page.reddit %}
+        <a
+          href="{{ page.reddit }}"
+          rel="noreferrer nofollow noopener"
+          target="_blank"
+          title="Reddit"
+        >
+          <img src="{{ '/images/reddit.svg' | prepend: site.baseurl }}" alt="Reddit" />
+        </a>
+      {% endif %}
+
+      {% if page.facebook %}
+        <a
+          href="{{ page.facebook }}"
+          rel="noreferrer nofollow noopener"
+          target="_blank"
+          title="Facebook"
+        >
+          <img src="{{ '/images/facebook.svg' | prepend: site.baseurl }}" alt="Facebook" />
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="share">
+    <h3>Share</h3>
+    {% assign share-url = page.url | prepend: site.baseurl | prepend: site.url %}
+
+    <a
+      href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ share-url }}&via={{ site.twitter }}&original_referer={{ share-url }}"
+      rel="noreferrer nofollow noopener"
+      target="_blank"
+      title="Twitter"
+    >
+      <img src="{{ '/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter" />
+    </a>
+
+    <a
+      href="http://www.reddit.com/submit?title={{ page.title }}&url={{ share-url }}"
+      rel="noreferrer nofollow noopener"
+      target="_blank"
+      title="Reddit"
+    >
+      <img src="{{ '/images/reddit.svg' | prepend: site.baseurl }}" alt="Reddit" />
+    </a>
+
+    <a
+      href="https://www.facebook.com/sharer/sharer.php?u={{ share-url }}"
+      rel="noreferrer nofollow noopener"
+      target="_blank"
+      title="Facebook"
+    >
+      <img src="{{ '/images/facebook.svg' | prepend: site.baseurl }}" alt="Facebook" />
+    </a>
+
+    <a
+      href="{{ page.url | prepend: site.baseurl | prepend: site.url }}"
+
+      title="Permalink"
+    >
+      <img src="{{ '/images/edit-copy-32.svg' | prepend: site.baseurl }}" alt="Permalink" />
+    </a>
+  </div>
+</div>
+

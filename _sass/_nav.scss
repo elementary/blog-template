@@ -1,0 +1,72 @@
+body > header {
+  background-color: var(--header-bg-color);
+  color: var(--header-fg-color);
+  fill: var(--header-fg-color);
+
+  nav {
+    display: flex;
+    font-size: 0;
+    overflow-x: auto;
+    padding: 0 1rem;
+
+    ul {
+      display: inline-block;
+      flex: 0 0 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      vertical-align: middle;
+    }
+
+    a {
+      color: var(--header-fg-color);
+      display: inline-block;
+      font-family: var(--ui-font);
+      font-size: 0.85rem;
+      line-height: 2.9em;
+      opacity: 1;
+      padding: 0 0.65rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      height: 1em;
+
+      * {
+        fill: inherit !important;
+      }
+    }
+
+    .logomark {
+      line-height: 0;
+
+      svg {
+        height: auto;
+      }
+    }
+  }
+
+  .primary {
+    justify-content: space-between;
+  }
+
+  .secondary {
+    background-color: var(--secondary-bg-color);
+    justify-content: center;
+
+    a {
+      color: var(--secondary-fg-color);
+      font-size: 0.7rem;
+      line-height: 3.6em;
+    }
+  }
+}
+

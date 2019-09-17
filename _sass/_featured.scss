@@ -1,0 +1,149 @@
+.featured {
+  border-radius: 0.5rem;
+  color: inherit;
+  display: block;
+  font-size: 0;
+  opacity: 1;
+  padding: 1rem;
+  text-decoration: none;
+  transition: background-color 250ms ease, color 250ms ease;
+
+  &:hover {
+    background: var(--secondary-bg-color);
+  }
+
+  header {
+    display: inline-block;
+    font-size: 1rem;
+    padding-left: 1em;
+    vertical-align: middle;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+
+
+    @media (min-width: 800px) {
+      width: 33.33%;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .byline {
+      max-width: 100%;
+    }
+  }
+
+  .excerpt {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 1rem;
+    vertical-align: middle;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+
+    @media (min-width: 800px) {
+      width: 66.66%;
+    }
+
+    span {
+      font-family: var(--ui-font);
+      font-size: 0.8em;
+      opacity: 0.75;
+    }
+  }
+
+  .featured-image {
+    background-color: var(--silver-100);
+    background-origin: border-box;
+    background-position: 50%;
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.05),
+      0 1px 2px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    height: 320px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      margin-bottom: 0;
+      width: 50%;
+    }
+
+    @media (min-width: 800px) {
+      width: calc(66.66% - 0.66rem);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--silver-900);
+      border: 1px solid black;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 0 rgba(255, 255, 255, 0.05),
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      left: 50%;
+      max-width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .latest {
+    font-size: 0;
+    margin-top: 2rem;
+
+    .featured {
+      padding: 1rem;
+
+      &:nth-child(n+2) {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.33%;
+
+        header {
+          font-size: 0.8rem;
+          padding: 0;
+          width: 100%;
+
+          h3 {
+            margin-top: -1em;
+          }
+        }
+
+        .excerpt {
+          padding: 0;
+          width: 100%;
+        }
+
+        .featured-image {
+          height: 200px;
+          margin-bottom: 0.5rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

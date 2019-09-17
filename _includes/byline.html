@@ -1,0 +1,34 @@
+{% if site.authors[include.author].name %}
+  {% assign author=site.authors[include.author]  %}
+{% else %}
+  {% assign author=site.authors["anonymous"] %}
+{% endif %}
+
+{% assign date=include.date %}
+
+<div class="byline">
+  <div class="avatar">
+    <img
+      {% if author.gravatar %}
+        srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=96&d=blank 2x"
+        src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=48&d=blank"
+        alt="Avatar for {{ author.name }}"
+      {% else %}
+        srcset="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=96&d=blank 2x"
+        src="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=48&d=blank"
+        alt="elementary Avatar"
+      {% endif %}
+    />
+  </div>
+  <div class="author">
+    <span class="name">{{ author.name }}</span>
+    {% if author.description and page.layout == 'post' %}
+      <span class="description">{{ author.description }}</span>
+    {% endif %}
+  </div>
+  <time class="post-date" datetime="{{ date | date:"%Y-%m-%d" }}">{{ date | date: "%a, %b %e, %Y" }}</time>
+  {% if include.content %}
+    {% include read-time.html content=include.content %}
+  {% endif %}
+</div>
+

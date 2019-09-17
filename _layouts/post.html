@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <h2>{{ page.description }}</h2>
+    {% endif %}
+
+    {% include byline.html author=page.author date=page.date content=page.content %}
+    {% include tags.html %}
+  </header>
+
+  <section>
+    {{ content }}
+  </section>
+
+  {% capture thanks %}{% include thanks.md %}{% endcapture %}
+  {{ thanks | markdownify }}
+</article>
+
+{% include license.html %}
+{% include social.html %}
+
+<h2 class="up-next">Up Next</h2>
+
+{% if page.next %}
+  {% unless page.next.hidden %}
+    {% include featured.html post=page.next %}
+  {% endunless %}
+{% endif %}
+
+{% if page.previous %}
+  {% unless page.previous.hidden %}
+    {% include featured.html post=page.previous %}
+  {% endunless %}
+{% endif %}
+

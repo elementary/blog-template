@@ -1,0 +1,50 @@
+title: "elementary Blog"
+description: "We design and develop the fast, open, and privacy-respecting replacement for Windows and macOS"
+permalink: /:title/
+theme-color: "#64baff"
+gravatar: eaa3cc978770998ea2bd4382935bf0f4
+
+facebook: elementaryos
+mastodon: elementary
+reddit: elementaryos
+twitter: elementary
+
+authors:
+  cassidyjames:
+    name: Cassidy James Blaede
+    description: "Co-founder & CXO"
+    gravatar: 41275ecc8271aca852ce2c0ff72d2610 # Gravatar md5 hash
+  danrabbit:
+    name: Daniel Foré
+    description: "Founder & CEO"
+    gravatar: 1f3cc76b99b5d0dae8381a23f52ea96d
+  karensophia:
+    name: Karen Sophia
+    description: "Customer Engagement"
+    # gravatar: e0ac5d5e717da67a36ac72adf235bc42
+  peteruithoven:
+    name: Peter Uithoven
+    description: "Front-end Developer"
+    gravatar: f39b1485b28be1dc2b98f269235218bc
+  anonymous:
+    name: "Unknown Author"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+paginate: 7
+paginate_path: "/archive/:num/"
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+future: false # Allows us to stage posts
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
+
