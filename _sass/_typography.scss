@@ -126,3 +126,22 @@ aside {
   margin-bottom: 2em;
 }
 
+kbd {
+  background-color: #f0f0f0;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 0 #fff,
+    inset 0 -2px 0 0 #d9d9d9;
+  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  font-size: 80%;
+  line-height: 1.5;
+  margin: 3px;
+  min-width: 22px;
+  padding: 2px 4px;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+}
+
