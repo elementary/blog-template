@@ -64,11 +64,11 @@ nav.pagination {
     padding: 1em;
 
     &.next::after {
-      content: " »";
+      content: " →";
     }
 
     &.previous::before {
-      content: "« ";
+      content: "← ";
     }
   }
 }
