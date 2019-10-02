@@ -8,9 +8,7 @@ Remember, we moved away from other platforms for very specific reasons.
 
 1. **Completely frictionless** for readers.
 2. **As few external resources as possible**—it slows things down and introduces potential privacy issues.
-3. **Little-to-no JavaScript**—it’s a blog, not a web app. Currently, we only use progressively-enhancing JS for:
-   - Improving the image zoom experience
-   - Adding `target="_blank"` to external links
+3. **Little-to-no JavaScript**—it’s a blog, not a web app. Currently, we only use progressively-enhancing JS for improving the image zoom experience.
 
 ## Modern Niceties
 
