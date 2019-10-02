@@ -12,13 +12,5 @@
       }
     });
   });
-
-  let externalLinks = document.querySelectorAll ("a:not([target]):not([href*='mailto:'])");
-  externalLinks.forEach (function (externalLink) {
-    if ( externalLink.href.indexOf (window.location.host) == -1 ) {
-      externalLink.setAttribute ("target", "_blank");
-      externalLink.setAttribute ("rel", "noreferrer noopener");
-    }
-  });
 </script>
 
