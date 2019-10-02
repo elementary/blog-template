@@ -1,18 +1,17 @@
 aside.tags {
   margin: 1em auto;
   max-width: var(--content-width);
-
-  a {
-    background-color: var(--banana-300);
-    border-radius: 0.25em;
-    color: var(--banana-900);
-    display: inline-block;
-    font-family: var(--ui-font);
-    font-size: 0.75em;
-    line-height: 2em;
-    margin: 0.125em;
-    padding: 0 0.5em;
-    text-decoration: none;
-  }
 }
 
+.tag {
+  background-color: var(--banana-300);
+  border-radius: 0.25em;
+  color: var(--banana-900);
+  display: inline-block;
+  font-family: var(--ui-font);
+  font-size: 0.75em;
+  line-height: 2em;
+  margin: 0.125em;
+  padding: 0 0.5em;
+  text-decoration: none;
+}
