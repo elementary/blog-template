@@ -4,7 +4,7 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     {% include nav.html %}
     <section>
-      {{ content }}
+      {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
 
       {% include medium.html %}
     </section>
