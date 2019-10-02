@@ -57,7 +57,7 @@ figure {
     img {
       cursor: zoom-in;
       margin: 1%;
-      width: 31.33%;
+      max-width: 31.33%;
 
       &:focus {
         cursor: zoom-out;
@@ -84,7 +84,7 @@ figure {
     img {
       cursor: zoom-in;
       margin: 1%;
-      width: 48%;
+      max-width: 48%;
 
       &:focus {
         cursor: zoom-out;
@@ -137,4 +137,3 @@ figure {
     }
   }
 }
-
