@@ -1,6 +1,13 @@
 // Solarized Code Highlighting
 // Adapted from https://gist.github.com/nicolashery/5765395
 
+code {
+  background-color: var(--secondary-bg-color);
+  border-radius: 0.25em;
+  font-size: 0.85em;
+  padding: 0.2em;
+}
+
 .highlighter-rouge {
   margin: 2em auto;
   text-align: center;
@@ -10,19 +17,24 @@
     box-shadow:
       0 0 0 1px rgba(0, 0, 0, 0.05),
       0 3px 3px rgba(0, 0, 0, 0.22);
+    line-height: 1;
   }
 }
 
 .highlight {
-
+  code {
+    padding: 0;
+  }
 
   table {
+    border-spacing: 0;
     margin: auto;
   }
 }
 
 .rouge-code {
   padding-left: 0.25em;
+  padding-right: 1em;
 }
 
 
@@ -38,7 +50,7 @@
 
   .gl {
     background-color: var(--solarized-base2);
-    padding: 0 0.25em;
+    padding: 0 0.5em;
     text-align: right;
   }
 
