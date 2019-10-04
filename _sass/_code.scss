@@ -13,18 +13,9 @@
   }
 }
 
-.highlight {
-
-
-  table {
-    margin: auto;
-  }
-}
-
 .rouge-code {
   padding-left: 0.25em;
 }
-
 
 .highlight {
   display: inline-block;
@@ -32,9 +23,18 @@
   line-height: 1.33em;
   margin: auto;
   overflow: auto;
+  max-width: 100%;
   text-align: left;
   background-color: var(--solarized-base3);
   color: var(--solarized-base01);
+
+  table {
+    margin: auto;
+  }
+
+  pre {
+    margin: 0;
+  }
 
   .gl {
     background-color: var(--solarized-base2);
