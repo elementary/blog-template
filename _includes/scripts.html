@@ -12,5 +12,25 @@
       }
     });
   });
+
+  //Toggle night mode
+  function toggleNightMode() {
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+      document.body.classList.add('night-mode');
+    } else {
+      document.body.classList.remove('night-mode');
+    }
+  }
+  toggleNightMode();
+  document.getElementById('toggle-night-mode').addEventListener('click', e => {
+    e.preventDefault();
+    if (localStorage.getItem('mode') !== 'dark') {
+      localStorage.setItem('mode', 'dark');
+    } else {
+      localStorage.removeItem('mode');
+    }
+    toggleNightMode();
+  })
 </script>
 
