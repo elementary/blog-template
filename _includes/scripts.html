@@ -13,7 +13,7 @@
     });
   });
 
-  //Toggle night mode
+  // Toggle night mode
   function toggleNightMode() {
     const mode = localStorage.getItem('mode');
     if (mode === 'dark') {
@@ -23,7 +23,10 @@
     }
   }
   toggleNightMode();
-  document.getElementById('toggle-night-mode').addEventListener('click', e => {
+  const trigger = document.getElementById('toggle-night-mode');
+  // Show toggle trigger if JS enabled
+  trigger.classList.remove('hidden');
+  trigger.addEventListener('click', e => {
     e.preventDefault();
     if (localStorage.getItem('mode') !== 'dark') {
       localStorage.setItem('mode', 'dark');

@@ -83,11 +83,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: var(--black-700);
-    --fg-color: var(--silver-300);
-    --accent-color: var(--blueberry-300);
-    --secondary-bg-color: var(--black-500);
-    --secondary-fg-color: var(--silver-300);
+    @include dark-root;
   }
 }
 

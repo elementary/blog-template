@@ -157,40 +157,6 @@ code {
 
 @media (prefers-color-scheme: dark) {
   .highlight {
-    background-color: var(--solarized-base03);
-    color: var(--solarized-base1);
-
-    .gl {
-      background-color: var(--solarized-base02);
-    }
-
-    .c,
-    .c1,
-    .cm,
-    .sb {
-      color: var(--solarized-base01);
-    }
-
-    .err,
-    .g,
-    .ge,
-    .go,
-    .gp,
-    .gs,
-    .gt,
-    .l,
-    .ld,
-    .n,
-    .na,
-    .nl,
-    .nn,
-    .nx,
-    .p,
-    .py,
-    .sd,
-    .sh,
-    .w {
-      color: var(--solarized-base1);
-    }
+    @include dark-highlight;
   }
 }
