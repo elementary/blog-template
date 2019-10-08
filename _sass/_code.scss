@@ -45,42 +45,12 @@ code {
   margin: auto;
   overflow: auto;
   text-align: left;
-  background-color: var(--solarized-base3);
-  color: var(--solarized-base01);
+
+  @include light-highlight;
 
   .gl {
-    background-color: var(--solarized-base2);
     padding: 0 0.5em;
     text-align: right;
-  }
-
-  .c,
-  .c1,
-  .cm,
-  .sb {
-    color: var(--solarized-base1);
-  }
-
-  .err,
-  .g,
-  .ge,
-  .go,
-  .gp,
-  .gs,
-  .gt,
-  .l,
-  .ld,
-  .n,
-  .na,
-  .nl,
-  .nn,
-  .nx,
-  .p,
-  .py,
-  .sd,
-  .sh,
-  .w {
-    color: var(--solarized-base01);
   }
 
   .gd,
