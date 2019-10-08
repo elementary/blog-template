@@ -17,8 +17,7 @@ layout: default
     {{ content }}
   </section>
 
-  {% capture thanks %}{% include thanks.md %}{% endcapture %}
-  {{ thanks | markdownify }}
+  {% include thanks.html %}
 </article>
 
 {% include license.html %}

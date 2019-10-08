@@ -81,6 +81,23 @@ article {
       padding: 0 0.5rem;
     }
   }
+
+  .thanks {
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: center;
+
+    .links {
+        display: flex;
+        justify-content: center;
+
+        svg {
+          height: 2em;
+          margin-left: 1.5em;
+          margin-right: 1.5em;
+        }
+    }
+  }
 }
 
 hr {
