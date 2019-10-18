@@ -65,17 +65,24 @@ The template is the source for the design and layout. The private repo holds a c
 
 The reason for this separation is to be able to stage future/private blog posts while still letting people benefit from the template work. Ideally we'd have another solution that let us keep the contents of the blog itself public as well, without exposing future posts—or adding significantly to the complexity of maintaining the blog.
 
-## Running Locally
+## Building & Running Locally
 
-GitHub has pretty good docs for [running GitHub Pages sites locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll). This README assumes you're on elementary OS.
+The blog is a simple Jekyll-powered site hosted by GitHub Pages. To run it locally, see [the GitHub docs](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
 
-### First time
+### Dependencies
 
-```shell
-sudo apt install ruby ruby-dev
-gem install bundler
-bundle install
-```
+This guide assumes you're on elementary OS or a similar Ubuntu-based environment.
+
+#### Packages:
+
+- `ruby-full` (should include `ruby` and `ruby-dev`)
+- `build-essential`
+- `zlib1g-dev`
+
+#### Ruby Stuff
+
+- `jekyll` (follow [these instructions](https://jekyllrb.com/docs/installation/))
+- `bundler` (included in the Jekyll instructions)
 
 ### Serve
 
