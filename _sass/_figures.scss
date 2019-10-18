@@ -126,13 +126,13 @@ figure {
 
   &.card {
     img {
-      background-color: var(--silver-100);
       box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.05),
         0 3px 3px rgba(0, 0, 0, 0.22);
+      @include light-figure;
 
       @media (prefers-color-scheme: dark) {
-        background-color: var(--silver-900);
+        @include dark-figure;
       }
     }
   }

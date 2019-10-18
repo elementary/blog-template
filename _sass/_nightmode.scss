@@ -1,0 +1,58 @@
+:root {
+  .dark-mode {
+    @include dark-root;
+  }
+  .light-mode {
+    @include light-root;
+  }
+}
+
+.dark-mode {
+  .byline {
+    .avatar {
+      &::before {
+        @include dark-avatar-shadow;
+      }
+    }
+  }
+  .featured {
+    .featured-image {
+      @include dark-image;
+    }
+  }
+  .highlight {
+    @include dark-highlight;
+  }
+  figure {
+    &.card {
+      img {
+        @include dark-figure;
+      }
+    }
+  }
+}
+
+.light-mode {
+  .byline {
+    .avatar {
+      &::before {
+        @include light-avatar-shadow;
+      }
+    }
+  }
+  .featured {
+    .featured-image {
+      @include light-image;
+    }
+  }
+  .highlight {
+    @include light-highlight;
+  }
+  figure {
+    &.card {
+      img {
+        @include light-figure;
+      }
+    }
+  }
+}

@@ -4,9 +4,11 @@
 @charset "utf-8";
 
 // Global
+@import "mixins";
 @import "colors";
 @import "layout";
 @import "typography";
+@import "nightmode";
 
 // Components
 @import "byline";
@@ -111,5 +113,9 @@ nav.pagination {
   font-family: var(--ui-font);
   padding: 0.5em 1em;
   text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
 

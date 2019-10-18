@@ -72,22 +72,14 @@
   --solarized-red: #dc322f;
   --solarized-yellow: #b58900;
 
-  --bg-color: white;
-  --fg-color: var(--black-500);
-  --accent-color: var(--blueberry-700);
   --header-bg-color: var(--blueberry-300);
   --header-fg-color: var(--silver-100);
-  --secondary-bg-color: #f5f5f5; // Instead of making up a Silver 200
-  --secondary-fg-color: var(--black-300);
+  @include light-root;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: var(--black-700);
-    --fg-color: var(--silver-300);
-    --accent-color: var(--blueberry-300);
-    --secondary-bg-color: var(--black-500);
-    --secondary-fg-color: var(--silver-300);
+    @include dark-root;
   }
 }
 

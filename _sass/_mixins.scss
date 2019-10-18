@@ -1,0 +1,141 @@
+@mixin dark-root {
+  --bg-color: var(--black-700);
+  --fg-color: var(--silver-300);
+  --accent-color: var(--blueberry-300);
+  --secondary-bg-color: var(--black-500);
+  --secondary-fg-color: var(--silver-300);
+}
+
+@mixin light-root {
+  --bg-color: white;
+  --fg-color: var(--black-500);
+  --accent-color: var(--blueberry-700);
+  --secondary-bg-color: #f5f5f5;
+  --secondary-fg-color: var(--black-300);
+}
+
+@mixin dark-avatar-shadow {
+  box-shadow:
+    inset 0 0 0 1px black,
+    inset 0 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.22),
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.07),
+    0 1px 3px 0 rgba(0, 0, 0, 0.24),
+    0 1px 2px 0 rgba(0, 0, 0, 0.48);
+}
+
+@mixin light-avatar-shadow {
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.1),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 0 0 rgba(255, 255, 255, 0.15),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+@mixin dark-image {
+  background-color: var(--silver-900);
+  border: 1px solid black;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@mixin light-image {
+  background-color: var(--silver-100);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@mixin dark-highlight {
+  background-color: var(--solarized-base03);
+  color: var(--solarized-base1);
+
+  .gl {
+    background-color: var(--solarized-base02);
+  }
+
+  .c,
+  .c1,
+  .cm,
+  .sb {
+    color: var(--solarized-base01);
+  }
+
+  .err,
+  .g,
+  .ge,
+  .go,
+  .gp,
+  .gs,
+  .gt,
+  .l,
+  .ld,
+  .n,
+  .na,
+  .nl,
+  .nn,
+  .nx,
+  .p,
+  .py,
+  .sd,
+  .sh,
+  .w {
+    color: var(--solarized-base1);
+  }
+}
+
+@mixin light-highlight {
+  background-color: var(--solarized-base3);
+  color: var(--solarized-base01);
+
+  .gl {
+    background-color: var(--solarized-base2);
+  }
+
+  .c,
+  .c1,
+  .cm,
+  .sb {
+    color: var(--solarized-base1);
+  }
+
+  .err,
+  .g,
+  .ge,
+  .go,
+  .gp,
+  .gs,
+  .gt,
+  .l,
+  .ld,
+  .n,
+  .na,
+  .nl,
+  .nn,
+  .nx,
+  .p,
+  .py,
+  .sd,
+  .sh,
+  .w {
+    color: var(--solarized-base01);
+  }
+}
+
+@mixin dark-figure {
+  background-color: var(--silver-900);
+}
+
+@mixin light-figure {
+  background-color: var(--silver-100);
+}
