@@ -5,7 +5,7 @@ layout: null
     "lastBuildDate": "{{ site.time | date_to_rfc822 }}",
     "generator": "Jekyll v{{ jekyll.version }}",
     "posts": [
-        {% for post in site.posts limit:3 %}
+        {% for post in site.tags[page.tag] limit:3 %}
         {
             "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
             "title": {{ post.title | jsonify }},
