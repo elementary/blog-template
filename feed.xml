@@ -1,5 +1,7 @@
 ---
 layout: null
+redirect_from:
+  - /feed/
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -19,12 +21,12 @@ layout: null
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% if post.image %}
-            {% assign prefix = page.image | slice: 0, 4 %} 
-            {% if prefix == "http" %} 
-                {% assign image = page.image %} 
-            {% else %} 
-                {% assign image = page.image | prepend: site.baseurl | prepend: site.url %} 
-            {% endif %} 
+            {% assign prefix = page.image | slice: 0, 4 %}
+            {% if prefix == "http" %}
+                {% assign image = page.image %}
+            {% else %}
+                {% assign image = page.image | prepend: site.baseurl | prepend: site.url %}
+            {% endif %}
         <enclosure url="{{ image }}" />
         {% endif %}
         {% for tag in post.tags %}
