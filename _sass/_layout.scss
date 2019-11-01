@@ -83,13 +83,10 @@ article {
   }
 
   .thanks {
-    font-size: 0.8em;
-    font-style: italic;
-    text-align: center;
-
     .links {
         display: flex;
         justify-content: center;
+        margin: 1.5em auto;
 
         svg {
           height: 2em;
