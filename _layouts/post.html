@@ -3,6 +3,18 @@ layout: default
 ---
 
 <article>
+  {% if page.hidden %}
+    <aside class="embargo">
+      {% if page.hidden != "true" %}
+        <h1>Under embargo until {{ page.hidden | date: "%a, %b %e, %Y %H:%M" }} UTC!</h1>
+        <p>Please respect the embargo by not sharing this URL. The content below may be subject to minor changes before the embargo is lifted.</p>
+      {% else %}
+        <h1>Note: This post is hidden!</h1>
+        <p>Please respect any embargoes by not sharing this URL. The content below may be unfinished, inaccurate, or subject to change.</p>
+      {% endif %}
+      <hr />
+    </aside>
+  {% endif %}
   <header>
     <h1>{{ page.title }}</h1>
     {% if page.description %}
