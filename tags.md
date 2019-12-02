@@ -8,7 +8,9 @@
 
   {% assign posts = tag[1] | sort | reverse %}
   {% for post in posts %}
-    {% include featured.html post=post %}
+    {% unless post.hidden %}
+      {% include featured.html post=post %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
 </section>
