@@ -44,6 +44,17 @@
     }
   }
 
+  a {
+    color: inherit;
+    opacity: 1;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+  }
+
   .name {
     font-weight: 600;
     opacity: 0.8;
