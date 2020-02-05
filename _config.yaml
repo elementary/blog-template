@@ -10,6 +10,9 @@ reddit: elementaryos
 twitter: elementary
 
 authors:
+  aroman:
+    name: "Avi Romanoff"
+    description: "Enthusiasm Evangelist"
   cassidyjames:
     name: Cassidy James Blaede
     description: "Co-founder & CXO"
@@ -22,6 +25,10 @@ authors:
     name: Karen Sophia
     description: "Customer Engagement"
     # gravatar: e0ac5d5e717da67a36ac72adf235bc42
+  kgrubb:
+    name: Keli Grubb
+    description: Developer
+    gravatar: 8e8d16d136c38f3a28820490c17928d1
   peteruithoven:
     name: Peter Uithoven
     description: "Front-end Developer"
@@ -47,4 +54,3 @@ kramdown:
 
 future: false # Allows us to stage posts
 exclude: [README.md, Gemfile, Gemfile.lock, vendor]
-

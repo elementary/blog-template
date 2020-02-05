@@ -79,6 +79,8 @@
   --header-fg-color: var(--silver-100);
   --secondary-bg-color: #f5f5f5; // Instead of making up a Silver 200
   --secondary-fg-color: var(--black-300);
+  --warning-bg-color: var(--banana-300);
+  --warning-fg-color: var(--black-900);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,4 +92,3 @@
     --secondary-fg-color: var(--silver-300);
   }
 }
-

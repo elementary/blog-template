@@ -1,11 +1,15 @@
 ---
-layout: null
+layout: uglify
 ---
 {
     "lastBuildDate": "{{ site.time | date_to_rfc822 }}",
     "generator": "Jekyll v{{ jekyll.version }}",
     "posts": [
-        {% for post in site.tags[page.tag] limit:3 %}
+        {% assign counter = 0 %}
+        {% for post in site.posts %}
+        {% unless post.hidden %}
+        {% assign counter = counter | plus: 1 %}
+        {% unless counter > 3 %}
         {
             "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
             "title": {{ post.title | jsonify }},
@@ -26,12 +30,12 @@ layout: null
             {% endif %}
             },
             {% if post.image %}
-                {% assign prefix = post.image | slice: 0, 4 %} 
-                {% if prefix == "http" %} 
-                    {% assign image = post.image %} 
-                {% else %} 
-                    {% assign image = post.image | prepend: site.baseurl | prepend: site.url %} 
-                {% endif %} 
+                {% assign prefix = post.image | slice: 0, 4 %}
+                {% if prefix == "http" %}
+                    {% assign image = post.image %}
+                {% else %}
+                    {% assign image = post.image | prepend: site.baseurl | prepend: site.url %}
+                {% endif %}
             "image": "{{ image }}",
             {% else %}
             "excerpt": "{{ post.excerpt | strip_html | truncatewords: 40 | jsonify }}",
@@ -39,7 +43,9 @@ layout: null
             {% assign words = post.content | strip_html | number_of_words %}
             "read_time": "{{ words | divided_by: 200 | plus: 1 }} min read"
         }
-        {% unless forloop.last %},{% endunless %}
+        {% unless counter >= 3 %},{% endunless %}
+        {% endunless %}
+        {% endunless %}
         {% endfor %}
     ]
 }
