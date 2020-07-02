@@ -7,7 +7,7 @@ layout: default
 <article>
   {% if page.hidden %}
     <aside class="embargo">
-      {% if page.hidden != "true" %}
+      {% if page.hidden != true %}
         <h1>Under embargo until {{ page.hidden | date: "%a, %b %e, %Y %H:%M" }} UTC!</h1>
         <p>Please respect the embargo by not sharing this URL. The content below may be subject to minor changes before the embargo is lifted.</p>
       {% else %}
@@ -23,7 +23,7 @@ layout: default
       <h2>{% include title.html title=page.description %}</h2>
     {% endif %}
 
-    {% include byline.html author=page.author date=page.date content=page.content %}
+    {% include byline.html author=page.author date=page.date content=page.content link=true %}
     {% include tags.html %}
   </header>
 

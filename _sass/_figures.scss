@@ -4,12 +4,17 @@ figure {
   position: relative;
   text-align: center;
 
+  article & p {
+    max-width: 100%; // Fix Markdown wrapping images in `<p>` and setting max-width
+  }
+
   * {
     margin: 0;
     max-width: 100%;
   }
 
-  img {
+  img,
+  video {
     display: inline;
     transition: transform 250ms ease;
     vertical-align: middle;
@@ -54,7 +59,8 @@ figure {
   }
 
   &.third {
-    img {
+    img,
+    video {
       cursor: zoom-in;
       margin: 1%;
       max-width: 31.33%;
@@ -81,7 +87,8 @@ figure {
   }
 
   &.half {
-    img {
+    img,
+    video {
       cursor: zoom-in;
       margin: 1%;
       max-width: 48%;
@@ -103,7 +110,8 @@ figure {
   }
 
   &.full-bleed {
-    img {
+    img,
+    video {
       left: 50%;
       max-width: 100vw;
       position: relative;
@@ -113,19 +121,22 @@ figure {
   }
 
   &.constrained {
-    img {
+    img,
+    video {
       width: var(--content-width);
     }
   }
 
   &.circle {
-    img {
+    img,
+    video {
       border-radius: 50%;
     }
   }
 
   &.card {
-    img {
+    img,
+    video {
       background-color: var(--silver-100);
       box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.05),

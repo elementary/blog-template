@@ -8,7 +8,10 @@
   <header>
     <h2>{% include title.html title=post.title %}</h2>
     {% if post.description %}
-      <h3>{% include title.html title=post.description %}</h3>
+      <h3>
+        {% include title.html title=post.description %}
+        {% if include.post.redirect_to %} →{% endif %}
+      </h3>
     {% endif %}
 
     {% include byline.html author=post.author date=post.date content=post.content %}

@@ -21,9 +21,9 @@
     />
   </div>
   <div class="author">
-    {% if page.layout == 'post' %}<a href="{{ site.baseurl }}/authors/#{{ include.author }}">{% endif %}
+    {% if include.link == true %}<a href="{{ site.baseurl }}/authors/#{{ include.author }}">{% endif %}
     <span class="name">{{ author.name }}</span>
-    {% if page.layout == 'post' %}</a>{% endif %}
+    {% if include.link == true %}</a>{% endif %}
     {% if author.description and page.layout == 'post' %}
       <span class="description">{{ author.description }}</span>
     {% endif %}
