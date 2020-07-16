@@ -1,0 +1,71 @@
+.twitter-card {
+  background-color: var(--silver-100);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 3px 3px rgba(0, 0, 0, 0.22);
+  border-radius: 0.5em;
+  font-family: var(--ui-font);
+  margin: 0 auto 2em;
+  max-width: 50ch;
+  padding: 1em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: max-content;
+    margin-bottom: 0.25em;
+
+    img.avatar {
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+      grid-row-end: span 2;
+      height: 2.5em;
+      margin-right: 0.5em;
+    }
+
+    img.logo {
+      grid-column-start: 3;
+      grid-row-end: span 2;
+      grid-row-start: 1;
+      height: 1.25em;
+      justify-self: end;
+      margin: 0;
+    }
+
+    p,
+    strong {
+      font-size: 0.8em;
+      grid-column-start: 2;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    strong {
+      align-self: end;
+    }
+
+    p {
+      align-self: start;
+      opacity: 0.75;
+    }
+  }
+
+  .timestamp {
+    font-size: 0.75em;
+    margin: 0;
+    opacity: 0.6;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--silver-900);
+  }
+}
