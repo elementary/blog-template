@@ -3,7 +3,7 @@
   <hr/>
 
   <h2>Thank You</h2>
-  <p>Thanks to all of our supporters, backers, and customers! Your contributions make elementary possible. If you’d like to help build and improve elementary OS, don’t hesitate to <a href="https://elementary.io/get-involved">Get Involved</a>.</p>
+  <p>Thanks to all of our supporters, backers, and customers! Your contributions make elementary possible. If you’d like to help build and improve elementary OS, don’t hesitate to <a href="https://elementary.io/get-involved" onclick="plausible('Link: Get Involved')">Get Involved</a>.</p>
 
   <div class="links">
     <a
@@ -11,6 +11,7 @@
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="elementary downloads"
+      onclick="plausible('Link: Homepage')"
     >
       {% include svg/elementary.svg %}
     </a>
@@ -20,8 +21,19 @@
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="AppCenter"
+      onclick="plausible('Link: AppCenter')"
     >
       {% include svg/appcenter.svg %}
+    </a>
+
+    <a
+      href="https://github.com/sponsors/elementary"
+      rel="noreferrer nofollow noopener"
+      target="_blank"
+      title="GitHub"
+      onclick="plausible('Link: GitHub Sponsors')"
+    >
+      {% include svg/github.svg %}
     </a>
 
     <a
@@ -29,6 +41,7 @@
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="Patreon"
+      onclick="plausible('Link: Patreon')"
     >
       {% include svg/patreon.svg %}
     </a>
@@ -38,6 +51,7 @@
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="Paypal"
+      onclick="plausible('Link: Paypal')"
     >
       {% include svg/paypal.svg %}
     </a>
@@ -47,6 +61,7 @@
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="elementary merch store"
+      onclick="plausible('Link: Store')"
     >
       {% include svg/shopping-cart.svg %}
     </a>

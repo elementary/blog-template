@@ -94,8 +94,9 @@ article {
         a {
           margin: 0.75em 1.5em;
         }
-      
+
         svg {
+          color: var(--fg-color);
           height: 2em;
         }
     }
