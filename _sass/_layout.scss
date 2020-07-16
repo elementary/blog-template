@@ -87,13 +87,16 @@ article {
   .thanks {
     .links {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        margin: 1.5em auto;
+        margin: 0.75em -1.5em;
 
+        a {
+          margin: 0.75em 1.5em;
+        }
+      
         svg {
           height: 2em;
-          margin-left: 1.5em;
-          margin-right: 1.5em;
         }
     }
   }
