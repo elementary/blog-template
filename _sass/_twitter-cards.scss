@@ -11,7 +11,12 @@
 
   a {
     color: inherit;
+    opacity: 1;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   p {
@@ -19,53 +24,56 @@
     margin-bottom: 0.5em;
   }
 
-  .header {
-    display: grid;
-    grid-template-columns: max-content;
-    margin-bottom: 0.25em;
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75em;
 
-    img.avatar {
-      border-radius: 50%;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
-      grid-row-end: span 2;
-      height: 2.5em;
-      margin-right: 0.5em;
+    .account {
+      display: grid;
+
+      .avatar {
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+        display: block;
+        grid-row-end: span 2;
+        height: 2.5em;
+        margin-right: 0.5em;
+      }
+
+      p,
+      strong {
+        font-size: 0.8em;
+        grid-column-start: 2;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      p {
+        opacity: 0.75;
+      }
     }
 
-    img.logo {
-      grid-column-start: 3;
-      grid-row-end: span 2;
-      grid-row-start: 1;
+    .logo {
       height: 1.25em;
-      justify-self: end;
       margin: 0;
-    }
-
-    p,
-    strong {
-      font-size: 0.8em;
-      grid-column-start: 2;
-      line-height: 1.25;
-      margin: 0;
-    }
-
-    strong {
-      align-self: end;
-    }
-
-    p {
-      align-self: start;
-      opacity: 0.75;
+      text-align: right;
     }
   }
 
-  .timestamp {
+  footer {
     font-size: 0.75em;
-    margin: 0;
-    opacity: 0.6;
+    line-height: 1;
+    margin-top: 1.5em;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0.6;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: var(--silver-900);
+    background-color: var(--black-500);
   }
 }
