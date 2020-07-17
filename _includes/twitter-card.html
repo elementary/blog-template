@@ -18,7 +18,7 @@
   <footer>
     <a href="{{ permalink }}">
       <span>View on Twitter →</span>
-      <time>{{ include.timestamp }}</time>
+      <time datetime="{{ include.timestamp | date:"%Y-%m-%d" }}">{{ include.timestamp | date: "%b %e, %Y" }}</time>
     </a>
   </footer>
 </div>
