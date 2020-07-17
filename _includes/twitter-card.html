@@ -1,12 +1,24 @@
+{% assign profile = include.account | prepend: "https://twitter.com/" %}
+{% assign permalink = include.id | prepend: "/status/" | prepend: profile %}
+
 <div class="twitter-card">
-  <a href="{{ include.href }}">
-    <div class="header">
-        <img class="avatar" src="{{ include.avatar }}" />
-        <strong>{{ include.name }}</strong>
-        <p>{{ include.account }}</p>
-        <img class="logo" src="/images/twitter.svg" />
-    </div>
-    <p>{{ include.contents }}</p>
-    <p class="timestamp">{{ include.timestamp }}</p>
-  </a>
+  <header>
+    <a class="account" href="{{ profile }}">
+      <img class="avatar" src="{{ include.avatar }}" />
+      <strong>{{ include.name }}</strong>
+      <p>@{{ include.account }}</p>
+    </a>
+    <a href="{{ permalink }}">
+      <img class="logo" src="/images/twitter.svg" />
+    </a>
+  </header>
+
+  <p>{{ include.contents }}</p>
+
+  <footer>
+    <a href="{{ permalink }}">
+      <span>View on Twitter →</span>
+      <time>{{ include.timestamp }}</time>
+    </a>
+  </footer>
 </div>
