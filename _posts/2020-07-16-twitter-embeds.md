@@ -1,9 +1,10 @@
 ---
-title: Twitter “Embeds” While Respecting Privacy
-description: A demo!
+title: Twitter “Embed” Cards While Respecting Privacy
+description: A quick demo!
 author: cassidyjames
 ---
-Check it out:
+
+We wanted to quote/embed a tweet in our blog, but don't like the idea of pulling in JS or even an iframe from Twitter's servers. So insted, we recreate a tweet card locally, making sure to follow the [Twitter Display Requirements](https://developer.twitter.com/en/developer-terms/display-requirements). Check it out:
 
 ```liquid
 {% raw %}{% include twitter-card.html
@@ -33,4 +34,6 @@ Turns into:
     guess it was ARM just from using it. It’s fanless!"
 %}
 
-It's even light/dark style aware!
+This is all rendered and styled localy, ensuring we're not hitting Twitter's tracking code just to show some content. It also means quoted tweets will persist, even if removed from Twitter (since it's just local content). It's even light/dark style aware!
+
+It does not (yet) support showing retweets, verified badges, or embedded media. If/when the need arises for those, we can add them, though. Profile images must be manually passed in, as well—ideally included with the regular assets for a post so all assets are staying local to the domain.
