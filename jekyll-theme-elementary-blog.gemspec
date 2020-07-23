@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-elementary-blog"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["elementary"]
   spec.email         = ["webdev@elementary.io"]
 

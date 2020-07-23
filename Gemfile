@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 gem 'github-pages', group: :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-paginate'
@@ -7,4 +8,3 @@ gem 'github-pages', group: :jekyll_plugins do
   gem 'kramdown'
   gem 'rouge'
 end
-
