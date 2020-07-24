@@ -2,16 +2,15 @@
 <div class="thanks">
   <hr/>
 
-  <h2>Thank You</h2>
-  <p>Thanks to all of our supporters, backers, and customers! Your contributions make elementary possible. If you’d like to help build and improve elementary OS, don’t hesitate to <a href="https://elementary.io/get-involved" onclick="plausible('Link: Get Involved')">Get Involved</a>.</p>
+  <h2>Salamat!</h2>
+  <p>Salamat sa suporta ninyo sa Antares Programming. Malaking tulong ang contributions ninyo para ma-improve ang site at ang lahat ng features nito. Kung gusto mong tumulong, huwag mahiyang mag-send ng message sa amin via <a href="mailto:antaresphdev@gmail.com" target="_blank" rel="noopener noreferrer">email</a>, o sa aming <a href="https://facebook.com/antaresprogramming" target="_blank" rel="noopener noreferrer">Facebook page</a>.</p>
 
-  <div class="links">
+  <!--div class="links">
     <a
       href="https://elementary.io/"
       rel="noreferrer nofollow noopener"
       target="_blank"
       title="elementary downloads"
-      onclick="plausible('Link: Homepage')"
     >
       {% include svg/elementary.svg %}
     </a>
@@ -65,7 +64,7 @@
     >
       {% include svg/shopping-cart.svg %}
     </a>
-  </div>
+  </div-->
 </div>
 {% endunless %}
 
@@ -85,7 +84,7 @@
     {% endif %}
     {% if page.sponsor.link  && page.sponsor.image %}</a>{% endif %}
 
-    <p>We'd like to specially thank
+    <p>Antares Programming would like to especially thank
     {% if page.sponsor.link %}
       <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
     {% endif %}{{ page.sponsor.name }}{% if page.sponsor.link %}</a>{% endif %} for sponsoring this blog post and helping to sponsor our work. {% if page.sponsor.hook %}{{ page.sponsor.hook }}{% endif %}</p>

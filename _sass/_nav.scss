@@ -29,7 +29,6 @@ body > header {
       }
     }
     
-
     li {
       display: inline-block;
       list-style: none;
@@ -74,6 +73,19 @@ body > header {
         height: auto;
         width: 50px;
         bottom: 0;
+      }
+      
+      &:hover { opacity: 1; }
+      
+      #antares-circle {
+	      transition: all 300ms;
+      }
+      
+      &:focus #antares-circle,
+      &:hover #antares-circle {
+	      fill: #fd0;
+	      filter: drop-shadow(0 3px 100px var(--banana-700));
+	      stroke-opacity: 0;
       }
     }
   }
