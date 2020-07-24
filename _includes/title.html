@@ -4,7 +4,7 @@ Adds a non-breaking space before the final word in titles to prevent widows.
 
 {% assign words = include.title | split: " " %}
 {% if words.size > 2  %}
-  {% for word in words %}{% if forloop.last %}{% else %} {% endif %}{{ word }}{% endfor %}
+  {% for word in words %}{% if forloop.last %}&#32;{% else %} {% endif %}{{ word }}{% endfor %}
 {% else %}
   {% for word in words %}
     {{ word }}
