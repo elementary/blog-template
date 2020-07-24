@@ -1,7 +1,7 @@
 :root {
-  --ui-font: "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
-  --copy-font: "Noto Serif", "Droid Serif", serif;
-  --heading-font: Raleway, var(--ui-font);
+  --ui-font: "Inter", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+  --copy-font: "Zilla Slab", "Noto Serif", "Droid Serif", serif;
+  --heading-font: var(--ui-font);
 }
 
 html {
@@ -44,6 +44,10 @@ article {
     margin-top: 0.5em;
     margin-bottom: 2em;
   }
+  
+  p {
+    font-size: 1.2rem;
+  }
 
   li {
     padding-left: 0.25em;
@@ -77,16 +81,17 @@ h6 {
 }
 
 header h1 {
-  font-size: 2em;
   margin-top: 1em;
+	letter-spacing: -1px;
+	font-size: calc(2rem + 2vw);
 }
 
 header h1 + h2 {
-  font-family: var(--ui-font);
-  font-size: 1.2rem;
-  font-weight: normal;
-  margin-top: 0.25em;
-  opacity: 0.5;
+	font-family: var(--copy-font);
+	font-size: calc(1rem + 2vw);
+	font-weight: 300;
+	margin-top: 0.25em;
+	opacity: 0.7;
 }
 
 header h2 {

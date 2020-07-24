@@ -11,21 +11,26 @@ body > section {
 
 body > footer {
   background-color: var(--secondary-bg-color);
-  display: flex;
-  flex-flow: wrap-reverse;
-  justify-content: space-between;
+  display: grid;
   overflow-x: auto;
-  padding: 0 1rem;
+
+  .copyright {
+	  padding: 0.25rem 0.5rem;
+	  background-color: var(--black-700);
+	  color: var(--silver-500);
+	  font-size: 0.8rem;
+  }
 
   ul {
     display: inline-block;
     flex: 0 0 auto;
     margin: 0;
+    margin-left: 2rem;
     padding: 0;
   }
 
   li {
-    display: inline-block;
+    display: block;
     list-style: none;
     vertical-align: middle;
   }
@@ -39,12 +44,33 @@ body > footer {
 
   a,
   p {
-    color: var(--secondary-fg-color);
+    color: var(--silver-500);
     font-family: var(--ui-font);
-    font-size: 0.6rem;
-    line-height: 3em;
+    font-size: 0.9rem;
+    line-height: 1.5em;
     margin: 0;
   }
+}
+
+@media screen and (min-width: 720px) {
+    footer .copyright {
+        grid-column: span 2;
+    }
+}
+
+.footer__section {
+	padding: 1rem;
+	padding-bottom: 2rem;
+	background-color: var(--black-500);
+	color: var(--silver-700);
+}
+
+.footer__section__title {
+	margin: 0;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 1rem;
 }
 
 article {

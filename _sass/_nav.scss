@@ -2,19 +2,33 @@ body > header {
   background-color: var(--header-bg-color);
   color: var(--header-fg-color);
   fill: var(--header-fg-color);
+  border-bottom: 1px solid #0003;
 
   nav {
     display: flex;
     font-size: 0;
-    overflow-x: auto;
-    padding: 0 1rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
 
     ul {
       display: inline-block;
-      flex: 0 0 auto;
       margin: 0;
       padding: 0;
+      display: flex;
+      
+      &:first-child {
+        flex: 2;
+      }
+      
+      &:last-child {
+        flex: 1;
+        
+        li {
+          flex: 1;
+        }
+      }
     }
+    
 
     li {
       display: inline-block;
@@ -23,15 +37,19 @@ body > header {
     }
 
     a {
-      color: var(--header-fg-color);
-      display: inline-block;
-      font-family: var(--ui-font);
-      font-size: 0.85rem;
-      line-height: 2.9em;
-      opacity: 1;
-      padding: 0 0.65rem;
-      text-decoration: none;
-      white-space: nowrap;
+	    color: var(--header-fg-color);
+	    display: inline-block;
+	    font-family: var(--ui-font);
+	    font-size: 0.85rem;
+	    line-height: 2.9rem;
+	    opacity: 1;
+	    padding: 0 0.65rem;
+	    text-decoration: none;
+	    white-space: nowrap;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    letter-spacing: 1px;
+	    font-size: 0.7rem;
     }
 
     a:hover {
@@ -40,9 +58,12 @@ body > header {
 
     svg {
       height: 1em;
+	    line-height: 0.5em;
+	    position: relative;
+	    bottom: -0.1rem;
 
       * {
-        fill: inherit !important;
+        /* fill: inherit !important; */
       }
     }
 
@@ -51,6 +72,8 @@ body > header {
 
       svg {
         height: auto;
+        width: 50px;
+        bottom: 0;
       }
     }
   }
