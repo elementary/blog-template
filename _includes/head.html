@@ -9,15 +9,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" sizes="256x256" href="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
-  <meta itemprop="logo" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
-  <link rel="shortcut icon" href="https://elementary.io/favicon.ico">
-  <link rel="apple-touch-icon" href="https://elementary.io/images/launcher-icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=LbzXEqQbXJ">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=LbzXEqQbXJ">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=LbzXEqQbXJ">
+  <link rel="manifest" href="/site.webmanifest?v=LbzXEqQbXJ">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=LbzXEqQbXJ" color="#ffdd00">
+  <link rel="shortcut icon" href="/favicon.ico?v=LbzXEqQbXJ">
+  <meta name="apple-mobile-web-app-title" content="Antares Programming">
+  <meta name="application-name" content="Antares Programming">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
 
   <link rel="alternate" type="application/rss+xml" title="Antares Programming Blog" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
   <meta name="theme-color" content="{% if page.theme-color %}{{ page.theme-color }}{% else %}{{ site.theme-color }}{% endif %}" />
+
+ <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;700&family=Zilla+Slab:ital@0;1&display=swap" rel="stylesheet"> 
 
   {% if page.image %}
     {% assign prefix = page.image | slice: 0, 4 %}
