@@ -80,7 +80,7 @@ code {
   .sd,
   .sh,
   .w {
-    color: var(--solarized-base01);
+    color: var(--solarized-base1);
   }
 
   .gd,
@@ -122,7 +122,7 @@ code {
   .kp,
   .o,
   .ow {
-    color: var(--solarized-green);
+    color: var(--grape-500);
   }
 
   .gh,
@@ -139,7 +139,7 @@ code {
   .gr,
   .kt,
   .sr {
-    color: var(--solarized-red);
+    color: var(--strawberry-300);
   }
 
   .nb {
@@ -193,4 +193,22 @@ code {
       color: var(--solarized-base1);
     }
   }
+}
+
+
+.highlight {
+	font-size: 1.1rem;
+	font-family: 'Courier Prime !important';
+	max-width: 100%;
+}
+
+.rouge-gutter.gl {
+	position: sticky;
+	left: 0;
+}
+
+.highlight,
+.highlight .gl {
+	background-color: var(--black-500);
+	color: var(--solarized-base1);
 }
