@@ -1,6 +1,6 @@
 :root {
-  --ui-font: "Inter", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
-  --copy-font: "Zilla Slab", "Noto Serif", "Droid Serif", serif;
+  --ui-font: "Gotham", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+  --copy-font: "Inter", "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
   --heading-font: var(--ui-font);
 }
 
@@ -46,7 +46,7 @@ article {
   }
   
   p {
-    font-size: 1.2rem;
+	  text-indent: 1rem;
   }
 
   li {
