@@ -1,0 +1,98 @@
+.lesson__video {
+	display: grid;
+	grid-template-columns: 16fr 9fr;
+	margin: 2rem;
+	max-width: 100%;
+	gap: 1rem;
+	padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .lesson__video {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lesson__video-wrapper {
+  display: grid;
+}
+
+.lesson__video-wrapper {
+  position: relative;
+}
+
+.aspect-ratio-hack {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lesson__video-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lesson__video-details {
+  width: 100%;
+}
+
+.lesson__title {
+  margin: 0;
+}
+
+.lesson__video-actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lesson__video-actions h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  font-weight: bold;
+  width: 100%;
+}
+
+.lesson__video-actions {
+  gap: 0.25rem;
+}
+
+.lesson__article p:first-of-type {
+	font-size: 1.5em;
+	text-indent: 0;
+	opacity: 0.55;
+	font-weight: lighter;
+}
+
+.lesson__article article h2 {
+	font-size: calc(2rem + 2vw);
+}
+
+.lesson__actions {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+  .lesson__actions {
+    flex-direction: column;
+  }
+  
+  .lesson__actions * + .btn {
+    margin-left: 0;
+  }
+}
+
+.lesson__actions .btn {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.lesson__actions * + * {
+margin-left: auto;
+}

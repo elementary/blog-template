@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="tl" dir="ltr" class="courses">
+  {% include head.html %}
+  <body class="{% if page.url == '/' %}home {% endif %}">
+    {% include course-banner.html %}
+    {% include nav.html %}
+    <section>
+      {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+
+    </section>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

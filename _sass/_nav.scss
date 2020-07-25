@@ -2,7 +2,7 @@ body > header {
   background-color: var(--header-bg-color);
   color: var(--header-fg-color);
   fill: var(--header-fg-color);
-  border-bottom: 1px solid #0003;
+  border-bottom: 1px solid var(--banana-700);
 
   nav {
     display: flex;

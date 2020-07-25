@@ -1,0 +1,9 @@
+<header class="banner">
+  <div class="banner__wrapper">
+    <h1 class="banner__title">{{ page.title }}</h2>
+    {% if page.subtitle != nil %}
+    <h2 class="banner__subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+    <p>{{ page.summary }}</p>
+  </div>
+</header>

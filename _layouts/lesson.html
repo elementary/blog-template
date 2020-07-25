@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tl" dir="ltr" class="lesson">
+  {% include head.html %}
+  <body class="{% if page.url == '/' %}home {% endif %}">
+    {% include course-banner.html %}
+    {% include nav.html %}
+    <section class="lesson__video">
+      <div class="lesson__video-wrapper">
+        <img class="aspect-ratio-hack" src='data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACwAAAAAEAAJAAACCoSPqcvtD6OclBUAOw=='>
+        <iframe class="lesson__video-embed" width="560" height="315" src="https://www.youtube.com/embed/5nCPbPPrQxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="lesson__video-details">
+        <h2 class="lesson__title">{{ page.title }}</h2>
+        <p>{{ page.summary }}</p>
+        
+        {% if page.has_downloads %}
+        <div class="lesson__video-actions">
+          <h3>Download&hellip;</h3>
+          {% if page.video != nil %}
+          <a class="btn" download>Video</a>
+          {% endif %}
+          {% if page.transcript != nil %}
+          <a class="btn" download>Transcript</a>
+          {% endif %}
+          {% if page.code != nil %}
+          <a class="btn" download href="{{ page.code }}">Code Used</a>
+          {% endif %}
+          {% if page.article != nil %}
+          <a class="btn" download>Article (<abbr title="Portable Document Format">PDF</abbr>)</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    <section class="lesson__article">
+      <hr>
+      <article>
+      {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      </article>
+      <div class="lesson__actions">
+        <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
+        <a class="btn btn--primary" href="{{ page.permalink }}..">Susunod na lesson</a>
+      </div>
+    </section>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
