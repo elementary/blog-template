@@ -8,6 +8,7 @@ permalink: /courses/html-essentials/01-hypertext-markup-language/
 
 has_downloads: true
 code: https://github.com/antaresprogramming/code/
+next_lesson: 02-html-syntax/
 ---
 
 ## HyperText Markup Language
