@@ -165,3 +165,16 @@ kbd {
   white-space: nowrap;
 }
 
+blockquote em, blockquote i {
+  font-style: italic;
+}
+
+blockquote {
+	font-family: 'Zilla Slab', 'Caladea', serif;
+	font-style: normal;
+	font-size: 1.5rem;
+	border: none;
+	text-align: center;
+	line-height: 1.5;
+	max-width: calc((var(--content-width) / 3) * 2)
+}

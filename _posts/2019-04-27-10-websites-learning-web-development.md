@@ -2,6 +2,7 @@
 title: "Mag-drop ka na sa College: 10 Web Sites na Puwede Mong Gamitin Para Maging Mas Magaling sa mga May Degree"
 description: "Oo, puwede kang 'wag nang mag-aral next sem. I-drop mo na lahat ng subject mo, kaya kang isalba ng mga sites na ito."
 author: teacherbuknoy
+slug: /10-websites-learning-web-development/
 tags:
   - learning
 ---

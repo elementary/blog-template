@@ -1,0 +1,13 @@
+[
+    {
+        "title": "HTML Essentials",
+        "id": "html-essentials",
+        "lessons": [
+            {
+                "title": "HyperText Markup Language",
+                "summary": "Ano ang HTML, at ano ang lugar nito sa Web development?",
+                "permalink": "/courses/html-essentials/01-hypertext-markup-language/"
+            }
+        ]
+    }
+]

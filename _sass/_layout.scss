@@ -91,6 +91,7 @@ article {
     max-width: var(--content-width);
   }
 
+  svg,
   img,
   video {
     display: block;
@@ -235,4 +236,43 @@ td:not(:last-child), td:not(:last-child) {
 	font-weight: 800;
 	font-family: var(--ui-font);
 	font-size: 1.1rem;
+}
+
+mark {
+	background-color: var(--banana-100);
+	border-radius: 0.25rem;
+}
+
+pre:not([class]) {
+	background-color: var(--black-700);
+	border-radius: 0.25rem;
+	padding: 1rem;
+	color: var(--bg-color);
+	overflow: auto;
+	margin: auto;
+}
+
+.highlighter-rouge .highlight,
+pre:not([class]) {
+	width: var(--content-width)
+}
+
+.rouge-code pre {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.rouge-table {
+  border: none;
+  max-width: none;
+  overflow: visible;
+}
+.rouge-table td {
+  border: none;
+}
+
+.img--borderize {
+	border-radius: 0.25rem;
+	box-shadow: 0 2px 3px #0003;
+	border: 1px solid var(--silver-500);
 }

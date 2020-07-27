@@ -1,0 +1,27 @@
+---
+layout: courses
+title: "Courses by Antares Programming"
+summary: "Libreng courses para sa Web development. Lahat sa Tagalog/Filipino."
+permalink: /courses/
+type: index
+order: -1
+---
+
+<h2>Courses available</h2>
+
+<ul class="course-list">
+{% for course in site.courses %}
+{% if course.type != "index" %}
+  <li {% if course.featured %}class="course--featured"{% endif %}>
+    <a href="{{ course.permalink }}">
+      {% if course.is_done != true %}
+      <span class="badge" aria-label="Abangan ang course na ito">Soon</span>
+      {% endif %}
+      {% if course.image %}<img src="{{ course.image }}" width="876" height="506" />{% endif %}
+      <strong>{{ course.title }}</strong>
+      <p>{{ course.summary }}</p>
+    </a>
+  </li>
+{% endif %}
+{% endfor %}
+</ul>

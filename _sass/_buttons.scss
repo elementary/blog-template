@@ -56,3 +56,87 @@
 	border-color: var(--banana-900);
 	box-shadow: inset 0 1px 2px #fff, 0 0 1px 5px var(--banana-300), inset 0 -1px 4px var(--banana-500);
 }
+
+:target {
+  background-image: linear-gradient(
+	    var(--banana-300),
+	    var(--banana-300));
+	background-size: 100% 0;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+  animation: 
+     tar 500ms ease-in-out,
+     indicator 500ms ease-in-out;
+  box-shadow: 0 0 0 3px var(--banana-300);
+}
+
+@keyframes tar {
+  50% {
+    background-size: 100% 100%;
+  }
+  
+  100% {
+    background-size: 100% 0;
+    background-position: top center;
+  }
+}
+
+@keyframes indicator {
+  0%, 75% {
+    box-shadow: 0 0 0 0 var(--banana-300);
+  }
+  100% {
+    box-shadow: 0 0 0 3px var(--banana-300);
+  }
+}
+
+abbr[title] {
+  position: relative;
+  cursor: pointer;
+}
+
+
+abbr[title]::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background-color: var(--banana-100);
+	border: 1px solid var(--banana-500);
+	border-radius: 0.25rem;
+	text-indent: 0;
+	font-size: 0.8em;
+	line-height: 1.1;
+	padding: 0.25rem;
+	opacity: 0;
+	transition: opacity 300ms, top 300ms;
+	transform: translateY(-50%);
+}
+
+abbr:focus::after {
+  opacity: 1;
+  top: -1.75rem;
+}
+
+abbr[title]::after {
+  content: attr(title)
+}
+
+abbr[title]:hover::before {
+  opacity: 1;
+  top: -0.25rem
+}
+
+abbr[title] {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 0.15rem;
+	text-decoration-line: underline;
+	text-decoration-color: var(--blueberry-500);
+	transition: text-decoration-color 300ms;
+}
+
+abbr[title]:hover {
+    text-decoration-color: var(--blueberry-700)
+}

@@ -4,10 +4,11 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     {% include course-banner.html %}
     {% include nav.html %}
+    {% if page.video != nil %}
     <section class="lesson__video">
       <div class="lesson__video-wrapper">
         <img class="aspect-ratio-hack" src='data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACwAAAAAEAAJAAACCoSPqcvtD6OclBUAOw=='>
-        <iframe class="lesson__video-embed" width="560" height="315" src="https://www.youtube.com/embed/5nCPbPPrQxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="lesson__video-embed" width="560" height="315" src="{{ page.video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="lesson__video-details">
         <h2 class="lesson__title">{{ page.title }}</h2>
@@ -32,16 +33,21 @@
         {% endif %}
       </div>
     </section>
+    {% endif %}
+    <div class="lesson__actions">
+        <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
+        <a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>
+    </div>
     <section class="lesson__article">
-      <hr>
+      {% if page.video != nil %}<hr>{% endif %}
       <article>
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
       </article>
-      <div class="lesson__actions">
-        <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
-        <a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>
-      </div>
     </section>
+    <div class="lesson__actions">
+      <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
+      <a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>
+    </div>
     {% include footer.html %}
     {% include scripts.html %}
   </body>

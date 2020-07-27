@@ -12,5 +12,9 @@
       }
     });
   });
+  
+  // enable focusability for abbr elements with title attribute
+  document.querySelectorAll("abbr[title]")
+          .forEach(abbr => abbr.setAttribute('tabindex', -1))
 </script>
 

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Creating a new post..."
+date_now=`date +"%Y-%m-%d"`
+
+read -p 'Post title: ' title
+read -p 'Summary: ' summary
+read -p 'Image URL: ' image
+read -p 'Author username (see "_config.yaml" under "authors"): ' author
+read -p 'Tags (comma-separated): ' tags
+
+# Generate filename
+permalink=`echo $title | sed 's/\ /-/g' | tr '[:upper:]' '[:lower:]'`
+slug="$date_now-$permalink.md"
+
+echo "Creating file './_posts/$slug'..."
+touch ./_posts/$slug
+
+# Separate tags
+IFS=',' read -r -a array <<< "$tags"
+
+tagstr=""
+
+for element in "${array[@]}"
+do
+  tagstr="$tagstr$element
+  "
+done 
+
+echo "---
+title: \"$title\"
+description: \"$summary\"
+image: $image
+author: $author
+slug: /blog/$permalink/
+tags:
+    $tagstr
+---" >> ./_posts/$slug
+
+echo "Done."

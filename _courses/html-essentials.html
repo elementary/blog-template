@@ -1,0 +1,61 @@
+---
+layout: courses
+title: "HTML Essentials"
+subtitle: Course
+summary: Isang introduction sa basics ng HTML para makagawa ka ng accessible na Web sites.
+permalink: /courses/html-essentials/
+image: /images/courses/html-essentials.jpg
+order: 0
+is_done: true
+featured: true
+---
+<article>
+<h2>Prerequisites</h2>
+<p>Para sa lahat ang course na ito. Pero magiging mas madali ito para sa mga taong...</p>
+<ul class="checklist">
+  <li>marunong gumawa ng bagong files at folders</li>
+  <li>marunong gumamit ng Web browser, gaya ng Firefox at Google Chrome</li>
+  <li>marunong mag-copy, rename, at delete ng computer files</li>
+</ul>
+
+<h2>Before you start...</h2>
+<p>Para maging lalong effective ang course na ito, gawin ang mga sumusunod:</p>
+<ul class="checklist">
+  <li>
+  Siguruhing may naka-install kang Web browser. Kung wala pa, puwede mong i-install ang kahit na alin sa mga ito:
+    <ul>
+      <li><a href="https://chrome.google.com/" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+      <li><a href="https://firefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+    </ul>
+    Kung balak mong gamitin ang default browser ng computer mo (Microsoft Edge sa Windows 10, Internet Explorer sa Windows 7, Safari sa macOS), siguraduhing updated ito.
+
+<mark class="note"><strong>Note</strong> Hindi na nire-recommend na gamitin ang Internet Explorer sa kahit na anong version nito. Kung ito ang balak mong gamitin, pag-isipang mabuti kung puwede kang lumipat sa ibang browser.</mark>
+  </li>
+  <li>
+    Tingnan kung may magagamit kang text editor. Sa Windows, puwede kang gumamit ng Notepad. Pero para sa mas magandang experience, puwede mong i-install ang kahit alin sa mga ito:
+      <ul>
+        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+        <li><a href="https://sublimetext.com/">Sublime Text</a></li>
+      </ul>
+  </li>
+</ul>
+
+<h2>Lessons</h2>
+<ol class="lessons-list">
+{% for course in site.data.courses %}
+
+{% if course.title == page.title %}
+{% for lesson in course.lessons %}
+<li>
+  <a href="{{ lesson.permalink }}">
+    <strong>{{ lesson.title }}</strong>
+    <p>{{ lesson.summary }}</p>
+  </a>
+</li>
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+
+</ol>
+</article>

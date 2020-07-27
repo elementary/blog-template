@@ -36,4 +36,9 @@ kramdown:
 future: false # Allows us to stage posts
 exclude: [README.md, Gemfile, Gemfile.lock, vendor]
 
-
+collections:
+  courses:
+    output: true
+    sort_by:
+      - html-essentials.html
+      - css-essentials.html
