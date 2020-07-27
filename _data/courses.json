@@ -7,6 +7,11 @@
                 "title": "HyperText Markup Language",
                 "summary": "Ano ang HTML, at ano ang lugar nito sa Web development?",
                 "permalink": "/courses/html-essentials/01-hypertext-markup-language/"
+            },
+            {
+                "title": "HTML Syntax",
+                "summary": "Ang grammar na sinusunod ng HTML",
+                "permalink": "/courses/html-essentials/02-html-syntax/"
             }
         ]
     }
