@@ -276,3 +276,7 @@ pre:not([class]) {
 	box-shadow: 0 2px 3px #0003;
 	border: 1px solid var(--silver-500);
 }
+
+.rouge-table pre {
+  overflow: visible;
+}
