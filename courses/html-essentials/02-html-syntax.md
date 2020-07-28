@@ -8,7 +8,7 @@ permalink: /courses/html-essentials/02-html-syntax/
 video: 
 has_downloads: false
 code: 
-next_lesson: 03-html-syntax/
+next_lesson: # 03-html-syntax/
 ---
 ## HTML Syntax
 Ang grammar na sinusunod ng HTML

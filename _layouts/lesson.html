@@ -36,7 +36,7 @@
     {% endif %}
     <div class="lesson__actions">
         <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
-        <a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>
+        {% if page.next_lesson != nil %}<a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>{% endif %}
     </div>
     <section class="lesson__article">
       {% if page.video != nil %}<hr>{% endif %}
@@ -46,7 +46,7 @@
     </section>
     <div class="lesson__actions">
       <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
-      <a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>
+      {% if page.next_lesson != nil %}<a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>{% endif %}
     </div>
     {% include footer.html %}
     {% include scripts.html %}
