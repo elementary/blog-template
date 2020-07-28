@@ -254,7 +254,7 @@ pre:not([class]) {
 
 .highlighter-rouge .highlight,
 pre:not([class]) {
-	width: var(--content-width)
+	max-width: var(--content-width)
 }
 
 .rouge-code pre {
