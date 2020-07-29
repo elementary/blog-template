@@ -3,6 +3,7 @@ layout: about
 title: "About Antares Programming"
 summary: "Ang Antares Programming ay isang project na tungkol sa paggawa ng high quality Web development resources para sa mga Pilipino."
 permalink: /about/
+author: teacherbuknoy
 ---
 
 Layunin ng Antares Programming na makapag-provide ng de-kalidad na educational resources tungkol sa Web development para sa mga Pilipino.
