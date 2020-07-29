@@ -55,58 +55,65 @@
     & > * { pointer-events: none; }
   
     .glossary-entry--popover {
-	  position: absolute;
-	  background-color: var(--silver-100);
-	  opacity: 1;
-	  border: 1px solid var(--silver-500);
-	  border-radius: 0.25rem;
-	  bottom: 2rem;
-	  width: 150%;
-	  min-width: 45ch;
-	  left: 50%;
-	  transform: translate(-50%);
-	  box-shadow: 0 3px 15px #0002;
-	  pointer-events: none;
-	  transition: bottom 200ms, opacity 200ms;
-	  
-	  &::before, &::after {
-	    content: '';
-	    position: absolute;
-	    border: 11px solid transparent;
-	    border-top-color: var(--silver-700);
-	    height: 0;
-	    width: 0;
-	    bottom: -22px;
-	    left: 50%;
-	    transform: translate(-50%);
+	      position: fixed;
+	      background-color: var(--banana-100);
+	      opacity: 1;
+	      border: 1px solid var(--banana-500);
+	      border-radius: 0.25rem;
+	      bottom: 1rem;
+	      right: 1rem;
+	      box-shadow: 0 3px 15px #0002;
+	      transition: right 200ms, opacity 200ms, bottom 200ms;
+	      max-width: var(--content-width);
+	      width: 50vw;
+	      z-index: 999;
+      
+      b {
+	      padding: 0.25rem 0.5rem;
+	      display: block;
+	      background-color: var(--banana-300);
+	      border-bottom: 1px solid var(--banana-500);
+	      color: var(--banana-900);
+      }
+      
+      p {
+	      font-size: 1rem;
+	      font-weight: normal;
+	      color: var(--fg-color);
+	      margin: 0;
+	      padding: 0.5rem;
+	      opacity: 1;
+      }
+      
+      &::after {
+	      background-color: transparent;
+	      border: 10px solid transparent;
+	      border-top-color: var(--silver-100);
+	      bottom: -20px;
+      }
     }
-    
-    b {
-	    padding: 0.25rem 0.5rem;
-	    display: block;
-	    background-color: var(--silver-300);
-	    border-bottom: 1px solid var(--silver-500);
-    }
-    
-    p {
-	    font-size: 1rem;
-	    font-weight: normal;
-	    color: var(--fg-color);
-	    margin: 0;
-	    padding: 0.25rem;
-	    opacity: 1;
-    }
-    
-    &::after {
-	    background-color: transparent;
-	    border: 10px solid transparent;
-	    border-top-color: var(--silver-100);
-	    bottom: -20px;
-    }
-  }
   
   &:not(:focus) .glossary-entry--popover {
-	  bottom: 0;
+	  right: -100%;
 	  opacity: 0;
+    transition: right 200ms, opacity 200ms, bottom 200ms;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .glossary-entry-link .glossary-entry--popover {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .glossary-entry-link .glossary-entry--popover {
+    width: calc(100vw - 2rem);
+  }
+  
+  .glossary-entry-link:not(:focus) .glossary-entry--popover {
+    right: 1rem;
+    bottom: -100%;
+    width: calc(100vw - 2rem);
   }
 }
