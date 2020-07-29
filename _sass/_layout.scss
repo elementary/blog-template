@@ -13,6 +13,7 @@ body > footer {
   background-color: var(--secondary-bg-color);
   display: grid;
   overflow-x: auto;
+  clear: both;
 
   .copyright {
 	  padding: 0.25rem 0.5rem;
