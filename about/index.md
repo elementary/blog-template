@@ -45,4 +45,14 @@ Kasama rin sa accessibility <em>requirement</em> ng Antares Programming para sa 
 
 ## Pagse-share ng content mula sa Antares Project
 
-Ang lahat ng content sa site na ito ay licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Ang lahat ng content sa site na ito ay licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/). Ibig sabihin, puwede mong i-redistribute ang lahat ng content sa site na ito saanman sa mundo, pero hindi mo ito puwedeng pagkakitaan, at dapat na wala ka ring babaguhin sa content.
+
+<b>Kailangan mong maglagay ng attribution kapag ire-redistribute mo ang content mula sa site na ito.</b> Puwede mong kopyahin ang content mula sa site na ito, at gumawa ng sarili mong content base sa content ng Antares Programming, pero kailangan magbigay ng credits at <strong>kailangan mo ring banggitin ang author at ang pinagmulan ng content, ang Antares programming.</strong> Kailangan mong banggitin ang pamagat, author ng content (article man ito, video, audio, o image), link papunta sa original na content, at ang license na ginagamit namin, ang [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Kapag ire-redistribute mo ang content ng Antares Programming,
+- <b>Maglagay ng copyright notice.</b> Banggitin na ang content na galing sa amin ay licensed under CC BY-SA 4.0.
+- <b>Banggitin ang pangalan ng author.</b> Mas maganda rin kung sasamahan mo ito ng link papunta sa profile page ng author ng content. Ang profile page ng lahat ng authors ng Antares Programming ay makikita sa [about:Authors](/about/authors/) section ng site na ito.
+- <b>Ilagay ang pamagat ng content.</b> Lagyan din ito ng link papunta sa original na content.
+- <b>Banggitin kung ang paraan mo ng redistribution ay isang derivative work o adaptation.</b> Halimbawa, kung gusto mong i-translate sa English ang content ng Antares Programming at ilagay iyon sa sarili mong Web site, maglagay ng isang notice na gaya ng <q>This is an English translation of \[title ng article\] by \[pangalan ng author\].</q>
+
+Para sa higit pang detalye, basahin ang [license sa Creative Commons Web site](http://creativecommons.org/licenses/by-sa/4.0/).
