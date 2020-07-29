@@ -448,3 +448,8 @@ header.error::before {
 	border-radius: 3px;
 	border: 1px solid var(--silver-300);
 }
+
+::selection {
+	background-color: var(--blueberry-100);
+	color: var(--blueberry-900) !important;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tl" dir="ltr" class="about">
+  {% include head.html %}
+  <body class="{% if page.url == '/' %}home {% endif %}">
+    {% include nav.html type=about %}
+    <section>
+      
+      <article>
+        <h1>{{ page.title }}</h1>
+        <p class="lead">{{ page.summary }}</p>
+        <aside class="links">
+          <h2>Iba pang links</h2>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/about/history/">History</a></li>
+            <li><a href="/about/authors/">Authors</a></li>
+            <li><a href="/about/contact/">Contact Us</a></li>
+          </ul>
+        </aside>
+        {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      </article>
+    </section>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

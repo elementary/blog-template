@@ -280,3 +280,27 @@ pre:not([class]) {
 .rouge-table pre {
   overflow: visible;
 }
+
+.about h1 {
+	font-size: calc(2rem + 5vw);
+	margin-top: 2rem;
+}
+
+.lead {
+	opacity: 0.7;
+	text-indent: 0;
+	font-size: 2rem;
+	line-height: 1.25;
+}
+
+.links {
+	float: right;
+	padding: 1rem;
+	border: 1px solid #0003;
+	border-radius: 0.25rem;
+	background-image: linear-gradient(90deg);
+}
+
+.links h2 {
+	margin: 0;
+}
