@@ -28,3 +28,85 @@
   }
 }
 
+.glossary-entry-link {
+	text-decoration: none;
+	background-color: var(--silver-100);
+	border: 1px solid var(--silver-300);
+	display: inline-flex;
+	text-indent: 0;
+	gap: 0.25rem;
+	padding: 0 0.15rem;
+	border-radius: 0.25rem;
+	color: var(--fg-color);
+	line-height: 1.5;
+	vertical-align: middle;
+	position: relative;
+	opacity: 1;
+	
+	svg {
+	  margin: 0;
+	  display: inline;
+	}
+	
+	abbr {
+	  text-decoration: none;
+    }
+  
+    & > * { pointer-events: none; }
+  
+    .glossary-entry--popover {
+	  position: absolute;
+	  background-color: var(--silver-100);
+	  opacity: 1;
+	  border: 1px solid var(--silver-500);
+	  border-radius: 0.25rem;
+	  bottom: 2rem;
+	  width: 150%;
+	  min-width: 45ch;
+	  left: 50%;
+	  transform: translate(-50%);
+	  box-shadow: 0 3px 15px #0002;
+	  pointer-events: none;
+	  transition: bottom 200ms, opacity 200ms;
+	  
+	  &::before, &::after {
+	    content: '';
+	    position: absolute;
+	    border: 11px solid transparent;
+	    border-top-color: var(--silver-700);
+	    height: 0;
+	    width: 0;
+	    bottom: -22px;
+	    left: 50%;
+	    transform: translate(-50%);
+    }
+    
+    b {
+	    padding: 0.25rem 0.5rem;
+	    display: block;
+	    background-color: var(--silver-300);
+	    border-bottom: 1px solid var(--silver-500);
+    }
+    
+    p {
+	    font-size: 1rem;
+	    font-weight: normal;
+	    color: var(--fg-color);
+	    margin: 0;
+	    padding: 0.25rem;
+	    opacity: 1;
+    }
+    
+    &::after {
+	    background-color: transparent;
+	    border: 10px solid transparent;
+	    border-top-color: var(--silver-100);
+	    bottom: -20px;
+    }
+  }
+  
+  &:not(:focus) .glossary-entry--popover {
+	  bottom: 0;
+	  opacity: 0;
+  }
+}
