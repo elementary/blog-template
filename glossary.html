@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Glossary"
+description: "Isang index ng pinaka-common na technical terms sa Web development at ang simpleng paliwanag sa kanila."
+permalink: /glossary/
+author: teacherbuknoy
+---
+
+<h1 class="page-title">{{ page.title }}</h1>
+<p class="lead">{{ page.description }}</p>
+
+<dl class="glossary">
+{% for entry in site.data.glossary %}
+  <dt id="{{ entry.term }}">{{ entry.term }}</dt>
+  <dd>{{ entry.meaning }}</dd>
+  {% if entry.link %}
+  <dd class="pull-right"><a class="btn" href="{{ entry.link }}" target="_blank" rel="noopener noreferrer">Read more...</a></dd>
+  {% endif %}
+{% endfor %}
+</dl>

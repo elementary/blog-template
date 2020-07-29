@@ -1,0 +1,30 @@
+.glossary {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.5rem;
+	max-width: var(--content-width);
+	margin: auto;
+	text-align: justify;
+	
+	dt, dd {
+	  padding: 1rem;
+	  margin: 0;
+  }
+  
+  dt {
+	  grid-column: 1/2;
+	  grid-row: span 2;
+	  font-size: 2rem;
+	  font-family: var(--ui-font);
+	  font-weight: bold;
+	  text-align: center;
+	  background-color: var(--banana-100);
+	  color: var(--banana-900);
+    
+  }
+  
+  .pull-right {
+    margin-left: auto;
+  }
+}
+
