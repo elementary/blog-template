@@ -16,12 +16,8 @@ body > header {
       padding: 0;
       display: flex;
       
-      &:first-child {
-        flex: 2;
-      }
-      
       &:last-child {
-        flex: 1;
+        margin-left: auto;
         
         li {
           flex: 1;
