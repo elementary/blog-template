@@ -16,12 +16,12 @@
       {% else %}
         srcset="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=96&d=blank 2x"
         src="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=48&d=blank"
-        alt="elementary Avatar"
+        alt="Antares Programming Avatar"
       {% endif %}
     />
   </div>
   <div class="author">
-    {% if include.link == true %}<a href="{{ site.baseurl }}/authors/#{{ include.author }}">{% endif %}
+    {% if include.link == true %}<a href="{{ site.baseurl }}/authors/{{ include.author }}">{% endif %}
     <span class="name">{{ author.name }}</span>
     {% if include.link == true %}</a>{% endif %}
     {% if author.description and page.layout == 'post' %}

@@ -1,0 +1,35 @@
+---
+layout: about
+title: "Authors ng Antares Programming"
+summary: "Sa ngayon, isa pa lang ang author ng Antares Programming. Pero umaasa ang project na ito na may mga taong magbo-volunteer bilang guest writers o regular authors."
+permalink: /about/authors/
+---
+
+<ul class="authors-list">
+{% for authorObj in site.authors %}
+  {% unless authorObj[0] == 'anonymous' %}
+    {% assign author = authorObj[1] %}
+    <li>
+        <a href="/authors/{{ authorObj[0] }}">
+            <img class="author__image"
+              {% if author.gravatar %}
+                srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=400&d=retro 2x"
+                src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=200&d=retro"
+                alt="Avatar for {{ author.name }}"
+                height="200"
+                width="200"
+              {% else %}
+                srcset="https://www.gravatar.com/avatar/123?s=400&d=retro 2x"
+                src="https://www.gravatar.com/avatar/123?s=200&d=retro"
+                alt="Author {{ author.name }} has no image."
+                height="200"
+                width="200"
+              {% endif %}
+            />
+          <b class="author__name">{{ author.name }}</b>
+          <p class="author__description">{{ author.description }}</p>
+        </a>
+    </li>
+  {% endunless %}
+{% endfor %}
+</ul>
