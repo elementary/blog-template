@@ -1,27 +1,52 @@
 [
     {
     "term": "HTML",
-      "meaning": "HyperText Markup Language. Ang pangunahing programming language ng Web. Ginagamit ito para sabihin sa browser ang purpose at meaning ng content. Inimbento ito ni Tim Berners-Lee kasabay ng pag-imbento niya sa World Wide Web.",
+      "meaning": "(n.) HyperText Markup Language. Ang pangunahing programming language ng Web. Ginagamit ito para sabihin sa browser ang purpose at meaning ng content. Inimbento ito ni Tim Berners-Lee kasabay ng pag-imbento niya sa World Wide Web.",
       "link": "https://wikipedia.org/wiki/HTML"
     },
     {
       "term": "CSS",
-      "meaning": "Cascading Style Sheets. Ang programming language ng Web para sa visual styling at layout. Inimbento ito nina Bert Bos at Hakon Wium Lie.",
+      "meaning": "(n.) Cascading Style Sheets. Ang programming language ng Web para sa visual styling at layout. Inimbento ito nina Bert Bos at Hakon Wium Lie.",
       "link": "https://wikipedia.org/wiki/CSS"
     },
     {
       "term": "JavaScript",
-      "meaning": "Ang programming language ng Web na nagdadagdag ng interactivity at functionality na hindi pino-provide ng browser by default. Inimbento ito ni Brendan Eich.",
+      "meaning": "(n.) Ang programming language ng Web na nagdadagdag ng interactivity at functionality na hindi pino-provide ng browser by default. Inimbento ito ni Brendan Eich.",
       "link": "https://wikipedia.org/wiki/JavaScript"
     },
     {
       "term": "markup",
-      "meaning": "Puwede ring tawaging <q>annotation</q> at <q>label</q>. Kadalasan nang ginagamit ito sa HTML na nagle-label sa content para sabihin ang purpose at meaning nito sa isang browser.",
+      "meaning": "(n.) Puwede ring tawaging <q>annotation</q> at <q>label</q>. Kadalasan nang ginagamit ito sa HTML na nagle-label sa content para sabihin ang purpose at meaning nito sa isang browser.",
       "link": null
     },
     {
       "term": "metadata",
-      "meaning": "Impormasyon tungkol sa isang piraso ng data. Halimbawa, kung ang data mo ay isang image, ang metadata nito ay ang file name, file size, width at height, at color profile. Para naman sa isang Web page, kasama sa metadata ang title, description, author, link papunta sa mga nakakonekta ritong CSS at JavaScript files, at iba pang kapareho nito.",
+      "meaning": "(n.) Impormasyon tungkol sa isang piraso ng data. Halimbawa, kung ang data mo ay isang image, ang metadata nito ay ang file name, file size, width at height, at color profile. Para naman sa isang Web page, kasama sa metadata ang title, description, author, link papunta sa mga nakakonekta ritong CSS at JavaScript files, at iba pang kapareho nito.",
+      "link": null
+    },
+    {
+      "term": "programming language",
+      "meaning": "(n.) Isang uri ng language na ginawa ng mga computer scientist para maging mas madali sa ating mga tao na sabihin sa computers ang gusto nating ipagawa sa kanila. Ilang halimbawa nito ang JavaScript, C#, Kotlin, at ang HTML at CSS.",
+      "link": null
+    },
+    {
+      "term": "Accessibility",
+      "meaning": "(n.) Mga techniques na ginagawa para masigurado na magagamit pa rin nang maayos kahit na may mga limitasyon, gaya ng sirang mouse, walang keyboard, o user na may kapansanan (bulag/malabo ang paningin, may hearing defeciency, may panginginig sa kamay, etc.)",
+      "link": null
+    },
+    {
+      "term": "Algorithm",
+      "meaning": "(n.) Isang step-by-step na listahan ng mga action. Isa itong paraan ng paglalarawan sa solusyon para puwede itong paulit-ulit na gawin ng isang tao o machine.",
+      "link": null
+    },
+    {
+      "term": "Asynchronous",
+      "meaning": "(adj.) kapag nag-execute ang isang code nang hindi hinihintay munang matapos ang nauna rito.",
+      "link": null
+    },
+    {
+      "term": "Ajax",
+      "meaning": "(n.) Isang technique na ginagamit para i-update ang mga parts ng isang user interface o kumuha ng data mula sa server nang hindi kinakailangang i-refresh ang buong page. <strong>Dati</strong> itong acronym para sa <i>Asynchronous JavaScript and XML</i>.",
       "link": null
     }
 ]

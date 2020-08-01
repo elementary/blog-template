@@ -1,6 +1,6 @@
 .glossary {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: min-content 1fr;
 	gap: 0.5rem;
 	max-width: var(--content-width);
 	margin: auto;
