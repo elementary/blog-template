@@ -12,7 +12,7 @@ author: teacherbuknoy
 <dl class="glossary">
 {% assign definitions = site.data.glossary | sort:'term' %}
 {% for entry in definitions %}
-  <dt id="{{ entry.term }}">{{ entry.term }}</dt>
+  <dt id="{{ entry.term | replace: ' ', '-' }}">{{ entry.term }}</dt>
   <dd>{{ entry.meaning }}</dd>
   {% if entry.link %}
   <dd class="pull-right"><a class="btn" href="{{ entry.link }}" target="_blank" rel="noopener noreferrer">Read more...</a></dd>
