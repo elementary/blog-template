@@ -10,7 +10,8 @@ author: teacherbuknoy
 <p class="lead">{{ page.description }}</p>
 
 <dl class="glossary">
-{% for entry in site.data.glossary %}
+{% assign definitions = site.data.glossary | sort:'term' %}
+{% for entry in definitions %}
   <dt id="{{ entry.term }}">{{ entry.term }}</dt>
   <dd>{{ entry.meaning }}</dd>
   {% if entry.link %}
