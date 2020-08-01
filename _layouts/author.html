@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tl" dir="ltr" class="author">
+  {% include head.html %}
+  <body class="{% if page.url == '/' %}home {% endif %}">
+    {% include nav.html %}
+    <section class="merge-with-header">
+      {% assign author = page.author %}
+      {% assign posts = site.posts | where: "author", author.username %}
+      {% assign postCount = posts.size %}
+      <div class="wrapper">
+        <img class="author__image"
+          {% if author.gravatar %}
+            srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=400&d=retro 2x"
+            src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=200&d=retro"
+            alt="Avatar for {{ author.name }}"
+            height="200"
+            width="200"
+          {% else %}
+            srcset="https://www.gravatar.com/avatar/123?s=400&d=retro 2x"
+            src="https://www.gravatar.com/avatar/123?s=200&d=retro"
+            alt="Author {{ author.name }} has no image."
+            height="200"
+            width="200"
+          {% endif %}
+        />
+        <h1>
+            <span class="small-text">Author</span>
+            {{ author.name }}
+        </h1>
+        <p class="lead">{{ author.description }}</p>
+        {% if postCount > 0 %}
+        <p class="posts-count"><b>{{ postCount }}</b> posts</p>
+        {% endif %}
+        {% if author.social %}
+        <h2>Sundan siya online...</h2>
+        <ul class="social-links">
+          {% for link in author.social %}
+            <li>
+              <a href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </section>
+    <section>
+      {% for post in posts %}
+          <a class="featured{% if post.image %} with-image{% endif %}{% if include.size %} {{ include.size }}{% endif %}" href="{{ post.url | prepend: site.baseurl }}">
+      {% if post.image %}
+            <div class="featured-image" alt="Featured image" style="background-image: url({{ post.image }});"></div>
+          {% endif %}
+
+          <header>
+            <h2>{% include title.html title=post.title %}</h2>
+            {% if post.description %}
+              <h3>
+                {% include title.html title=post.description %}
+                {% if include.post.redirect_to %} →{% endif %}
+              </h3>
+            {% endif %}
+
+            {% include byline.html author=post.author date=post.date content=post.content %}
+          </header>
+
+          {% unless post.image %}
+          <section class="excerpt">
+            <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <span>Read more…</span>
+          </section>
+          {% endunless %}
+        </a>
+      {% endfor %}
+    </section>
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
