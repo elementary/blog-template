@@ -12,30 +12,59 @@
       }
     });
   });
-  
-  // enable focusability for abbr elements with title attribute
-  document.querySelectorAll("*:not([data-glossary-term]) > abbr[title]")
-          .forEach(abbr => abbr.setAttribute('tabindex', -1))
-          
+
   // add visual indicator for glossary entries
   const svg = `{% include svg/accessories-dictionary.svg %}`
   const glossaryEntries = document.querySelectorAll('a[data-glossary-term]')
   glossaryEntries.forEach(entry => {
-    const popover = `<div aria-hidden="true" class="glossary-entry--popover">
-    <b>${svg}${entry.dataset.glossaryTerm}</b>
-    <p>HyperText Markup Language. Ang pangunahing programming language ng Web. Ginagamit ito para sabihin sa browser ang purpose at meaning ng content. Inimbento ito ni Tim Berners-Lee kasabay ng pag-imbento niya sa World Wide Web.</p>
-  </div>`
-    const initialHTML = entry.innerHTML
-    entry.innerHTML = `${svg}
-${initialHTML} ${popover}`
+    const linkContent = createLinkContent(entry)
+    const popover = createPopover(entry)
+
+    entry.innerHTML = linkContent
+    entry.appendChild(popover)
   })
-  
+
   // remove link actions on glossary-entry-links
+  // Note that this only works when JavaScript is actually enabled.
+  //    When the user disables JS, the link directs them to a glossary entry page
   document.body.addEventListener('click', e => {
       const link = e.target
       if(link.matches('.glossary-entry-link[data-glossary-term]')) {
           e.preventDefault();
       }
   })
+
+  function createLinkContent(entry) {
+    const word = entry.innerHTML
+
+    return `${svg}${word}`
+  }
+
+  function createPopover (entry) {
+    const term = entry.dataset.glossaryTerm;
+    const popoverElement = document.createElement('div');
+    popoverElement.classList.add('glossary-entry--popover');
+    popoverElement.setAttribute('aria-hidden', 'true');
+
+    const popoverHeading = document.createElement('b')
+    popoverHeading.innerHTML = svg+term
+    popoverElement.appendChild(popoverHeading)
+
+    const popoverContent = document.createElement('p')
+    popoverContent.innerHTML = getTermDefinition(term)
+    popoverElement.appendChild(popoverContent)
+
+    return popoverElement
+  }
+
+  function getTermDefinition(term) {
+    const definitions = {{ site.data.glossary | jsonify }};
+    const word = definitions.find(word => word.term === term)
+
+    if (word)
+      return word.meaning
+    else
+      return `<span style="opacity: 0.5">Wala pa sa collections ang meaning ng salitang ito.</span>`
+  }
 </script>
 
