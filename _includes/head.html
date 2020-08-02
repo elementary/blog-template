@@ -24,8 +24,7 @@
 
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
   <meta name="theme-color" content="{% if page.theme-color %}{{ page.theme-color }}{% else %}{{ site.theme-color }}{% endif %}" />
-
- <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@300;400;700&family=Zilla+Slab:ital@0;1&display=swap" rel="stylesheet"> 
+ 
 
   {% if page.image %}
     {% assign prefix = page.image | slice: 0, 4 %}
@@ -48,7 +47,7 @@
   <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
-    <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/gotham.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/fonts.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
   {% if jekyll.environment == "production" and site.url == "https://blog.elementary.io" %}
     <script async defer data-domain="blog.elementary.io" src="https://stats.elementary.io/js/index.js"></script>
