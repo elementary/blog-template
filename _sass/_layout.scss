@@ -245,12 +245,14 @@ mark {
 }
 
 pre:not([class]) {
-	background-color: var(--black-700);
 	border-radius: 0.25rem;
 	padding: 1rem;
-	color: var(--bg-color);
 	overflow: auto;
 	margin: auto;
+	
+	color: var(--silver-300);
+	background-color: var(--black-500);
+	border: 1px solid var(--black-900);
 }
 
 .highlighter-rouge .highlight,
@@ -262,6 +264,7 @@ pre:not([class]) {
   padding: 0;
   margin: 0;
   background-color: transparent;
+  border: 0;
 }
 .rouge-table {
   border: none;
