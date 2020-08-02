@@ -19,7 +19,7 @@ td.rouge-gutter.gl {
 	display: grid;
 	width: 100%;
 	max-width: var(--content-width);
-	border: 1px solid var(--black-900);
+	border-radius: 0;
 	
 	pre.highlight {
 	  width: 100%;
@@ -28,6 +28,13 @@ td.rouge-gutter.gl {
 	
 	.rouge-table {
 	  margin: 0;
+	  border: 1px solid var(--black-900);
+	  border-radius: 0.25rem;
 	  width: 100%;
+	  overflow: hidden;
   }
+}
+
+.highlight {
+  background: transparent;
 }
