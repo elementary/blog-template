@@ -38,3 +38,10 @@ td.rouge-gutter.gl {
 .highlight {
   background: transparent;
 }
+
+@media (prefers-color-scheme: dark) {
+  .color {
+    background-color: var(--black-700);
+    border-color: var(--black-900);
+  }
+}
