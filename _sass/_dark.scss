@@ -108,6 +108,24 @@ td.rouge-gutter.gl {
 	        color: var(--header-bg-color);
         }
     }
+    
+    .glossary-entry-link {
+	    border-color: #fff3;
+	    
+    }
+}
+
+.glossary-entry-link {
+  background-color: var(--secondary-bg-color);
+  border-color: #0003;
+
+  .glossary-entry--popover {
+      box-shadow: 0 10px 15px #0005;
+    
+     p {
+        color: var(--header-fg-color);
+      }
+  }
 }
 
 .lessons-list a {
