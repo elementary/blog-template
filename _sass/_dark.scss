@@ -79,10 +79,60 @@ td.rouge-gutter.gl {
 	  color: var(--strawberry-100) !important;
 	  opacity: 1 !important;
   }
+  
+  .lessons-list li a,
+  .course-list li a {
+	    background-color: var(--bg-color);
+	    border-color: #0005;
+	    color: var(--fg-color-emphasis);
+	    
+	    &:hover {
+	      box-shadow: 0 3px 15px #000a;
+      }
+      
+      &:focus {
+	      color: var(--header-fg-color);
+      }
+      
+      &:hover:focus {
+	      box-shadow: 0 3px 15px var(--banana-900);
+      }
+    }
+    
+    .lessons-list a {
+        border: 1px solid #fff3;
+        
+        &:hover:focus,
+        &:hover {
+	        background-color: var(--header-fg-color);
+	        color: var(--header-bg-color);
+        }
+    }
+}
+
+.lessons-list a {
+  border: 1px solid #0003;
 }
 
 @media screen and (max-width: 720px) {
   .author p.posts-count {
     color: var(--header-fg-color);
+  }
+}
+
+.lesson__actions .btn:not(.btn--primary) {
+	background-color: var(--bg-color);
+	color: var(--accent-color);
+	border-color: currentColor;
+	
+	&:hover {
+	  background-color: var(--blueberry-100);
+	  color: var(--blueberry-900);
+	  box-shadow: none;
+	  border-color: currentColor;
+  }
+  
+  &:focus {
+	  box-shadow: 0 0 1px 5px var(--blueberry-300);
   }
 }
