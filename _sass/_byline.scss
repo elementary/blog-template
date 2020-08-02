@@ -18,6 +18,11 @@
     vertical-align: middle;
     width: 48px;
 
+    img {
+        width: 100%;
+        height: auto;
+    }
+
     &::before {
       content: "";
       border-radius: 50%;

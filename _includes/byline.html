@@ -11,13 +11,15 @@
     <img
       {% if author.gravatar %}
         srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=96&d=blank 2x"
-        src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=48&d=blank"
+        src="{{ site.url }}/images/authors/{{ author.gravatar }}.jpg"
         alt="Avatar for {{ author.name }}"
       {% else %}
         srcset="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=96&d=blank 2x"
         src="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=48&d=blank"
         alt="Antares Programming Avatar"
       {% endif %}
+      width="96"
+      height="96"
     />
   </div>
   <div class="author">

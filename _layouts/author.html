@@ -11,17 +11,15 @@
         <img class="author__image"
           {% if author.gravatar %}
             srcset="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=400&d=retro 2x"
-            src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=200&d=retro"
+            src="{{ site.url }}/images/authors/{{ author.gravatar }}.jpg"
             alt="Avatar for {{ author.name }}"
-            height="200"
-            width="200"
           {% else %}
             srcset="https://www.gravatar.com/avatar/123?s=400&d=retro 2x"
             src="https://www.gravatar.com/avatar/123?s=200&d=retro"
             alt="Author {{ author.name }} has no image."
+          {% endif %}
             height="200"
             width="200"
-          {% endif %}
         />
         <h1>
             <span class="small-text">Author</span>
