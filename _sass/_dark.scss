@@ -44,4 +44,45 @@ td.rouge-gutter.gl {
     background-color: var(--black-700);
     border-color: var(--black-900);
   }
+  
+  .author .merge-with-header {
+    color: var(--header-fg-color);
+  }
+
+  .author .posts-count {
+	  color: var(--fg-color-emphasis);
+  }
+
+  .about body > header nav a {
+  	color: var(--fg-color);
+  }
+  
+  .about body > header nav a:hover svg path, body > header nav a:focus svg path {
+	  fill: #000;
+  }
+  
+  aside.links {
+	  border-color: var(--black-900);
+	  background-color: var(--black-900);
+  }
+  
+  .authors-list li a {
+	  background-color: var(--black-500);
+	  border-color: var(--black-900);
+	  
+	  &:hover {
+	    background-color: var(--black-900);
+    }
+  }
+  
+  header.error::before {
+	  color: var(--strawberry-100) !important;
+	  opacity: 1 !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .author p.posts-count {
+    color: var(--header-fg-color);
+  }
 }
