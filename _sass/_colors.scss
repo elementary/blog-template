@@ -72,7 +72,7 @@
   --solarized-red: #dc322f;
   --solarized-yellow: #b58900;
 
-  --brand-color: #FF9500;
+  --brand-color: var(--solarized-orange);
 
   --bg-color: white;
   --fg-color: var(--black-500);
@@ -96,5 +96,6 @@
     --secondary-fg-color: var(--silver-300);
     
     --fg-color-emphasis: #fff;
+    --brand-color: #FF9500;
   }
 }

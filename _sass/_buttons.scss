@@ -57,39 +57,6 @@
 	box-shadow: inset 0 1px 2px #fff, 0 0 1px 5px var(--banana-300), inset 0 -1px 4px var(--banana-500);
 }
 
-:target {
-  background-image: linear-gradient(
-	    var(--banana-300),
-	    var(--banana-300));
-	background-size: 100% 0;
-	background-repeat: no-repeat;
-	background-position: bottom center;
-  animation: 
-     tar 500ms ease-in-out,
-     indicator 500ms ease-in-out;
-  box-shadow: 0 0 0 3px var(--banana-300);
-}
-
-@keyframes tar {
-  50% {
-    background-size: 100% 100%;
-  }
-  
-  100% {
-    background-size: 100% 0;
-    background-position: top center;
-  }
-}
-
-@keyframes indicator {
-  0%, 75% {
-    box-shadow: 0 0 0 0 var(--banana-300);
-  }
-  100% {
-    box-shadow: 0 0 0 3px var(--banana-300);
-  }
-}
-
 abbr[title] {
   position: relative;
   cursor: pointer;
@@ -139,4 +106,44 @@ abbr[title] {
 
 abbr[title]:hover {
     text-decoration-color: var(--blueberry-700)
+}
+
+article a:not([class]) {
+  --link-indicator-color: var(--accent-color);
+	color: var(--link-indicator-color);
+	opacity: 1;
+	border-radius: 0.25rem;
+}
+
+article a[target=_blank] {
+  --link-indicator-color: var(--brand-color);
+	padding-right: 1rem;
+	background-image: radial-gradient(var(--link-indicator-color), var(--link-indicator-color) 75%, transparent 75%);
+	background-size: 0.5rem 0.5rem;
+	background-repeat: no-repeat;
+	background-position: top 0.25rem right 0.25rem;
+	position: relative;
+}
+
+article a[target="_blank"]:lang(tl)::after {
+	content: 'Bubukas ito sa bagong tab';
+	position: absolute;
+	background-color: var(--fg-color);
+	color: var(--bg-color);
+	text-indent: 0;
+	font-size: 0.8em;
+	top: 0;
+	left: 0;
+	padding: 0.25em;
+	line-height: 1.2;
+	border-radius: 0.25rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 150ms, top 300ms;
+}
+
+article a[target="_blank"]:lang(tl):hover::after {
+	opacity: 1;
+	top: -2.5rem;
+	transition: opacity 150ms 300ms, top 300ms 300ms;
 }

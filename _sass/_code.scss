@@ -4,8 +4,10 @@
 code {
   background-color: var(--secondary-bg-color);
   border-radius: 0.25em;
-  font-size: 0.85em;
+  font-size: 1;
   padding: 0.2em;
+  padding-bottom: 0;
+  line-height:inherit;
 }
 
 .highlighter-rouge {
