@@ -26,7 +26,7 @@ Ang layunin ng Antares Programming ay <b>kalidad</b>, isang bagay na hindi madal
 ## Pag-achieve sa mga characteristics ng isang de-kalidad na educational resource
 ### Accuracy
 
-Kumukha ang Antares Programming ng impormasyon mula sa mga mapagkakatiwalaang source. Para sa Web development practice, madaling i-verify ang impormasyon kung ite-test lang sa browser ang isang technology. Ang paggana ng technology o feature ay kumpirmasyon na ang source ay nagsasabi ng accurate na impormasyon.
+Kumukuha ang Antares Programming ng impormasyon mula sa mga mapagkakatiwalaang source. Para sa Web development practice, madaling i-verify ang impormasyon kung ite-test lang sa browser ang isang technology. Ang paggana ng technology o feature ay kumpirmasyon na ang source ay nagsasabi ng accurate na impormasyon.
 
 Sa Web development, ang [W3C Specifications](https://w3.org/) ang ultimate source of truth. Pero isa itong technical document tungkol sa mga features na dapat makita sa mga Web browser. Para sa source na mas simple at madaling unawain, ginagamit ng Antares Programming ang [Mozilla Developer Network Documentations](https://developer.mozila.org/) na ibinase mismo sa mga specifications.
 
