@@ -1,0 +1,33 @@
+td.rouge-gutter.gl {
+	background-color: var(--black-500);
+	color: var(--silver-700);
+	text-align: center;
+	padding: 0.15rem;
+}
+
+.rouge-code {
+	padding-left: 1rem;
+	padding-left: 1rem;
+	background-color: var(--black-700);
+	
+	pre {
+	  color: var(--silver-300);
+  }
+}
+
+.highlighter-rouge div.highlight {
+	display: grid;
+	width: 100%;
+	max-width: var(--content-width);
+	border: 1px solid var(--black-900);
+	
+	pre.highlight {
+	  width: 100%;
+	  display: grid;
+  }
+	
+	.rouge-table {
+	  margin: 0;
+	  width: 100%;
+  }
+}

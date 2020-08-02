@@ -122,7 +122,7 @@ code {
   .kp,
   .o,
   .ow {
-    color: var(--grape-500);
+    color: var(--grape-100);
   }
 
   .gh,
@@ -139,7 +139,7 @@ code {
   .gr,
   .kt,
   .sr {
-    color: var(--strawberry-300);
+    color: var(--strawberry-100);
   }
 
   .nb {
@@ -155,46 +155,6 @@ code {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .highlight {
-    background-color: var(--solarized-base03);
-    color: var(--solarized-base1);
-
-    .gl {
-      background-color: var(--solarized-base02);
-    }
-
-    .c,
-    .c1,
-    .cm,
-    .sb {
-      color: var(--solarized-base01);
-    }
-
-    .err,
-    .g,
-    .ge,
-    .go,
-    .gp,
-    .gs,
-    .gt,
-    .l,
-    .ld,
-    .n,
-    .na,
-    .nl,
-    .nn,
-    .nx,
-    .p,
-    .py,
-    .sd,
-    .sh,
-    .w {
-      color: var(--solarized-base1);
-    }
-  }
-}
-
 
 .highlight {
 	font-size: 1.1rem;
@@ -205,10 +165,4 @@ code {
 .rouge-gutter.gl {
 	position: sticky;
 	left: 0;
-}
-
-.highlight,
-.highlight .gl {
-	background-color: var(--black-500);
-	color: var(--solarized-base1);
 }
