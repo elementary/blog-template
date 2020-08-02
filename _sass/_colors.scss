@@ -83,6 +83,8 @@
   --secondary-fg-color: var(--black-300);
   --warning-bg-color: var(--banana-300);
   --warning-fg-color: var(--black-900);
+  
+  --fg-color-emphasis: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -92,5 +94,7 @@
     --accent-color: var(--blueberry-300);
     --secondary-bg-color: var(--black-500);
     --secondary-fg-color: var(--silver-300);
+    
+    --fg-color-emphasis: #fff;
   }
 }
