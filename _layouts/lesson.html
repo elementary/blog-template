@@ -16,15 +16,38 @@
         
         {% if page.has_downloads %}
         <div class="lesson__video-actions">
-          <h3>Download&hellip;</h3>
+          <h3>
+            <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+              <g color='currentColor' transform='translate(-1093 315)'>
+                  <path d='M1101-303.03a.498.498 0 0 1-.375-.158l-2.5-3a.428.428 0 0 1-.09-.248c-.014-.266.188-.556.465-.564h1.5v-3.5c0-.262.238-.5.5-.5h1a.492.492 0 0 1 .094 0c.23.044.41.267.406.5v3.5h1.5c.37.011.606.524.375.813l-2.5 3a.497.497 0 0 1-.375.158z' fill='currentColor' overflow='visible' style='marker:none'/>
+                  <path d='M1101-315a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z' fill='#666' overflow='visible' style='marker:none'/>
+              </g>
+          </svg>
+            Download&hellip;
+          </h3>
           {% if page.video != nil %}
-          <a class="btn" download>Video</a>
+          <a class="btn" href="{{ page.video }}" download>
+            <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+                <g color='currentColor' transform='translate(-1113 267)'>
+                    
+                    <path d='M1114.75-266a.748.748 0 0 0-.75.75v13.5c0 .415.335.75.75.75h12.5c.416 0 .75-.335.75-.75v-13.5a.748.748 0 0 0-.75-.75zm.25 1h1v1h-1zm2.5 0h7c.277 0 .5.223.5.5v5c0 .277-.223.5-.5.5h-7a.499.499 0 0 1-.5-.5v-5c0-.277.223-.5.5-.5zm8.5 0h1v1h-1zm-11 2h1v1h-1zm11 0h1v1h-1zm-11 2h1v1h-1zm11 0h1v1h-1zm-11 2h1v1h-1zm11 0h1v1h-1zm-8.5 1h7c.277 0 .5.223.5.5v5c0 .277-.223.5-.5.5h-7a.499.499 0 0 1-.5-.5v-5c0-.277.223-.5.5-.5zm-2.5 1h1v1h-1zm11 0h1v1h-1zm-11 2h1v1h-1zm11 0h1v1h-1zm-11 2h1v1h-1zm11 0h1v1h-1z' fill='currentColor' overflow='visible' style='marker:none'/>
+                </g>
+            </svg>
+            Video
+          </a>
           {% endif %}
           {% if page.transcript != nil %}
           <a class="btn" download>Transcript</a>
           {% endif %}
           {% if page.code != nil %}
-          <a class="btn" download href="{{ page.code }}">Code Used</a>
+          <a class="btn" download href="{{ page.code }}">
+              <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+                <g color='currentColor' transform='translate(-1193 247)'>
+                    <path d='M1202.025-243l-2.91 8h.861l2.91-8zm-4.255 1.333l-3.77 2.222v.89l3.77 2.222v-.889l-2.932-1.776 2.932-1.78zm6.461 0v.889l2.932 1.78-2.932 1.776v.889l3.77-2.222v-.89z' fill='currentColor' overflow='visible' style='isolation:auto;mix-blend-mode:normal;marker:none'/>
+                </g>
+            </svg>
+            Code Used
+          </a>
           {% endif %}
           {% if page.article != nil %}
           <a class="btn" download>Article (<abbr title="Portable Document Format">PDF</abbr>)</a>
@@ -35,8 +58,22 @@
     </section>
     {% endif %}
     <div class="lesson__actions">
-        <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
-        {% if page.next_lesson != nil %}<a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>{% endif %}
+        <a class="btn" href="{{ page.permalink }}..">
+          <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+            <g color='currentColor' transform='translate(-453 -17)'>
+                <path d='M467.676 25l-6.191-7.002-6.16 7.001H459V31h5v-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg>
+          Bumalik sa course page
+        </a>
+        {% if page.next_lesson != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ page.next_lesson }}">
+          Susunod na lesson
+          <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
+            <g color='currentColor' transform='translate(-313 3)'>
+                <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg>
+        </a>{% endif %}
     </div>
     <section class="lesson__article">
       {% if page.video != nil %}<hr>{% endif %}
@@ -45,8 +82,22 @@
       </article>
     </section>
     <div class="lesson__actions">
-      <a class="btn" href="{{ page.permalink }}..">Bumalik sa course page</a>
-      {% if page.next_lesson != nil %}<a class="btn btn--primary" href="{{ page.permalink }}../{{ page.next_lesson }}">Susunod na lesson</a>{% endif %}
+        <a class="btn" href="{{ page.permalink }}..">
+          <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+            <g color='currentColor' transform='translate(-453 -17)'>
+                <path d='M467.676 25l-6.191-7.002-6.16 7.001H459V31h5v-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg>
+          Bumalik sa course page
+        </a>
+        {% if page.next_lesson != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ page.next_lesson }}">
+          Susunod na lesson
+          <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
+            <g color='currentColor' transform='translate(-313 3)'>
+                <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg>
+        </a>{% endif %}
     </div>
     {% include footer.html %}
     {% include scripts.html %}

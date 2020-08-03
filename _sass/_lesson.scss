@@ -74,31 +74,11 @@
   margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: stretch;
+  justify-content: space-evenly;
   gap: 1rem;
   max-width: var(--page-width);
   padding: 0 1rem;
 }
-
-@media screen and (max-width: 720px) {
-  .lesson__actions {
-    flex-direction: column;
-  }
-  
-  .lesson__actions * + .btn {
-    margin-left: 0;
-  }
-}
-
-.lesson__actions .btn {
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-.lesson__actions * + * {
-margin-left: auto;
-}
-
 
 /* Inline #3 | http://0.0.0.0:4000/courses/ */
 
