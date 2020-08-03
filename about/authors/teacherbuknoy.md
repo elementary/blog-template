@@ -1,5 +1,5 @@
 ---
-title: Francis Rubio
+title: "author: Francis Rubio"
 description: "Francis Rubio is a Web Developer and Educator from the Philippines"
 author:
   username: teacherbuknoy
