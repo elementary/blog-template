@@ -201,48 +201,6 @@ mark {
 	border-radius: 0.25rem;
 }
 
-pre:not([class]) {
-	border-radius: 0.25rem;
-	padding: 1rem;
-	overflow: auto;
-	margin: auto;
-	
-	color: var(--silver-300);
-	background-color: var(--black-500);
-	border: 1px solid var(--black-900);
-}
-
-.highlighter-rouge .highlight,
-pre:not([class]) {
-	max-width: var(--content-width)
-}
-
-.rouge-code pre {
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  color: var(--fg-color);
-  border: 0;
-}
-.rouge-table {
-  border: none;
-  max-width: none;
-  overflow: visible;
-}
-.rouge-table td {
-  border: none;
-}
-
-.img--borderize {
-	border-radius: 0.25rem;
-	box-shadow: 0 2px 3px #0003;
-	border: 1px solid var(--silver-500);
-}
-
-.rouge-table pre {
-  overflow: visible;
-}
-
 .page-title,
 .about h1 {
 	font-size: calc(2rem + 5vw);

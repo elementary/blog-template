@@ -1,43 +1,4 @@
-td.rouge-gutter.gl {
-	background-color: var(--black-500);
-	color: var(--silver-700);
-	text-align: center;
-	padding: 0.15rem;
-}
 
-.rouge-code {
-	padding-left: 1rem;
-	padding-left: 1rem;
-	background-color: var(--black-700);
-	
-	pre {
-	  color: var(--silver-300);
-  }
-}
-
-.highlighter-rouge div.highlight {
-	display: grid;
-	width: 100%;
-	max-width: var(--content-width);
-	border-radius: 0;
-	
-	pre.highlight {
-	  width: 100%;
-	  display: grid;
-  }
-	
-	.rouge-table {
-	  margin: 0;
-	  border: 1px solid var(--black-900);
-	  border-radius: 0.25rem;
-	  width: 100%;
-	  overflow: hidden;
-  }
-}
-
-.highlight {
-  background: transparent;
-}
 
 @media (prefers-color-scheme: dark) {
   .color {
