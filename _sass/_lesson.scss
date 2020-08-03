@@ -229,17 +229,22 @@ margin-left: auto;
   z-index: 1;
 }
 
-.lessons-list a {
+article .lessons-list li a {
   padding: 1rem;
   border-radius: 0.25rem;
-  border: 1px solid transparent;
   color: var(--fg-color);
   text-decoration: none;
+  flex: 1;
 }
 
 .lessons-list a:hover {
-  background-color: var(--banana-100);
-  border-color: var(--banana-500);
+  background-color: #0003;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lessons-list a:hover {
+    background-color: #fff1;
+  }
 }
 
 .lessons-list a {
@@ -247,9 +252,10 @@ margin-left: auto;
 }
 
 .lessons-list a:focus {
-  box-shadow: 0 0 20px 3px var(--banana-300);
-  background-color: var(--banana-100);
-  border-color: var(--banana-500);
+	box-shadow: 0 0 0 5px var(--banana-300);
+	background-color: var(--banana-100);
+	outline: none;
+	color: var(--header-fg-color);
 }
 
 .lessons-list li:last-child::after {
