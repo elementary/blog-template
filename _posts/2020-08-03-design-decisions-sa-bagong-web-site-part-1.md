@@ -1,7 +1,7 @@
 ---
 title: "Design Decisions sa Bagong Web Site&mdash;Part&nbsp;1"
 description: "Mga design decision na ginawa sa bagong Web site ng Antares Programming"
-image: /images/posts/design-decisions-1/cover.svg
+image: /images/posts/design-decisions-1/cover.jpg
 author: teacherbuknoy
 slug: /design-decisions-part-1/
 tags:
@@ -13,9 +13,7 @@ Bilang bahagi ng redesign ng Antares Programming, maraming pagbabago sa Web site
 Isa sa mga goals ng redesign na ito ay makikita hindi lang sa visual aspect. Kasama rin dito estilo ng pagsulat at ang semantics ng HTML. Pero sa post na ito pag-usapan lang natin ang ilan sa maliliit na visual styling na ginamit sa redesign.
 
 ## Links sa bagong tab
-Kapag nagli-link ang isang article sa ibang websites, gumagamit tayo ng `target="_blank"` attribute sa `<a></a>` tag para bumukas ito sa bagong tab. Magiging mas convenient ito para sa user, especially sa mga longform article na may mahahabang bodies ng text na baka gusto pang ituloy na basahin ng user. May mga kaso kung saan naglalagay tayo ng link papunta sa isang related na content na nasa ibang site. Puwede itong isang article, video sa YouTube, o image sa isang <abbr title="Content Delivery Network">CDN</abbr>. Sa mga kasong iyan, malamang na gusto lang ng mambabasa na tingnan kung ano ang nasa link, pero itutuloy pa rin niya ang pagbabasa pagkatapos.
-
-Sa mga articles sa site na ito, naglagay tayo ng microinteraction sa mga new-tab link. Kapag hino-hover ng user ang mouse niya sa mga new-tab link, may lalabas na tooltip na nagsasabi na bubukas ito sa bagong tab. Iba rin ang kulay ng new-tab links kaysa sa iba pang links, at may bilog itong indicator.
+Kapag nagli-link ang isang article sa ibang websites, gumagamit tayo ng `target="_blank"` attribute sa `<a></a>` tag para bumukas ito sa bagong tab. Magiging mas convenient ito para sa user, especially sa mga longform article na may mahahabang bodies ng text na baka gusto pang ituloy na basahin ng user. May mga kaso kung saan naglalagay tayo ng link papunta sa isang related na content na nasa ibang site. Puwede itong isang article, video sa YouTube, o image sa isang <abbr title="Content Delivery Network">CDN</abbr>. Sa mga kasong iyan, malamang na gusto lang ng mambabasa na tingnan kung ano ang nasa link, pero itutuloy pa rin niya ang pagbabasa pagkatapos. Sa site na ito, iba ang kulay ng new-tab links kaysa sa iba pang links, at may bilog itong indicator.
 
 ## Fonts
 Sa lumang blog, ginamit natin ang [Inter](https://rsms.me/inter/), isang open-source font na may variable version. Sa redesign na ito, iyan din ang unang choice na gamitin. Pero sa huli, ang ginamit na font para sa body copy ay [Manrope](https://manropefont.com/). Hindi ako expert sa typography (isa iyan sa mga inaaral ko ngayon), pero sa tingin ko mas madaling basahin ang longform articles sa Manrope kaysa sa Inter.
