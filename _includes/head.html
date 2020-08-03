@@ -42,10 +42,17 @@
   <meta name="twitter:site" content="@{{ site.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.twitter }}" />
 
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+{% if page.description %}
+    {% assign lead = page.description %}
+{% elsif page.summary %}
+    {% assign lead = page.summary %}
+{% else %}
+    {% assign lead = site.description %}
+{% endif %}
+  <meta name="description" content="{{ lead }}" />
+  <meta property="og:description" content="{{ lead }}" />
+  <meta itemprop="description" content="{{ lead }}" />
+  <meta name="twitter:description" content="{{ lead }}" />
 
     <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/fonts.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
