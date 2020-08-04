@@ -107,9 +107,15 @@
   margin: 2rem auto;
   max-width: var(--content-width);
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .course-list li a:not([class]) {
+  background-color: var(--bg-color);
   color: var(--fg-color);
   text-decoration: none;
   display: block;
@@ -118,6 +124,12 @@
   padding: 1rem;
   opacity: 1;
   height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .course-list li a:not([class]) {
+    background-color: #0003;
+  }
 }
 
 .course-list a:hover {
@@ -141,13 +153,15 @@
 /* Inline #3 | http://0.0.0.0:4000/courses/ */
 
 .course-list a strong {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin: 0;
   line-height: 1.25;
 }
 
 .course-list a p {
-  margin: 0;
+	margin: 0;
+	line-height: 1.45;
+	font-size: 0.9em;
 }
 
 .checklist li::marker {
@@ -373,39 +387,6 @@ header.error::before {
   text-align: center;
 }
 
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.course-list li {
-  flex-grow: 1;
-  flex-basis: 300px;
-}
-
-.course-list img {
-  height: auto;
-  width: 100%;
-}
-
-.course-list li {
-  flex-basis: 200px;
-  flex-grow: 1;
-}
-
-.course-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  align-items: stretch;
-}
-
-.course--featured {
-  grid-row: 1/2;
-  grid-column: span 2;
-}
-
 .course-list a strong {
   margin-bottom: 0.5rem;
   display: block;
@@ -421,14 +402,6 @@ header.error::before {
 	border: 1px solid #0005;
 	vertical-align: middle;
 	line-height: 1;
-}
-
-.course-list a strong {
-  margin-top: 1.5rem;
-}
-
-.course-list a {
-  position: relative;
 }
 
 @media screen and (max-width: 720px) {

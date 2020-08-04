@@ -15,7 +15,6 @@ order: -1
 {% if course.type != "index" %}
   <li {% if course.featured %}class="course--featured"{% endif %}>
     <a href="{{ course.permalink }}">
-      {% if course.image %}<img src="{{ course.image }}" width="876" height="506" />{% endif %}
       <strong>
         {{ course.title }}
         {% unless course.is_done %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}
