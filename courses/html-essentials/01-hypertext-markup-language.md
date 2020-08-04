@@ -2,10 +2,8 @@
 layout: lesson
 id: 01-hypertext-markup-language
 title: HyperText Markup Language
-subtitle: HTML Essentials
 summary: "Ano ang HTML, at ano ang lugar nito sa Web development?"
 course: html-essentials
-order: 0
 
 permalink: /courses/html-essentials/01-hypertext-markup-language/
 video: https://www.youtube.com/embed/nCDWzV9wzW4

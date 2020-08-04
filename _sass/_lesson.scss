@@ -109,7 +109,7 @@
   list-style: none;
 }
 
-.course-list a {
+.course-list li a:not([class]) {
   color: var(--fg-color);
   text-decoration: none;
   display: block;
@@ -407,7 +407,7 @@ header.error::before {
 }
 
 .course-list a strong {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   display: block;
 }
 
@@ -460,4 +460,18 @@ header.error::before {
 ::selection {
 	background-color: var(--blueberry-100);
 	color: var(--blueberry-900) !important;
+}
+
+.course-list .release-date {
+    opacity: 0.8;
+    line-height: 1;
+    text-indent: 0;
+    margin-bottom: 1rem;
+    
+    svg {
+        display: inline;
+        margin-right: 1ch;
+        position: relative;
+        top: 0.1rem;
+    }
 }

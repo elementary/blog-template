@@ -1,12 +1,16 @@
 ---
 layout: courses
-title: "HTML Essentials"
+title: "Essentials of HyperText Markup Language"
+course_id: html-essentials
 subtitle: Course
 summary: Isang introduction sa basics ng HTML para makagawa ka ng accessible na Web sites.
 permalink: /courses/html-essentials/
 image: /images/courses/html-essentials.jpg
 order: 0
-is_done: true
+
+long_desc: "Sa course na ito, tatalakayin ang basics ng HTML. Kasama sa mga topics ang accessibility, kung paano malalaman kung aling tag ang gagamitin, at pag-una sa semantics ng isang Web page. Throughout this course, magkakaroon ng emphasis sa <i>separation of concerns</i>: gamitin ang HTML para ipaalam sa browser ang meaning at purpose ng content, <em>hindi ang visual styling</em> ng isang element. Para ito sa mga walang experience sa paggawa ng Web sites at mga Web developers na pero gustong magkaroon ng refresher course para ma-improve ang paggawa nila ng Web sites."
+release_date: 2020-09-30
+is_done: false
 featured: true
 ---
 <article>
@@ -41,22 +45,4 @@ featured: true
   </li>
 </ul>
 
-<h2>Lessons</h2>
-<ol class="lessons-list">
-{% for course in site.data.courses %}
 
-{% if course.title == page.title %}
-{% for lesson in course.lessons %}
-<li>
-  <a href="{{ lesson.permalink }}">
-    <strong>{{ lesson.title }}</strong>
-    <p>{{ lesson.summary }}</p>
-  </a>
-</li>
-{% endfor %}
-{% endif %}
-
-{% endfor %}
-
-</ol>
-</article>

@@ -5,8 +5,40 @@
     {% include course-banner.html %}
     {% include nav.html %}
     <section>
-      {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      <article>
+      {% if page.type == 'index' %}
+        {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      {% endif %}
 
+      {% if page.type != 'index' %}
+      {% unless page.is_done %}
+      <h2>Course Description</h2>
+      <p>{{ page.long_desc }}</p>
+      <p>Magsisimula ang course na ito sa <b><time datetime="{{ page.release_date }}">{{ page.release_date | date: "%B %-d, %Y" }}</time></b>.</p>
+      {% endunless %}
+      
+      {% if page.is_done %}
+      {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      <h2>Lessons</h2>
+      <ol class="lessons-list">
+      {% for course in site.data.courses %}
+      {% if course.id == page.course_id %}
+      {% for lesson in course.lessons %}
+      <li>
+        <a href="{{ lesson.permalink }}">
+          <strong>{{ lesson.title }}</strong>
+          <p>{{ lesson.summary }}</p>
+        </a>
+      </li>
+      {% endfor %}
+      {% endif %}
+
+      {% endfor %}
+
+      </ol>
+      {% endif %}
+      {% endif %}
+      </article>
     </section>
     {% include footer.html %}
     {% include scripts.html %}

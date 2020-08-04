@@ -2,10 +2,8 @@
 layout: lesson
 id: 02-html-syntax
 title: HTML Syntax
-subtitle: HTML Essentials
 summary: "Ang grammar na sinusunod ng HTML"
 course: html-essentials
-order: 1
 
 permalink: /courses/html-essentials/02-html-syntax/
 video: 
