@@ -16,16 +16,6 @@ slug="$date_now-$permalink.md"
 echo "Creating file './_posts/$slug'..."
 touch ./_posts/$slug
 
-# Separate tags
-IFS=',' read -r -a array <<< "$tags"
-
-tagstr=""
-
-for element in "${array[@]}"
-do
-  tagstr="$tagstr$element
-  "
-done 
 
 echo "---
 title: \"$title\"
@@ -33,8 +23,7 @@ description: \"$summary\"
 image: $image
 author: $author
 slug: /blog/$permalink/
-tags:
-    $tagstr
+tags: [$tags]
 ---" >> ./_posts/$slug
 
 echo "Done."
