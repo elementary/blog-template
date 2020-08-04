@@ -460,13 +460,12 @@ mark {
 .notice {
 	background-color: var(--blueberry-100);
 	color: var(--header-fg-color);
-	margin: 1rem -1rem;
+	margin: 100px -1rem;
 	max-width: none;
 	position: relative;
 	padding: 1rem 0;
 	padding-left: 150px;
-	margin-bottom: 100px;
-
+ 
   ::selection {
 	  background-color: var(--blueberry-300);
   }
