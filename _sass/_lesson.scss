@@ -303,7 +303,7 @@ i, em, dfn {
   background-color: var(--blueberry-100);
   padding: 1rem;
   border-radius: 0.25rem;
-  border: 1px solid var(--blueberry-300);
+  border: 1px solid var(--blueberry-500);
 }
 
 .note strong {
@@ -313,11 +313,19 @@ i, em, dfn {
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
   border-bottom: 1px solid var(--blueberry-500);
+  text-indent: 0;
 }
 
-.note {
-  border: 1px solid var(--blueberry-500);
-}
+
+.note.note--warning {
+	  background-color: var(--orange-100);
+	  border-color: var(--orange-700);
+	  
+	  strong {
+	    background-color: var(--orange-500);
+	    border-color: var(--orange-700);
+    }
+  }
 
 header.error {
   max-width: none;
