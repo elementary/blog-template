@@ -2,7 +2,7 @@
 layout: about
 title: "Mag-donate sa amin"
 summary: "Libre ang lahat ng resources mula sa Antares Programming. Pero kung gusto mong tumulong financially, ito ang mga puwede mong gawin."
-permalink: /about/mag-donate
+permalink: /about/mag-donate/
 author: teacherbuknoy
 ---
 
