@@ -143,7 +143,7 @@
 .course-list a strong {
   font-size: 1.5rem;
   margin: 0;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .course-list a p {
@@ -412,14 +412,15 @@ header.error::before {
 }
 
 .badge {
-  position: absolute;
-  top: 0;
-  left: 1rem;
-  background-color: var(--banana-100);
-  padding: 0.25rem;
-  border: 1px solid var(--banana-700);
-  border-top: 0;
-  color: var(--banana-900);
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: normal;
+	padding: 0.25rem 0.5rem;
+	background-color: var(--secondary-bg-color);
+	border-radius: 100px;
+	border: 1px solid #0005;
+	vertical-align: middle;
+	line-height: 1;
 }
 
 .course-list a strong {

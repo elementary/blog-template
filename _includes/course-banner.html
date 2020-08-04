@@ -1,6 +1,9 @@
 <header class="banner">
   <div class="banner__wrapper">
-    <h1 class="banner__title">{{ page.title }}</h2>
+    <h1 class="banner__title">
+      {{ page.title }}
+      {% unless course.is_done %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}
+    </h1>
     {% if page.subtitle != nil %}
     <h2 class="banner__subtitle">{{ page.subtitle }}</h2>
     {% endif %}

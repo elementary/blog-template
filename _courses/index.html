@@ -15,7 +15,10 @@ order: -1
   <li {% if course.featured %}class="course--featured"{% endif %}>
     <a href="{{ course.permalink }}">
       {% if course.image %}<img src="{{ course.image }}" width="876" height="506" />{% endif %}
-      <strong>{{ course.title }}</strong>
+      <strong>
+        {{ course.title }}
+        {% unless course.is_done %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}
+      </strong>
       {% unless course.is_done %}
       <p class="release-date">
         <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
