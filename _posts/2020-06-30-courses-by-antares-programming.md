@@ -4,8 +4,7 @@ description: "May bagong feature ang Antares Programming Web site: ang Courses."
 image: /images/posts/courses-antares-programming/cover.png
 author: teacherbuknoy
 slug: /blog/courses-antares-programming/
-tags:
-    meta
+tags: [meta]
 ---
 Sobrang excited ako na i-announce sa inyong lahat ang bagong part ng Antares Programming project: ang <i>Courses by Antares Programming</i>. Basically isa itong ongoing series na may videos, code samples, at written articles na libre para sa lahat. Sa ngayon, tungkol muna ito sa HTML, na susundan in the near future ng CSS at JavaScript. Pero magkakaroon din dito ng series tungkol sa iba't ibang topics gaya ng accessibility, Web typography, at ibang programming languages tulad ng Java at C#.
 

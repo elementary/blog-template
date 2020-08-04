@@ -4,8 +4,7 @@ description: "Matagal na walang content ang Antares Programming. Ano na ang nang
 image: /images/posts/estado-antares-programming/cover.jpg
 author: teacherbuknoy
 permalink: /estado-antares-programming/
-tags:
-    meta
+tags: [meta]
 ---
 Gaya siguro ng alam n'yo na, ako lang ang mag-isang nagha-handle ng Antares Programming. Masaya akong gawin ito, pero napakamatrabaho nito. Kailangang gumawa ng mga infographics, videos, articles, at research&mdash;lahat ito, isang tao lang ang gumagawa.
 

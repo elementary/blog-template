@@ -4,9 +4,7 @@ description: "Mga design decision na ginawa sa bagong Web site ng Antares Progra
 image: /images/posts/design-decisions-1/cover.jpg
 author: teacherbuknoy
 slug: /design-decisions-part-1/
-tags:
-  design
-  meta
+tags: [design, meta]
 ---
 Bilang bahagi ng redesign ng Antares Programming, maraming pagbabago sa Web site. Hindi lang ito re-design; isa itong <i>rebuilding from scratch</i>. Goal ng redesign na &rsquo;to na maging accessible sa lahat at enjoyable gamitin ang buong website.
 

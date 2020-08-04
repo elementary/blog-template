@@ -4,9 +4,7 @@ description: "Sa halip na gumamit ng maraming <code>div</code>, puwede nating ga
 image: /images/posts/using-linear-gradients-to-create-stripes/blueberry.jpg
 author: teacherbuknoy
 slug: /using-linear-gradients-to-create-stripes/
-tags:
-    web development
-   css
+tags: [web development]
 ---
 
 ## Ang problema

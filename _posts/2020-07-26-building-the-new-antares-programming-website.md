@@ -4,9 +4,7 @@ description: "Bago na ang Website ng Antares Programming. Paano ito ginawa, at a
 image: /images/posts/building-the-new-antares-programming-website-1x.jpg
 author: teacherbuknoy
 slug: /building-the-new-antares-programming-website/
-tags:
-    meta
-  web development
+tags: [meta, web development]
 ---
 
 ## Bakit kailangan ng bago?

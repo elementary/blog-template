@@ -4,8 +4,7 @@ description: "Isang quick post para maipakita kung paano magagamit ang '..' sa m
 author: teacherbuknoy
 slug: /creating-links-to-up-one-directory/
 image: /images/posts/creating-links-to-up-one-directory/cover.png
-tags:
-    - web development
+tags: [web development]
 ---
 
 Habang kino-code ang bagong Web site ng Antares Programming, specifically ang part para sa courses, nagkaroon ako ng maliit na problema. Sa lessons page, may dalawa akong link na nakalagay: isang link pabalik sa course page, at isang link papunta sa susunod na lesson.
