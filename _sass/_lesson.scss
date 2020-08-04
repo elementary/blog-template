@@ -72,12 +72,33 @@
 
 .lesson__actions {
   margin: 1rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   max-width: var(--page-width);
   padding: 0 1rem;
+  justify-items: center;
+  align-items: center;
+  
+  .btn:first-child {
+    justify-self: self-start;
+  }
+  
+  .btn:last-child {
+    justify-self: self-end;
+  }
+  
+}
+
+@media screen and (max-width: 690px) {
+    .lesson__actions {
+        grid-template-columns: 1fr;
+        
+        .btn:last-child,
+        .btn:first-child {
+          justify-self: unset;
+        }
+    }
 }
 
 /* Inline #3 | http://0.0.0.0:4000/courses/ */

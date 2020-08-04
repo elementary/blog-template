@@ -4,6 +4,27 @@
   <body class="{% if page.url == '/' %}home {% endif %}">
     {% include course-banner.html %}
     {% include nav.html %}
+    {% assign course = site.data.courses | where: 'id', page.course %}
+    {% assign currentLesson = course[0].lessons | where: 'id', page.id %}
+    {% assign lessonsCount = course[0].lessons | size | minus: 1 %}
+    
+    {% for i in (0..lessonsCount) %}
+      {% if course[0].lessons[i].id == page.id %}
+        {% assign nextLessonIndex = i | plus: 1 %}
+        {% assign prevLessonIndex = i | minus: 1 %}
+        
+        {% if course[0].lessons[nextLessonIndex] and nextLessonIndex <= lessonsCount %}
+          {% assign nextLessonID = course[0].lessons[nextLessonIndex].id %}
+          {% assign nextLessonTitle = course[0].lessons[nextLessonIndex].title %}
+        {% endif %}
+        
+        {% if course[0].lessons[prevLessonIndex] and prevLessonIndex >= 0 %}
+          {% assign prevLessonID = course[0].lessons[prevLessonIndex].id %}
+          {% assign prevLessonTitle = course[0].lessons[prevLessonIndex].title %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
     {% if page.video != nil %}
     <section class="lesson__video">
       <div class="lesson__video-wrapper">
@@ -58,6 +79,18 @@
     </section>
     {% endif %}
     <div class="lesson__actions">
+      {% if prevLessonID != nil %}<a class="btn" href="{{ page.permalink }}../{{ prevLessonID }}">
+            <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+                <g color='currentColor' transform='translate(-293 3)'>
+                    <path d='M301 10.676l-7-6.192 7-6.16V2h6.001v5h-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+                </g>
+            </svg>
+            {{ prevLessonTitle }}
+          </a>
+          {% else %}
+          <span aria-hidden="none"></span>
+          {% endif %}
+    
         <a class="btn" href="{{ page.permalink }}..">
           <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
             <g color='currentColor' transform='translate(-453 -17)'>
@@ -66,14 +99,17 @@
         </svg>
           Bumalik sa course page
         </a>
-        {% if page.next_lesson != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ page.next_lesson }}">
-          Susunod na lesson
+        {% if nextLessonID != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ nextLessonID }}">
+          {{ nextLessonTitle }}
           <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
             <g color='currentColor' transform='translate(-313 3)'>
                 <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
             </g>
         </svg>
-        </a>{% endif %}
+        </a>
+          {% else %}
+          <span aria-hidden="none"></span>
+        {% endif %}
     </div>
     <section class="lesson__article">
       {% if page.video != nil %}<hr>{% endif %}
@@ -81,7 +117,20 @@
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
       </article>
     </section>
+    
     <div class="lesson__actions">
+      {% if prevLessonID != nil %}<a class="btn" href="{{ page.permalink }}../{{ prevLessonID }}">
+            <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+                <g color='currentColor' transform='translate(-293 3)'>
+                    <path d='M301 10.676l-7-6.192 7-6.16V2h6.001v5h-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+                </g>
+            </svg>
+            {{ prevLessonTitle }}
+          </a>
+          {% else %}
+          <span aria-hidden="none"></span>
+          {% endif %}
+    
         <a class="btn" href="{{ page.permalink }}..">
           <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
             <g color='currentColor' transform='translate(-453 -17)'>
@@ -90,14 +139,17 @@
         </svg>
           Bumalik sa course page
         </a>
-        {% if page.next_lesson != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ page.next_lesson }}">
-          Susunod na lesson
+        {% if nextLessonID != nil %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ nextLessonID }}">
+          {{ nextLessonTitle }}
           <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
             <g color='currentColor' transform='translate(-313 3)'>
                 <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
             </g>
         </svg>
-        </a>{% endif %}
+        </a>
+          {% else %}
+          <span aria-hidden="none"></span>
+        {% endif %}
     </div>
     {% include footer.html %}
     {% include scripts.html %}

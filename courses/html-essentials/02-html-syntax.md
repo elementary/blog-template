@@ -1,14 +1,16 @@
 ---
 layout: lesson
+id: 02-html-syntax
 title: HTML Syntax
 subtitle: HTML Essentials
 summary: "Ang grammar na sinusunod ng HTML"
-section: 0
+course: html-essentials
+order: 1
+
 permalink: /courses/html-essentials/02-html-syntax/
 video: 
 has_downloads: false
-code: 
-next_lesson: # 03-html-syntax/
+code:
 ---
 ## HTML Syntax
 Ang grammar na sinusunod ng HTML

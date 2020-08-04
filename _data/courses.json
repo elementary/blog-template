@@ -1,18 +1,36 @@
 [
     {
-        "title": "HTML Essentials",
+        "title": "Essentials of HyperText Markup Language",
         "id": "html-essentials",
         "lessons": [
             {
+                "id": "01-hypertext-markup-language",
                 "title": "HyperText Markup Language",
                 "summary": "Ano ang HTML, at ano ang lugar nito sa Web development?",
                 "permalink": "/courses/html-essentials/01-hypertext-markup-language/"
             },
             {
+                "id": "02-html-syntax",
                 "title": "HTML Syntax",
                 "summary": "Ang grammar na sinusunod ng HTML",
                 "permalink": "/courses/html-essentials/02-html-syntax/"
+            },
+            {
+                "id": "03-html-page",
+                "title": "Ang HTML Page",
+                "summary": "Ang basic structure ng isang HTML page",
+                "permalink": "/courses/html-essentials/03-html-page/"
             }
         ]
+    },
+    {
+      "title": "Essentials of Cascading Style Sheets",
+        "id": "css-essentials",
+        "lessons": []
+    },
+    {
+      "title": "Basics of Web Programming with JavaScript",
+        "id": "js-basics",
+        "lessons": []
     }
 ]
