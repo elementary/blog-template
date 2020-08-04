@@ -455,3 +455,61 @@ mark {
     }
   }
 }
+
+.notice {
+	background-color: var(--blueberry-100);
+	color: var(--header-fg-color);
+	margin: 1rem -1rem;
+	max-width: none;
+	position: relative;
+	padding: 1rem 0;
+	padding-left: 150px;
+	margin-bottom: 100px;
+
+  ::selection {
+	  background-color: var(--blueberry-300);
+  }
+
+	img {
+	  width: 666px;
+	  height: auto;
+	  position: absolute;
+	  left: -170px;
+	  bottom: -170px;
+  }
+  
+  .attribution {
+	position: absolute;
+	bottom: 1rem;
+	font-size: 0.5em;
+	line-height: 1;
+	right: 1rem;
+  }
+  
+  .btn {
+	padding: 0.5rem 1rem;
+	margin-left: auto;
+	display: block;
+	width: max-content;
+}
+}
+
+.notice__wrapper {
+	max-width: var(--content-width);
+	width: 100%;
+	margin: 1rem auto;
+	padding: 1rem;
+	position: relative;
+	padding-left: 2rem;
+
+	h2 {
+	  margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .notice {
+	  border-radius: 0.25rem;
+	  padding-left: 75px;
+  }
+}

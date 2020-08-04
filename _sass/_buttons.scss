@@ -47,6 +47,11 @@
       transition: box-shadow 50ms;
     }
   }
+  
+  &.btn--accent {
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

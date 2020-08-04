@@ -26,7 +26,7 @@ has_banner: true
     {% include featured.html post=post %}
   </section>
 {% endunless %}
-
+{% include notice-banner.html %}
 <section class="more">
 {% if paginator.previous_page %}
   <h2>Archive Page {{ paginator.page }}</h2>
