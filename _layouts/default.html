@@ -2,6 +2,7 @@
 <html lang="tl" dir="ltr">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
+    {% if page.has_banner %}{% include cta-banner.html %}{% endif %}
     {% include nav.html %}
     <section>
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}

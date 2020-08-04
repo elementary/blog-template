@@ -1,10 +1,40 @@
 .banner {
 	background-color: var(--bg-color);
-	color: var(--fg-color-emphasis);                                                                    
+	color: var(--fg-color-emphasis);
 	min-height: 50vh;
 	display: grid;
 	align-items: center;
 	justify-content: center;
+	
+	&.banner--cta {
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	    
+	    .banner__wrapper {
+	      grid-column: 1/3;
+	      grid-row: 1/3;
+	      z-index: 1;
+	      
+	      .banner-actions {
+	        display: flex;
+	        gap: 1rem;
+	        flex-wrap: wrap;
+	        margin-top: 2rem;
+	        
+	        .btn {
+	          padding: 1rem;
+          }
+        }
+      }
+      
+      & > svg {
+	      grid-column: 2/4;
+	      grid-row: 2/3;
+	      height: 30vw;
+	      margin-left: auto;
+	      margin-right: -5vw;
+      }
+    }
 }
 
 .banner__wrapper {
