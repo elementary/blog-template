@@ -10,7 +10,8 @@ order: -1
 <h2>Courses available</h2>
 
 <ul class="course-list">
-{% for course in site.courses %}
+{% assign sortedCourses = site.courses | sort: 'order' %}
+{% for course in sortedCourses %}
 {% if course.type != "index" %}
   <li {% if course.featured %}class="course--featured"{% endif %}>
     <a href="{{ course.permalink }}">
