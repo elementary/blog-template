@@ -35,7 +35,7 @@ kramdown:
       line_numbers: true
 
 future: false # Allows us to stage posts
-exclude: [README.md, Gemfile, Gemfile.lock, vendor]
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, create-new-post]
 
 collections:
   courses:
