@@ -19,14 +19,22 @@
       
       {% if page.is_done %}
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+
       <h2>Lessons</h2>
       <ol class="lessons-list">
       {% for course in site.data.courses %}
       {% if course.id == page.course_id %}
       {% for lesson in course.lessons %}
+      {% capture lessonPermalink %}/courses/{{ page.course_id }}/{{ lesson.id }}/{% endcapture %}
+      {% for pg in site.pages %}
+        {% if pg.course == page.course_id and pg.id == lesson.id %}
+          {% assign lessonIsOpen = true %}<br>
+        {% endif %}
+      {% endfor %}
+      
       <li>
-        <a href="{{ lesson.permalink }}">
-          <strong>{{ lesson.title }}</strong>
+        <a {% if lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
+          <strong>{{ lesson.title }} <span class="badge" aria-label="Hindi pa available ang lesson na ito">Soon</span></strong>
           <p>{{ lesson.summary }}</p>
         </a>
       </li>
