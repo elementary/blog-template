@@ -132,7 +132,7 @@
   }
 }
 
-.course-list a:hover {
+.course-list a[href]:hover {
   box-shadow: 0 3px 15px #0003;
 }
 
@@ -140,12 +140,12 @@
   transition: all 300ms;
 }
 
-.course-list a:focus {
+.course-list a[href]:focus {
   background-color: var(--banana-100);
   border-color: var(--banana-500);
 }
 
-.course-list a:hover:focus {
+.course-list a[href]:hover:focus {
   box-shadow: 0 3px 15px var(--banana-300);
 }
 
@@ -250,14 +250,20 @@ article .lessons-list li a {
   color: var(--fg-color);
   text-decoration: none;
   flex: 1;
+  
+  strong {
+	  display: flex;
+	  justify-content: space-between;
+  }
 }
 
-.lessons-list a:hover {
+
+.lessons-list a[href]:hover {
   background-color: #0003;
 }
 
 @media (prefers-color-scheme: dark) {
-  .lessons-list a:hover {
+  .lessons-list a[href]:hover {
     background-color: #fff1;
   }
 }
@@ -266,7 +272,7 @@ article .lessons-list li a {
   transition: border-color 300ms, color 300ms, background-color 300ms, box-shadow 300ms;
 }
 
-.lessons-list a:focus {
+.lessons-list a[href]:focus {
 	box-shadow: 0 0 0 5px var(--banana-300);
 	background-color: var(--banana-100);
 	outline: none;
@@ -410,6 +416,12 @@ header.error::before {
 	border: 1px solid #0005;
 	vertical-align: middle;
 	line-height: 1;
+	
+	&.badge--success {
+	  background-color: #69F0AE;
+	  color: #1B5E20;
+	  border-color: #1B5E20;
+	}
 }
 
 @media screen and (max-width: 720px) {

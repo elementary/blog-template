@@ -1,6 +1,7 @@
 <header class="banner">
   <div class="banner__wrapper">
     <h1 class="banner__title">
+      {% assign course = include.course %}
       {{ page.title }}
       {% if page.type != 'index' %}{% unless course.is_done %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}{% endif %}
     </h1>

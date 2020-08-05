@@ -2,7 +2,8 @@
 <html lang="tl" dir="ltr" class="courses">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
-    {% include course-banner.html %}
+    {% unless page.type %}{% assign thisCourse = page %}{% endunless %}
+    {% include course-banner.html course=thisCourse %}
     {% include nav.html %}
     <section>
       <article>
@@ -26,15 +27,15 @@
       {% if course.id == page.course_id %}
       {% for lesson in course.lessons %}
       {% capture lessonPermalink %}/courses/{{ page.course_id }}/{{ lesson.id }}/{% endcapture %}
-      {% for pg in site.pages %}
-        {% if pg.course == page.course_id and pg.id == lesson.id %}
-          {% assign lessonIsOpen = true %}<br>
-        {% endif %}
-      {% endfor %}
-      
+      {% assign lessonPage = site.pages | where: "id", lesson.id %}
+      {% if lessonPage.size > 0 %}
+        {% assign lessonIsOpen = true %}
+      {% else %}
+        {% assign lessonIsOpen = false %}
+      {% endif %}
       <li>
         <a {% if lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
-          <strong>{{ lesson.title }} <span class="badge" aria-label="Hindi pa available ang lesson na ito">Soon</span></strong>
+          <strong>{{ lesson.title }}</strong>
           <p>{{ lesson.summary }}</p>
         </a>
       </li>
