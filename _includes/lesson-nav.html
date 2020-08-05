@@ -1,0 +1,47 @@
+{% assign prevLessonID = include.prevLessonID %}
+{% assign nextLessonID = include.nextLessonID %}
+{% assign prevLessonTitle = include.prevLessonTitle %}
+{% assign nextLessonTitle = include.nextLessonTitle %}
+
+<!-- does next lesson exist?: nextLessonExists -->
+{% assign coursePages = site.pages | where: 'course', page.course_id %}
+{% assign nextLessonPage = coursePages | where: 'id', nextLessonID %}
+
+{% if nextLessonPage.size > 0 %}
+  {% assign nextLessonExists = true %}
+{% else %}
+  {% assign nextLessonExists = false %}
+{% endif %}
+<div class="lesson__actions">
+  {% if prevLessonID != nil %}<a class="btn" href="{{ page.permalink }}../{{ prevLessonID }}">
+        <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+            <g color='currentColor' transform='translate(-293 3)'>
+                <path d='M301 10.676l-7-6.192 7-6.16V2h6.001v5h-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+            </g>
+        </svg>
+        {{ prevLessonTitle }}
+      </a>
+      {% else %}
+      <span aria-hidden="none"></span>
+      {% endif %}
+
+    <a class="btn" href="{{ page.permalink }}..">
+      <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg'>
+        <g color='currentColor' transform='translate(-453 -17)'>
+            <path d='M467.676 25l-6.191-7.002-6.16 7.001H459V31h5v-6z' fill='currentColor' overflow='visible' style='marker:none'/>
+        </g>
+    </svg>
+      Bumalik sa course page
+    </a>
+    {% if nextLessonID != nil and nextLessonExists %}<a class="btn btn--preferred" href="{{ page.permalink }}../{{ nextLessonID }}">
+      {{ nextLessonTitle }}
+      <svg height='16' width='16' xmlns='http://www.w3.org/2000/svg' style="margin: 0; margin-left: 0.5ch">
+        <g color='currentColor' transform='translate(-313 3)'>
+            <path d='M321 10.676l7.001-6.192-7-6.16V2H315v5h6z' fill='currentColor' overflow='visible' style='marker:none'/>
+        </g>
+    </svg>
+    </a>
+      {% else %}
+      <span aria-hidden="none"></span>
+    {% endif %}
+</div>
