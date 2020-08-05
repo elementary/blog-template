@@ -1,36 +1,103 @@
 [
-    {
-        "title": "Essentials of HyperText Markup Language",
-        "id": "html-essentials",
-        "lessons": [
-            {
-                "id": "01-hypertext-markup-language",
-                "title": "HyperText Markup Language",
-                "summary": "Ano ang HTML, at ano ang lugar nito sa Web development?",
-                "permalink": "/courses/html-essentials/01-hypertext-markup-language/"
-            },
-            {
-                "id": "02-html-syntax",
-                "title": "HTML Syntax",
-                "summary": "Ang grammar na sinusunod ng HTML",
-                "permalink": "/courses/html-essentials/02-html-syntax/"
-            },
-            {
-                "id": "03-html-page",
-                "title": "Ang HTML Page",
-                "summary": "Ang basic structure ng isang HTML page",
-                "permalink": "/courses/html-essentials/03-html-page/"
-            }
-        ]
-    },
-    {
-      "title": "Essentials of Cascading Style Sheets",
-        "id": "css-essentials",
-        "lessons": []
-    },
-    {
-      "title": "Basics of Web Programming with JavaScript",
-        "id": "js-basics",
-        "lessons": []
-    }
+  {
+    "title" : "Essentials of HyperText Markup Language",
+    "id" : "html-essentials",
+    "lessons" : [
+      {
+        "id" : "01-hypertext-markup-language",
+        "title" : "HyperText Markup Language",
+        "summary" : "Ano ang HTML, at ano ang lugar nito sa Web development?",
+        "permalink" : "/courses/html-essentials/01-hypertext-markup-language/"
+      },
+      {
+        "id" : "02-html-syntax",
+        "title" : "HTML Syntax",
+        "summary" : "Ang grammar na sinusunod ng HTML",
+        "permalink" : "/courses/html-essentials/02-html-syntax/"
+      },
+      {
+        "id" : "03-html-page",
+        "title" : "Ang HTML Page",
+        "summary" : "Ang basic structure ng isang HTML page",
+        "permalink" : "/courses/html-essentials/03-html-page/"
+      }
+    ]
+  },
+  {
+    "title" : "Essentials of Cascading Style Sheets",
+    "id" : "css-essentials",
+    "lessons" : [
+      {
+        "id" : "01-intro-css",
+        "title" : "Ang Cascading Style Sheets",
+        "summary" : "Bakit kailangan ang CSS? At paano ito gagamitin kasama ng HTML?"
+      },
+      {
+        "id" : "01-1-Selectors",
+        "title" : "Mga Selector",
+        "summary" : "Bukod sa HTML tags, puwede tayong gumamit ng patterns, o selectors, para sabihin sa CSS kung sa aling HTML elements lang mag-a-apply ang styling natin."
+      },
+      {
+        "id" : "02-cascade-inheritance-specificity",
+        "title" : "Ang Cascade, Inheritance, at Specificity",
+        "summary" : "Mga nakakalitong concepts ng CSS, at kung paano sila gumagana."
+      },
+      {
+        "id" : "03-box-model",
+        "title" : "Ang Box Model",
+        "summary" : "Mga spacing at sizes sa CSS"
+      },
+      {
+        "id" : "04-typography",
+        "title" : "Typography",
+        "summary" : "Mga fonts at iba pang styling ng text"
+      },
+      {
+        "id" : "05-display-types",
+        "title" : "Layout: Inline, Block, at Inline-Block Display",
+        "summary" : "Mga display types na madalas gamitin sa Web design."
+      },
+      {
+        "id" : "06-flexbox",
+        "title" : "Layout: Flexbox",
+        "summary" : "Ang flexible boxes layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
+      },
+      {
+        "id" : "07-grid",
+        "title" : "Layout: Grid",
+        "summary" : "Ang grid layout, kung paano ito gamitin, at kung kailan ito dapat gamitin"
+      },
+      {
+        "id" : "07-grid-flex",
+        "title" : "Layout: Paggamit Grid at Flexbox nang Sabay",
+        "summary" : "Hindi magkalabang layout techniques ang flexbox at grid. Sa katunayan, mas maganda pa nga kung gagamitin natin sila pareho. Tingnan kung paano."
+      },
+      {
+        "id" : "08-positioning",
+        "title" : "Positioning: Relative, Absolute, Fixed, at Sticky",
+        "summary" : "Bukod sa display types, puwede rin nating gamitin ang position property ng CSS"
+      },
+      {
+        "id" : "09-pseudo-elements-classes",
+        "title" : "Pseudoelements at Pseudoclasses",
+        "summary" : "Puwede tayong magdagdag ng elements at states gamit lang ang CSS"
+      },
+      {
+        "id" : "10-transitions",
+        "title" : "Transitions",
+        "summary" : "Kapag nagpapalit ng value ang property ng isang element, puwede nating lagyan iyon ng transition."
+      },
+      {
+        "id" : "11-animations",
+        "title" : "Animations",
+        "summary" : "Gawing mas interesting ang Web pages mo gamit ang CSS animations."
+      }
+    ]
+  },
+  {
+    "title" : "Basics of Web Programming with JavaScript",
+    "id" : "js-basics",
+    "lessons" : [
+    ]
+  }
 ]
