@@ -298,9 +298,14 @@ article .lessons-list li a {
 }
 
 i, em, dfn {
-    font-family: "Zilla Slab", serif;
-    font-size: 1.1em;
-    color: var(--fg-color-emphasis);
+  font-family: var(--serif-font);
+  font-size: 1.1em;
+  color: var(--fg-color-emphasis);
+}
+
+b, strong {
+  font-family: var(--serif-font);
+  font-variation-settings: 'opsz' 30, 'wght' 700 !important;
 }
 
 .note {
@@ -416,6 +421,7 @@ header.error::before {
 	border: 1px solid #0005;
 	vertical-align: middle;
 	line-height: 1;
+	font-family: var(--copy-font);
 	
 	&.badge--success {
 	  background-color: #69F0AE;
