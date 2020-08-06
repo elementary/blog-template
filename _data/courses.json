@@ -96,8 +96,112 @@
   },
   {
     "title" : "Basics of Web Programming with JavaScript",
-    "id" : "js-basics",
-    "lessons" : [
+    "id" : "js-essentials",
+    "lessons" : [{
+        "id" : "01-hello-world",
+        "title" : "Ang Una Mong Program: <q>Hello, World!</q>",
+        "summary" : "Pagli-link ng JavaScript program sa HTML file mo, at ang una mong program."
+      },
+      {
+        "id" : "02-statement-semicolon-comment",
+        "title" : "Statements, Semi-colons, at Comments",
+        "summary" : "Ano ang mga statement? Required ba ang semi-colons? Paano makakatulong ang paglalagay ng comments sa code?"
+      },
+      {
+        "id" : "03-use-strict",
+        "title" : "Modern JavaScript: <code>'use strict'</code>",
+        "summary" : "Para saan ang <code>'use strict'</code>, at kailangan mo ba talaga nito?"
+      },
+      {
+        "id" : "04-variables",
+        "title" : "Variables",
+        "summary" : "Pagde-declare ng variables gamit ang <code>let</code> at <code>const</code>. At dapat pa bang gamitin ang <code>var</code>"
+      },
+      {
+        "id" : "05-data-types",
+        "title" : "Data Types",
+        "summary" : "Ang iba't ibang types ng data sa JavaScript."
+      },
+      {
+        "id" : "06-operators",
+        "title" : "Basic Operators at Math Operations",
+        "summary" : "Puwede tayong gumawa ng math operations gamit ang JavaScript"
+      },
+      {
+        "id" : "07-comparisons",
+        "title" : "Comparisons",
+        "summary" : "Gamitin natin ang comparisons (<code>&gt;</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, etc.)."
+      },
+      {
+        "id" : "08-selection",
+        "title" : "Selection",
+        "summary" : "Paggawa ng selection at decision gamit ang <code>if</code statements at ternary selection (</code>?:</code>)"
+      },
+      {
+        "id" : "09-logical-operators",
+        "title" : "Logical Operators",
+        "summary" : "Ang logical operations ay mga operation na may boolean result."
+      },
+      {
+        "id" : "10-loops",
+        "title" : "Loops: <code>while</code>, <code>do&hellip;while</code>, at <code>for</code>",
+        "summary" : "Inuulit ng mga loop ang isang set ng operations hanggang sa ma-meet ang condition na sinet mo."
+      },
+      {
+        "id" : "11-switch",
+        "title" : "Ang <code>switch</code> Statement",
+        "summary" : "Ang <code>switch</code> ay isang mas complex na version ng <code>if</code> statement."
+      },
+      {
+        "id" : "12-functions",
+        "title": "Functions",
+        "summary" : "Ang functions ay isang set ng operations na puwede nating gamitin nang paulit-ulit sa iba't ibang bahagi ng code."
+      },
+      {
+        "id" : "13-arrow-functions",
+        "title" : "Arrow Functions", 
+        "summary": "Ang arrow functions ay isang way ng pagsusulat ng functions sa code."
+      },
+      {
+        "id" : "14-arrays",
+        "title" : "Arrays", 
+        "summary": "Ang arrays ay isang set ng mga value na puwedeng tawagin gamit lang ang isang variable."
+      },
+      {
+        "id" : "15-objects",
+        "title" : "Objects", 
+        "summary": "Ang objects ay mga value na may properties at sariling functions na kung tawagin ay method."
+      },
+      {
+        "id" : "16-dom",
+        "title" : "Ang Document Object Model", 
+        "summary": "Ang Document Object Model o DOM ay isang object representation ng HTML webpage na puwedeng gamitin sa JavaScript."
+      },
+      {
+        "id" : "17-dom-query",
+        "title" : "Paghahanap ng Elements sa DOM", 
+        "summary": "Paano natin gagamitin ang JavaScript sa paghahanap ng HTML elements sa DOM?"
+      },
+      {
+        "id" : "18-attributes-properties",
+        "title" : "DOM Attributes at Properties", 
+        "summary": "Puwede rin nating baguhin ang HTML attributes gamit ang JavaScript"
+      },
+      {
+        "id" : "19-dom-manipulation",
+        "title" : "DOM Manipulation", 
+        "summary": "Gamit ang JavaScript, puwede tayong magdagdag ng elements, attributes, at text sa HTML page natin."
+      },
+      {
+        "id" : "20-events",
+        "title" : "Events", 
+        "summary": "Ang mga event ay mga signal na sine-send ng browser sa code natin kapag may ginawa ang user o kapag may ibang changes na nangyari na puwede nating gamitin."
+      },
+      {
+        "id" : "21-storage",
+        "title" : "Storage", 
+        "summary": "Gamit ang cookies, <code>localStorage</code>, at <code>sessionStorage</code>, puwede tayong mag-save ng data sa browser ng user."
+      }
     ]
   }
 ]
