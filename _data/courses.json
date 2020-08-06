@@ -1,29 +1,5 @@
 [
   {
-    "title" : "Essentials of HyperText Markup Language",
-    "id" : "html-essentials",
-    "lessons" : [
-      {
-        "id" : "01-hypertext-markup-language",
-        "title" : "HyperText Markup Language",
-        "summary" : "Ano ang HTML, at ano ang lugar nito sa Web development?",
-        "permalink" : "/courses/html-essentials/01-hypertext-markup-language/"
-      },
-      {
-        "id" : "02-html-syntax",
-        "title" : "HTML Syntax",
-        "summary" : "Ang grammar na sinusunod ng HTML",
-        "permalink" : "/courses/html-essentials/02-html-syntax/"
-      },
-      {
-        "id" : "03-html-page",
-        "title" : "Ang HTML Page",
-        "summary" : "Ang basic structure ng isang HTML page",
-        "permalink" : "/courses/html-essentials/03-html-page/"
-      }
-    ]
-  },
-  {
     "title" : "Essentials of Cascading Style Sheets",
     "id" : "css-essentials",
     "lessons" : [
@@ -201,6 +177,137 @@
         "id" : "21-storage",
         "title" : "Storage", 
         "summary": "Gamit ang cookies, <code>localStorage</code>, at <code>sessionStorage</code>, puwede tayong mag-save ng data sa browser ng user."
+      }
+    ]
+  },
+  {
+    "title" : "Essentials of HyperText Markup Language",
+    "id" : "html-essentials",
+    "lessons" : [
+      {
+        "id" : "01-hypertext-markup-language",
+        "title" : "HyperText Markup Language",
+        "summary" : "Ano ang HTML, at ano ang lugar nito sa Web development?"
+      },
+      {
+        "id" : "02-html-syntax",
+        "title" : "HTML Syntax",
+        "summary" : "Ang grammar na sinusunod ng HTML"
+      },
+      {
+        "id" : "03-html-page",
+        "title" : "Ang HTML Page",
+        "summary" : "Ang basic structure ng isang HTML page"
+      },
+      {
+        "id" : "04-paragraph-headline",
+        "title" : "Paragraphs at Headlines",
+        "summary" : ""
+      },
+      {
+        "id" : "05-bold-italic",
+        "title" : "Bold at Italic Text",
+        "summary" : ""
+      },
+      {
+        "id" : "06-list",
+        "title" : "Mga Listahan",
+        "summary" : ""
+      },
+      {
+        "id" : "07-quotes-blockquotes",
+        "title" : "Quotes at Blockquotes",
+        "summary" : ""
+      },
+      {
+        "id" : "08-date-time",
+        "title" : "Date at Time",
+        "summary" : ""
+      },
+      {
+        "id" : "09-code-preformatted-line-breaks",
+        "title" : "Code, Preformatted Text, at Line Breaks",
+        "summary" : ""
+      },
+      {
+        "id" : "10-subscript-superscript-small",
+        "title" : "Subscripts, Superscripts, at Small Text",
+        "summary" : ""
+      },
+      {
+        "id" : "11-debugging",
+        "title" : "Kapag may mali sa code mo&hellip;",
+        "summary" : "Mga tools at techniques na puwede mong gawin kapag may mali sa code mo."
+      },
+      {
+        "id" : "12-html-attributes",
+        "title" : "HTML Attributes",
+        "summary" : "Ang attributes ay additional settings na puwede nating ilagay sa mga tag para madagdagan o baguhin mismo ang functionality nila."
+      },
+      {
+        "id" : "13-aria",
+        "title" : "ARIA Roles",
+        "summary" : "Ang Accessible Rich Internet Applications (ARIA) ay ginawa para maging accessible sa lahat ang mga Web page."
+      },
+      {
+        "id" : "14-whitespace",
+        "title" : "HTML Whitespace at Formatting",
+        "summary" : "Ito ang puwede mong gawin para mas madaling basahin ang HTML code mo."
+      },
+      {
+        "id" : "15-entities",
+        "title" : "HTML Entities",
+        "summary" : "Paano tayo maglalagay ng special characters o symbols na wala sa keyboard natin?"
+      },
+      {
+        "id" : "16-links",
+        "title" : "Ang <i>HyperText</i>: Web Links",
+        "summary" : "I-connect natin sa isa't isa ang mga webpage natin."
+      },
+      {
+        "id" : "17-url-paths",
+        "title" : "Mga URL at File Paths",
+        "summary" : ""
+      },
+      {
+        "id" : "18-navigation",
+        "title" : "Navigation Links",
+        "summary" : "Sa karamihan ng webpages, may makikita tayong navigation bar. Paano natin ito gagawin sa HTML?"
+      },
+      {
+        "id" : "19-images",
+        "title" : "Images",
+        "summary" : "Paglalagay ng images, at iba pang techniques na puwede nating gawin para ma-save ang internet data ng users natin."
+      },
+      {
+        "id" : "20-figure-figcaption",
+        "title" : "Figures at <code>figcaption</code>",
+        "summary" : "Ang figures ay mga media na isinasama natin sa content bilang additional information."
+      },
+      {
+        "id" : "21-audio-video-subtitles",
+        "title" : "Audio, Video, at Subtitles",
+        "summary" : ""
+      },
+      {
+        "id" : "22-iframes",
+        "title" : "Pag-e-embed ng media gamit ang <code>iframe</code>",
+        "summary" : ""
+      },
+      {
+        "id" : "23-languages",
+        "title" : "Paglalagay ng content na nasa ibang wika",
+        "summary" : ""
+      },
+      {
+        "id" : "24-forms",
+        "title" : "HTML Forms",
+        "summary" : "Subukan nating gumawa ng sign up/log in form"
+      },
+      {
+        "id" : "25-tables",
+        "title" : "HTML Tables",
+        "summary" : "Gumawa tayo ng table para mag-display ng data"
       }
     ]
   }
