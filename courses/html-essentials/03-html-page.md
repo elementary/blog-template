@@ -62,3 +62,6 @@ Ang `<title></title>` tag ang nagsasabi sa browser kung ano ang title ng webpage
 
 ### Ang `<body></body>` Tag
 Sa `<body></body>` tag nakalagay ang lahat ng content ng webpage natin. So basically, dito natin ilalagay ang HTML elements na ginawa natin sa nakaraang lesson.
+
+### Summary
+Mula sa lesson na ito hanggang sa pinakahuling lesson, ito na ang template na gagamitin natin kapag gumagawa tayo ng bagong webpages.
