@@ -2,6 +2,7 @@
 layout: courses
 title: "Basics of Web Programming with JavaScript"
 subtitle: Course
+course_id: js-essentials
 summary: Isang introduction sa basics ng JavaScript para sa interactive na Web sites.
 permalink: /courses/js-essentials/
 
@@ -10,7 +11,6 @@ long_desc: 'Sa course na ito, tatalakayin natin ang basics ng programming gamit 
 release_date: 2020-01-30
 is_done: false
 ---
-<article>
 <h2>Prerequisites</h2>
 <p>Para sa lahat ang course na ito. Pero magiging mas madali ito para sa mga taong...</p>
 <ul class="checklist">
@@ -40,23 +40,3 @@ is_done: false
       </ul>
   </li>
 </ul>
-
-<h2>Lessons</h2>
-<ol class="lessons-list">
-{% for course in site.data.courses %}
-
-{% if course.title == page.title %}
-{% for lesson in course.lessons %}
-<li>
-  <a href="{{ lesson.permalink }}">
-    <strong>{{ lesson.title }}</strong>
-    <p>{{ lesson.summary }}</p>
-  </a>
-</li>
-{% endfor %}
-{% endif %}
-
-{% endfor %}
-
-</ol>
-</article>
