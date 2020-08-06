@@ -1,0 +1,49 @@
+---
+---
+.lesson__actions,
+body > header,
+body > footer {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1em;
+}
+
+article figure {
+	max-width: var(--content-width);
+	margin: auto;
+}
+
+blockquote {
+	font-size: 1rem;
+	line-height: 1.2;
+	text-align: right;
+	padding: 0;
+	max-width: var(--content-width);
+}
+
+article {
+  margin: 0;
+  max-width: none;
+  
+  & > * {
+    max-width: none !important;
+  }
+}
+
+body > section {
+  max-width: none !important;
+}
+
+.lesson__article {
+	margin: 0;
+}
+
+@page {
+  margin: 1.5cm;
+}
+
+@page :left {
+  margin: 5cm
+}
