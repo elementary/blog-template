@@ -2,9 +2,10 @@
 <html lang="tl" dir="ltr" class="lesson">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
-    {% include course-banner.html %}
-    {% include nav.html %}
     {% assign course = site.data.courses | where: 'id', page.course %}
+    {% assign coursePage = site.courses | where: 'course_id', page.course %}
+    {% include course-banner.html course=coursePage isALesson=true %}
+    {% include nav.html %}
     {% assign currentLesson = course[0].lessons | where: 'id', page.id %}
     {% assign lessonsCount = course[0].lessons | size | minus: 1 %}
     

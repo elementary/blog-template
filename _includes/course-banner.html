@@ -1,9 +1,14 @@
+{% assign course = include.course %}
+{% if include.isALesson %}
+  {% assign courseIsDone = course | map: "is_done" | first %}
+{% else %}
+  {% assign courseIsDone = course.is_done %}
+{% endif %}
 <header class="banner">
   <div class="banner__wrapper">
     <h1 class="banner__title">
-      {% assign course = include.course %}
       {{ page.title }}
-      {% if page.type != 'index' %}{% unless course.is_done %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}{% endif %}
+      {% if page.type != 'index' %}{% unless courseIsDone %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}{% endif %}
     </h1>
     {% if page.subtitle != nil %}
     <h2 class="banner__subtitle">{{ page.subtitle }}</h2>
