@@ -48,5 +48,11 @@
       "term": "Ajax",
       "meaning": "(n.) Isang technique na ginagamit para i-update ang mga parts ng isang user interface o kumuha ng data mula sa server nang hindi kinakailangang i-refresh ang buong page. <strong>Dati</strong> itong acronym para sa <i>Asynchronous JavaScript and XML</i>.",
       "link": null
+    }, {
+      "term": "Character Set",
+      "meaning": "(n.) isang set ng rules na nagsasabi sa computer kung aling characters ang itutumbas sa isang sequence ng bytes. Dahil puwedeng i-interpret sa iba't ibang paraan ang numbers papuntang letters, mahalagang i-specify ang character set ng isang webpage. UTF-8 ang isa sa pinakamadalas gamitin sa mga webpage."
+    }, {
+      "term": "Character Encoding",
+      "meaning": "(n.) isang set ng rules na nagsasabi sa computer kung aling characters ang itutumbas sa isang sequence ng bytes. Dahil puwedeng i-interpret sa iba't ibang paraan ang numbers papuntang letters, mahalagang i-specify ang character set ng isang webpage. UTF-8 ang isa sa pinakamadalas gamitin sa mga webpage."
     }
 ]
