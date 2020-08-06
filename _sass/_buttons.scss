@@ -141,7 +141,6 @@ article a:not([class]) {
 }
 
 article a[target=_blank] {
-  --link-indicator-color: var(--brand-color);
 	padding-right: 1rem;
 	background-image: radial-gradient(var(--link-indicator-color), var(--link-indicator-color) 75%, transparent 75%);
 	background-size: 0.5rem 0.5rem;
