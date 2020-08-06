@@ -13,6 +13,15 @@ code:
 ## HTML Syntax
 Ang grammar na sinusunod ng HTML
 
+### File type
+Para makagawa ng isang webpage, kailangan lang nating gumawa ng isang ordinary text file. Pero sa halip na `.txt` ang gamitin nating filename extension, papalitan natin ito ng `.html`.
+
+<aside class="float">
+<h4 class="float__header">Ang HTML filename extension</h4>
+<p>Noong bago pa lang ang HTML, kung kailan maliliit pa lang ang storage capacities ng mga computer, mahalaga na maikli lang ang filenames ng mga files. Sa katunayan, sa mga lumang versions ng <i>Microsoft Windows</i>, hindi puwedeng lumampas sa tatlong letters ang filename extensions ng mga files. Kaya noon, ang mga HTML files ay gumagamit ng `.htm` filename extension. Pero ngayon, kung kailan umaabot na sa terabytes ang storage space, hindi na ganoon kahalaga ang haba ng filenames, kaya karamihan ng webpages ay gumagamit ng `.html` filename extensions. Puwede mong gamitin ang kahit alin sa mga ito.</p>
+</aside>
+
+### Syntax
 Ganito ang hitsura ng HTML:
 ```html
 <p>

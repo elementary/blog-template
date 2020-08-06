@@ -59,7 +59,7 @@
   gap: 0.25rem;
 }
 
-.lesson__article p:first-of-type {
+.lesson__article article > p:first-of-type {
 	font-size: 1.5em;
 	text-indent: 0;
 	opacity: 0.55;
@@ -79,6 +79,7 @@
   padding: 0 1rem;
   justify-items: center;
   align-items: center;
+  clear: both;
   
   .btn:first-child {
     justify-self: self-start;
@@ -478,4 +479,40 @@ header.error::before {
 q {
 	font-family: var(--serif-font);
 	font-weight: normal;
+}
+
+aside.float {
+  width: 100%;
+	max-width: calc(((var(--content-width) / 3) * 2) - 4rem);
+	float: left;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-size: 1px 75%;
+	background-repeat: no-repeat;
+	padding-left: 0.5rem;
+	padding-right: 2rem;
+	margin-right: 2rem;
+	text-align: right;
+	background-position: right center;
+
+	&.float--right {
+	  float: right;
+	  padding-right: 0.5rem;
+	  margin-right: 0;
+	  padding-left: 2rem;
+	  margin-left: 2rem;
+	  background-position: left center;
+	  text-align: left;
+  }
+
+  .float__header {
+	  font-size: 1.1rem;
+	  margin-top: 0;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    text-indent: 0;
+    line-height: 1.45;
+    margin-bottom: 0;
+  }
 }
