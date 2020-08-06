@@ -12,9 +12,10 @@
       {% endif %}
 
       {% if page.type != 'index' %}
-      {% unless page.is_done %}
       <h2>Course Description</h2>
       <p>{{ page.long_desc }}</p>
+
+      {% unless page.is_done %}
       <p>Magsisimula ang course na ito sa <b><time datetime="{{ page.release_date }}">{{ page.release_date | date: "%B %-d, %Y" }}</time></b>.</p>
       {% endunless %}
       
