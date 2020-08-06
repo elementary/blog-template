@@ -251,9 +251,8 @@ article .lessons-list li a {
   text-decoration: none;
   flex: 1;
   
-  strong {
-	  display: flex;
-	  justify-content: space-between;
+  &:not([href]) {
+    opacity: 0.5;
   }
 }
 
