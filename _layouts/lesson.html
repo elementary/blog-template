@@ -2,30 +2,29 @@
 <html lang="tl" dir="ltr" class="lesson">
   {% include head.html %}
   <body class="{% if page.url == '/' %}home {% endif %}">
-    {% assign course = site.data.courses | where: 'id', page.course %}
+    {% assign courseData = site.data.courses | where: 'id', page.course %}
     {% assign coursePage = site.courses | where: 'course_id', page.course %}
     {% include course-banner.html course=coursePage isALesson=true %}
     {% include nav.html %}
-    {% assign currentLesson = course[0].lessons | where: 'id', page.id %}
-    {% assign lessonsCount = course[0].lessons | size | minus: 1 %}
+    {% assign currentLesson = courseData[0].lessons | where: 'id', page.id %}
+    {% assign lessonsCount = courseData[0].lessons | size | minus: 1 %}
     
     {% for i in (0..lessonsCount) %}
-      {% if course[0].lessons[i].id == page.id %}
+      {% if courseData[0].lessons[i].id == page.id %}
         {% assign nextLessonIndex = i | plus: 1 %}
         {% assign prevLessonIndex = i | minus: 1 %}
         
-        {% if course[0].lessons[nextLessonIndex] and nextLessonIndex <= lessonsCount %}
-          {% assign nextLessonID = course[0].lessons[nextLessonIndex].id %}
-          {% assign nextLessonTitle = course[0].lessons[nextLessonIndex].title %}
+        {% if courseData[0].lessons[nextLessonIndex] and nextLessonIndex <= lessonsCount %}
+          {% assign nextLessonID = courseData[0].lessons[nextLessonIndex].id %}
+          {% assign nextLessonTitle = courseData[0].lessons[nextLessonIndex].title %}
         {% endif %}
         
-        {% if course[0].lessons[prevLessonIndex] and prevLessonIndex >= 0 %}
-          {% assign prevLessonID = course[0].lessons[prevLessonIndex].id %}
-          {% assign prevLessonTitle = course[0].lessons[prevLessonIndex].title %}
+        {% if courseData[0].lessons[prevLessonIndex] and prevLessonIndex >= 0 %}
+          {% assign prevLessonID = courseData[0].lessons[prevLessonIndex].id %}
+          {% assign prevLessonTitle = courseData[0].lessons[prevLessonIndex].title %}
         {% endif %}
       {% endif %}
     {% endfor %}
-    
     {% if page.video != nil %}
     <section class="lesson__video">
       <div class="lesson__video-wrapper">
