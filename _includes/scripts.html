@@ -59,7 +59,7 @@
 
   function getTermDefinition(term) {
     const definitions = {{ site.data.glossary | jsonify }};
-    const word = definitions.find(word => word.term === term)
+    const word = definitions.find(word => word.term.toLowerCase() === term.toLowerCase())
 
     if (word)
       return word.meaning
