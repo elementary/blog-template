@@ -42,6 +42,7 @@ html {
 html {
   // To blend with the footer on short pages
   background-color: var(--secondary-bg-color);
+  scroll-behavior: smooth;
 }
 
 svg {
