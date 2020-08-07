@@ -84,8 +84,10 @@
       <article>
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
       </article>
+    {% include license.html %}
     {% include lesson-nav.html prevLessonID=prevLessonID nextLessonID=nextLessonID prevLessonTitle=prevLessonTitle nextLessonTitle=nextLessonTitle %}
     </section>
+    {% include social.html %}
     {% include footer.html %}
     {% include scripts.html %}
   </body>
