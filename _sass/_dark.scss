@@ -1,6 +1,12 @@
-
+body {
+  transition: background-color 300ms, color 300ms;
+}
 
 @media (prefers-color-scheme: dark) {
+  .invert-when-dark {
+      filter: invert(1) hue-rotate(180deg);
+  }
+  
   .color {
     background-color: var(--black-700);
     border-color: var(--black-900);
@@ -78,3 +84,5 @@
     color: var(--header-fg-color);
   }
 }
+
+

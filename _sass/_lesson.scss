@@ -66,8 +66,20 @@
 	font-weight: lighter;
 }
 
-.lesson__article article h2 {
-	font-size: calc(2rem + 2vw);
+.lesson__article {
+  h4 {
+	  font-size: 1.5em;
+	  opacity: 1;
+  }
+
+  h3 {
+	  font-size: 2em;
+	  opacity: 1;
+  }
+
+  article h2 {
+	  font-size: calc(2rem + 2vw);
+  }
 }
 
 .lesson__actions {
@@ -493,6 +505,9 @@ aside.float {
 	margin-right: 2rem;
 	text-align: right;
 	background-position: right center;
+	clear: both;
+	font-size: 0.9em;
+	opacity: 0.7;
 
 	&.float--right {
 	  float: right;
@@ -505,12 +520,11 @@ aside.float {
   }
 
   .float__header {
-	  font-size: 1.1rem;
+	  font-size: 1em;
 	  margin-top: 0;
   }
   
   p {
-    font-size: 0.9rem;
     text-indent: 0;
     line-height: 1.45;
     margin-bottom: 0;
@@ -518,7 +532,7 @@ aside.float {
 }
 
 .footnotes {
-  font-size: 0.85rem;
+  font-size: 0.9em;
   line-height: 1.45;
   clear: both;
   
@@ -532,6 +546,7 @@ aside.float {
   }
   
   p, ul, ol {
+    font-size: 1em;
     margin-bottom: 1em;
   }
 }
