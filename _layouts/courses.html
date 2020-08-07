@@ -25,24 +25,23 @@
       <h2>Lessons</h2>
       <ol class="lessons-list">
       {% for course in site.data.courses %}
-      {% if course.id == page.course_id %}
-      {% for lesson in course.lessons %}
-      {% capture lessonPermalink %}/courses/{{ page.course_id }}/{{ lesson.id }}/{% endcapture %}
-      {% assign lessonPage = site.pages | where: "id", lesson.id %}
-      {% if lessonPage.size > 0 %}
-        {% assign lessonIsOpen = true %}
-      {% else %}
-        {% assign lessonIsOpen = false %}
-      {% endif %}
-      <li>
-        <a {% if lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
-          <strong>{{ lesson.title }}</strong>
-          <p>{{ lesson.summary }}</p>
-        </a>
-      </li>
-      {% endfor %}
-      {% endif %}
-
+          {% if course.id == page.course_id %}
+              {% for lesson in course.lessons %}
+                  {% capture lessonPermalink %}/courses/{{ page.course_id }}/{{ lesson.id }}/{% endcapture %}
+                  {% assign lessonPage = site.pages | where: "id", lesson.id %}
+                  {% if lessonPage.size > 0 %}
+                    {% assign lessonIsOpen = true %}
+                  {% else %}
+                    {% assign lessonIsOpen = false %}
+                  {% endif %}
+                  <li>
+                    <a {% if lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
+                      <strong>{{ lesson.title }}</strong>
+                      <p>{{ lesson.summary }}</p>
+                    </a>
+                  </li>
+              {% endfor %}
+          {% endif %}
       {% endfor %}
 
       </ol>
