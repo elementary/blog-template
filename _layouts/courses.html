@@ -21,6 +21,7 @@
       
       {% if page.is_done %}
       {{ content | replace: '<a href="http', '<a rel="nofollow noopener noreferrer" target="_blank" href="http' }}
+      {% endif %}
 
       <h2>Lessons</h2>
       <ol class="lessons-list">
@@ -35,7 +36,7 @@
                     {% assign lessonIsOpen = false %}
                   {% endif %}
                   <li>
-                    <a {% if lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
+                    <a {% if page.is_done and lessonIsOpen %}href="{{ lessonPermalink }}"{% endif %}>
                       <strong>{{ lesson.title }}</strong>
                       <p>{{ lesson.summary }}</p>
                     </a>
@@ -45,7 +46,6 @@
       {% endfor %}
 
       </ol>
-      {% endif %}
       {% endif %}
       </article>
     </section>
