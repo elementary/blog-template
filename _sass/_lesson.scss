@@ -516,3 +516,53 @@ aside.float {
     margin-bottom: 0;
   }
 }
+
+.footnotes {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  clear: both;
+  
+  & > ol,
+  & > ul {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 50% 1px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+  }
+  
+  p, ul, ol {
+    margin-bottom: 1em;
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+}
+
+#markdown-toc {
+	float: right;
+	padding: 1rem;
+	margin: 1rem 2rem;
+	padding-left: 2em;
+	border-radius: 0.25rem;
+	background-color: var(--secondary-bg-color);
+	border: 1px solid #0005;
+	
+	&::before {
+	  content: 'Table of Contents';
+	  font-weight: bold;
+	  margin-left: -1rem;
+	  font-size: 1.2em;
+  }
+	
+	a{
+	  text-decoration: none;
+	}
+	
+	ol, ul {
+	  margin-bottom: 0.5em;
+	}
+}
