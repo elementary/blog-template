@@ -11,7 +11,11 @@ has_downloads: false
 code:
 ---
 ## HTML Syntax
+{:.no_toc}
 Ang grammar na sinusunod ng HTML
+
+1. Table of Contents
+{:toc}
 
 ### File type
 Para makagawa ng isang webpage, kailangan lang nating gumawa ng isang ordinary text file. Pero sa halip na `.txt` ang gamitin nating filename extension, papalitan natin ito ng `.html`.

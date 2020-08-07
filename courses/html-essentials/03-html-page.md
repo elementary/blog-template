@@ -11,7 +11,11 @@ has_downloads: false
 code:
 ---
 ## Ang HTML Page
+{:.no_toc}
 Ang basic structure ng isang HTML page
+
+1. Table of Contents
+{:toc}
 
 Dahil matibay o <i lang="en">resilient</i> ang HTML, kaya nitong hulaan kung ano ang ibig sabhin ng isang HTML document kahit may mga errors ito. Iyan ang dahilan kung bakit may lumalabas pa rin sa browser kahit hindi buo ang HTML document sa mga examples natin sa nakaraang lesson.
 

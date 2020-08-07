@@ -13,8 +13,11 @@ next_lesson: 02-html-syntax/
 ---
 
 ## HyperText Markup Language
-
+{:.no_toc}
 Ang HyperText Markup Language ang ginagamit para gumawa ng mga Web sites.
+
+1. Table of Contents
+{:toc}
 
 Makikita sa maraming lugar ang HTML. Ginagamit ito sa mga Web site, app, at iba pang software—sa kahit na anong bagay na gumagamit ng Web technology. HTML ang nagsisilbing channel ng content: mga salita, image,video at audio, forms, at mga interactive experience. Ito ang pundasyon kung saan nakabase ang lahat ng iba pang Web technologies.
 
