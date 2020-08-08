@@ -491,6 +491,8 @@ header.error::before {
 q {
 	font-family: var(--serif-font);
 	font-weight: normal;
+	font-variation-settings: 'wght' 300;
+	font-style: italic;
 }
 
 aside.float {
