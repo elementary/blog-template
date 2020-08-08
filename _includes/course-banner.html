@@ -11,7 +11,7 @@
       {% if page.type != 'index' %}{% unless courseIsDone %}<span class="badge" aria-label="Abangan ang course na ito">Soon</span>{% endunless %}{% endif %}
     </h1>
     {% if page.subtitle != nil %}
-    <h2 class="banner__subtitle">{{ page.subtitle }}</h2>
+    <p role="doc-subtitle" class="banner__subtitle">{{ page.subtitle }}</p>
     {% endif %}
     {% if page.description %}
         {% assign lead = page.description %}
