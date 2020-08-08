@@ -464,7 +464,7 @@ mark {
 	margin: 100px -1rem;
 	max-width: none;
 	position: relative;
-	padding: 1rem 0;
+	padding: 1rem 2rem;
 	padding-left: 150px;
  
   ::selection {
@@ -480,11 +480,11 @@ mark {
   }
   
   .attribution {
-	position: absolute;
-	bottom: 1rem;
-	font-size: 0.5em;
-	line-height: 1;
-	right: 1rem;
+	  position: absolute;
+	  bottom: 1rem;
+	  font-size: 0.5em;
+	  line-height: 1;
+	  right: 2rem;
   }
   
   .btn {

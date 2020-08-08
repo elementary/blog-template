@@ -4,7 +4,7 @@ layout: default
 
 {% include outdated.html post=page %}
 
-<article>
+<article class="post">
   {% if page.hidden %}
     <aside class="embargo">
       {% if page.hidden != true %}
@@ -18,9 +18,9 @@ layout: default
     </aside>
   {% endif %}
   <header>
-    <h1>{% include title.html title=page.title %}</h1>
+    <h1 class="post__title">{% include title.html title=page.title %}</h1>
     {% if page.description %}
-      <h2>{% include title.html title=page.description %}</h2>
+      <p class="post__subtitle" role="doc-subtitle">{% include title.html title=page.description %}</p>
     {% endif %}
 
     {% include byline.html author=page.author date=page.date content=page.content link=true %}
@@ -30,8 +30,9 @@ layout: default
   <section>
     {{ content }}
   </section>
-
+  <footer>
   {% include thanks.html %}
+  </footer>
 </article>
 
 {% include license.html %}
