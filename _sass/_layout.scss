@@ -78,6 +78,7 @@ body > footer {
 article {
   margin-bottom: 4rem;
 
+  iframe,
   & > address,
   dl,
   p,
@@ -93,6 +94,8 @@ article {
     margin-right: auto;
     max-width: var(--content-width);
   }
+
+  iframe { display: block; }
 
   svg,
   img,

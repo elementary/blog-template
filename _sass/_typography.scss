@@ -30,6 +30,9 @@ a {
   text-decoration-skip: ink;
   transition: opacity 250ms ease;
 
+  --fg-color-emphasis: var(--accent-color-emphasis);
+  --fg-color: currentColor;
+
   &:hover,
   &:focus {
     opacity: 1;
@@ -136,6 +139,16 @@ blockquote {
     margin: 2em auto;
     opacity: 0.8;
     padding: 0 1em;
+  }
+  
+  cite {
+	  font-size: 1rem;
+	  font-family: var(--copy-font);
+	  font-style: normal;
+  }
+  
+  p {
+    margin: 0;
   }
 
   .attribution {

@@ -312,12 +312,16 @@ article .lessons-list li a {
 i, em, dfn {
   font-family: var(--serif-font);
   font-size: 1.1em;
-  color: var(--fg-color-emphasis);
+  font-weight: inherit;
 }
 
 b, strong {
   font-family: var(--serif-font);
   font-variation-settings: 'opsz' 30, 'wght' 700 !important;
+}
+
+em, strong {
+    color: var(--fg-color-emphasis);
 }
 
 .note {
@@ -490,9 +494,9 @@ header.error::before {
 
 q {
 	font-family: var(--serif-font);
-	font-weight: normal;
-	font-variation-settings: 'wght' 300;
+	font-weight: inherit;
 	font-style: italic;
+	color: var(--fg-color);
 }
 
 aside.float {

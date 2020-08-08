@@ -1,5 +1,7 @@
 {% assign profile = include.account | prepend: "https://twitter.com/" %}
 {% assign permalink = include.id | prepend: "/status/" | prepend: profile %}
+{% assign photo = include.photo %}
+{% assign photoAlt = include.photoAlt %}
 
 <div class="twitter-card">
   <header>
@@ -14,6 +16,11 @@
   </header>
 
   <p>{{ include.contents }}</p>
+  {% if photo %}
+  <div class="twitter-img">
+    <img src="{{ photo }}" alt="{{ photoAlt }}" />
+  </div>
+  {% endif %}
 
   <footer>
     <a href="{{ permalink }}">

@@ -77,3 +77,25 @@
     background-color: var(--black-500);
   }
 }
+
+.twitter-card {
+	--ui-font: var(--copy-font);
+	--serif-font: var(--copy-font);
+	
+	* {
+	    text-indent: 0;
+	}
+	
+	.twitter-img {
+	    display: grid;
+	    max-height: calc(50ch / (16/9));
+	    overflow: hidden;
+	    align-content: center;
+	    border-radius: 0.5em;
+    }
+}
+
+article .twitter-card a[target="_blank"] {
+	padding: 0;
+	background: transparent;
+}
