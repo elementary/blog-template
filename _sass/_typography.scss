@@ -90,12 +90,16 @@ header h1 {
 	font-size: calc(2rem + 2vw);
 }
 
-header h1 + h2 {
+header h1 + h2,
+header h1 + p[role="doc-subtitle"] {
 	font-family: var(--copy-font);
-	font-size: calc(1rem + 1vw);
+	font-size: calc(1em + 0.5vw);
 	font-weight: 300;
 	margin-top: 0.25em;
 	opacity: 0.7;
+	line-height: 1.25;
+	text-indent: 0;
+	margin-top: 1em;
 }
 
 header h2 {
