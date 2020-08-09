@@ -602,3 +602,8 @@ dl {
 article section:not([class]) {
 	padding-left: 0 !important;
 }
+
+.post .lesson__video-wrapper {
+	max-width: var(--content-width);
+	margin: auto;
+}

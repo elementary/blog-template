@@ -29,9 +29,11 @@ Ni-retweet ito ni Jen Simmons:
   contents="This is what is feels like to me when a web team is like “we don’t support [foobar] browser”. Ya don’t? Well, the people using that browser are coming to your site anyway…"
 %}
 
-At may point siya. Kahit i-assume mo na hindi gagamitin ng persons with disability ang website mo, hindi mo sila mapipigilang i-access ang site mo. At may pakialam ka man o wala sa accessibility ng site mo, walang pakialam diyan ang users mo. Kapag nahirapan silang gamitin ang site mo, hindi magiging maganda ang image at brand mo. In the end, hindi mo namamalayan na nawawalan ka na ng customers. At minsan, may nilalabag ka palang batas.[^1]
+At may point siya. Kahit i-assume mo na hindi gagamitin ng persons with disability ang website mo, hindi mo sila mapipigilang i-access ang site mo. At may pakialam ka man o wala sa accessibility ng site mo, walang pakialam diyan ang users mo. Kapag nahirapan silang gamitin ang site mo, hindi magiging maganda ang image at brand mo. In the end, hindi mo namamalayan na nawawalan ka na ng customers. At minsan, may nilalabag ka palang batas.[^1] [^11]
 
 [^1]: Last year, may dininig ang kasong [<cite>Domino's Pizza v. Robles</cite>](https://www.forbes.com/sites/peterslatin/2019/10/08/the-supreme-court-rules-in-favor-of-accessibility-for-the-blind/#4f94cb31c486) pagkatapos idemanda ng isang visually impaired ang Domino's Pizza, isang pizza chain sa USA, dahil hindi accessible ang website nila.
+
+[^11]: Ayon sa Philippine Web Accessibility Group, [puwede kang makasuhan o mademanda kung hindi accessible ang website mo](https://www.pwag.org/resources/analysis-of-philippine-laws-pertaining-to-disability/can-we-be-sued-if-we-dont-make-our-web-site-accessible-written-by-jojo-esposa-jr/).
 
 1. Table of Contents
 {:toc}
@@ -74,13 +76,11 @@ Sa HTML5, may inilabas na bagong <i>semantic</i> tags na may actual na meaning. 
 ### Gamitin ang developer tools
  May accessibility tools ang [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane) at [Mozilla Firefox](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector). Malaking tulong ito para ayusin ang website mo at maging accessible. Mula sa mga tools na ito, makakakuha ka ng tips tungkol sa font size at color contrast ng web site mo, bukod pa sa ibang mga bagay.
  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/7mqqgIxX_NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <!--iframe width="560" height="315" src="https://www.youtube.com/embed/7mqqgIxX_NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
+ {% include video-embed.html video_path = "https://www.youtube.com/embed/7mqqgIxX_NU" %}
  
 ### 13 Days of Accessibility
  Nakatulong sa akin ang [13 Days of Accessibility](http://a11ycalendar.kaseybon.com/). For 13 days, gagawa ka ng improvements sa accessibility ng site mo. May kasama itong calendar ng schedule ng focus mo. Halimbawa, sa unang araw, ayon sa calendar, aayusin mo ang text alternatives sa lahat image, audio, at video na nasa site mo. Itutuloy mo lang ito hanggang sa matapos mo ang 13 days. At kung lumaki ang project mo at sa tingin mo kailangan mong i-examine ulit ang accessibility ng website mo, puwede mo itong ulitin.
- 
-## Ang accessibility sa Pilipinas
-Ayon sa Philippine Web Accessibility Group, [puwede kang makasuhan o mademanda kung hindi accessible ang website mo](https://www.pwag.org/resources/analysis-of-philippine-laws-pertaining-to-disability/can-we-be-sued-if-we-dont-make-our-web-site-accessible-written-by-jojo-esposa-jr/). Siguro sapat na iyan. Kung gusto mo ng higit pang detalye, basahin mo ang article.
 
 ## Conclusion
 Hindi lang persons with disability ang nakikinabang kapag accessible ang isang website. Kaya sana gawin nating lahat ang kahit kaunting effort lang na gawing accessible ang website natin. Pasasalamatan kayo ng users ninyo. At siyempre maa-appreciate ko rin kapag napunta ako sa website ninyo. 😉
