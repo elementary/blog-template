@@ -588,6 +588,17 @@ dl {
 	}
 }
 
+@media screen and (max-width: 600px) {
+  #markdown-toc {
+	  float: none;
+	  margin: auto;
+  }
+}
+
 .license + .lesson__actions {
 	margin-top: 4rem;
+}
+
+article section:not([class]) {
+	padding-left: 0 !important;
 }

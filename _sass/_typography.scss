@@ -122,7 +122,7 @@ header h2 + h3 {
 blockquote {
   max-width: var(--content-width);
   margin-left: auto;
-  padding-left: 1em;
+  padding: 1rem;
   margin-right: auto;
   font-style: italic;
   border-left: 0.125em solid var(--accent-color);
@@ -160,6 +160,12 @@ blockquote {
     &:before {
       content: "–";
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  blockquote {
+    text-align: right;
   }
 }
 
