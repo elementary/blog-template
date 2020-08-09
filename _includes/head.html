@@ -6,6 +6,13 @@
   <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
 
+  <meta property="og:locale" content="tl" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+  {% if page.collection == "posts" %}
+  <meta property="og:type" content="article" />
+  {% endif %}
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -39,6 +46,7 @@
   {% else %}
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
+    <meta property="og:image" content="https://www.gravatar.com/avatar/{{ site.gravatar }}?s=256&d=blank" />
   {% endif %}
   <meta name="twitter:site" content="@{{ site.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.twitter }}" />
