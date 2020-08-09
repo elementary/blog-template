@@ -3,7 +3,7 @@
 {% assign photo = include.photo %}
 {% assign photoAlt = include.photoAlt %}
 
-<div class="twitter-card">
+<article class="twitter-card">
   <header>
     <a class="account" href="{{ profile }}">
       <img class="avatar" src="{{ include.avatar }}" />
@@ -28,4 +28,4 @@
       <time datetime="{{ include.timestamp | date:"%Y-%m-%d" }}">{{ include.timestamp | date: "%b %e, %Y" }}</time>
     </a>
   </footer>
-</div>
+</article>

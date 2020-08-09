@@ -140,10 +140,10 @@ article a:not([class]) {
 	border-radius: 0.25rem;
 }
 
-article a[target=_blank] {
-	padding-right: 1rem;
+article a[target="_blank"] {
+	padding-right: 0.6rem;
 	background-image: radial-gradient(var(--link-indicator-color), var(--link-indicator-color) 75%, transparent 75%);
-	background-size: 0.5rem 0.5rem;
+	background-size: 0.3rem 0.3rem;
 	background-repeat: no-repeat;
 	background-position: top 0.25rem right 0.25rem;
 	position: relative;

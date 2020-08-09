@@ -30,8 +30,6 @@
 
 .glossary-entry-link {
 	text-decoration: none;
-	background-color: var(--silver-100);
-	border: 1px solid var(--silver-300);
 	display: inline-flex;
 	text-indent: 0;
 	gap: 0.25rem;
@@ -42,6 +40,20 @@
 	vertical-align: middle;
 	position: relative;
 	opacity: 1;
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #0003;
+	border-radius: 0;
+	
+	background-image: linear-gradient(#0003, #0003);
+	background-repeat: no-repeat;
+	background-size: 100% 0;
+	background-position: bottom center;
+	transition: background-size 200ms cubic-bezier(.19,1,.22,1);
+	
+	&:focus, &:hover {
+	  background-size: 100% 100%;
+	}
 	
 	svg {
 	  margin: 0;

@@ -9,7 +9,6 @@
 	&.banner--cta {
 	    display: grid;
 	    grid-template-columns: repeat(3, 1fr);
-	    height: calc(90vh - 1rem);
 	    
 	    .banner__wrapper {
 	      grid-column: 1/3;

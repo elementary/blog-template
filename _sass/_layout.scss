@@ -78,6 +78,10 @@ body > footer {
 article {
   margin-bottom: 4rem;
 
+  &.post header h1 {
+    line-height: 1.45;
+  }
+
   iframe,
   & > address,
   dl,
