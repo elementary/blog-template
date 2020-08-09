@@ -22,7 +22,7 @@ title: \"$title\"
 description: \"$summary\"
 image: $image
 author: $author
-slug: /blog/$permalink/
+slug: /$permalink/
 tags: [$tags]
 ---" >> ./_posts/$slug
 
