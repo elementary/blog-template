@@ -1,7 +1,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{% if page.title %}{{ page.title }} &sdot; {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title | strip_html }} &sdot; {% endif %}{{ site.title }}</title>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
@@ -52,11 +52,11 @@
   <meta name="twitter:creator" content="@{{ site.twitter }}" />
 
 {% if page.description %}
-    {% assign lead = page.description %}
+    {% assign lead = page.description | strip_html %}
 {% elsif page.summary %}
-    {% assign lead = page.summary %}
+    {% assign lead = page.summary | stip_html %}
 {% else %}
-    {% assign lead = site.description %}
+    {% assign lead = site.description | strip_html %}
 {% endif %}
   <meta name="description" content="{{ lead }}" />
   <meta property="og:description" content="{{ lead }}" />
