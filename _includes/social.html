@@ -1,7 +1,7 @@
 <div class="social">
   <h2>Join the Discussion on Social Media</h2>
 
-  {% if page.twitter or page.mastodon or page.reddit or page.facebook %}
+  {% if page.twitter or page.facebook %}
     <div class="official">
       <h3>Official Posts</h3>
 
@@ -16,31 +16,6 @@
           <img src="{{ '/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter" />
         </a>
       {% endif %}
-
-      {% if page.mastodon %}
-        <a
-          href="{{ page.mastodon }}"
-          rel="noreferrer nofollow noopener"
-          target="_blank"
-          title="Mastodon"
-          onclick="plausible('Social: Mastodon')"
-        >
-          <img src="{{ '/images/mastodon.svg' | prepend: site.baseurl }}" alt="Mastodon" />
-        </a>
-      {% endif %}
-
-      {% if page.reddit %}
-        <a
-          href="{{ page.reddit }}"
-          rel="noreferrer nofollow noopener"
-          target="_blank"
-          title="Reddit"
-          onclick="plausible('Social: Reddit')"
-        >
-          <img src="{{ '/images/reddit.svg' | prepend: site.baseurl }}" alt="Reddit" />
-        </a>
-      {% endif %}
-
       {% if page.facebook %}
         <a
           href="{{ page.facebook }}"
@@ -65,18 +40,8 @@
       target="_blank"
       title="Twitter"
       onclick="plausible('Share: Twitter')"
-    >
+     >
       <img src="{{ '/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter" />
-    </a>
-
-    <a
-      href="http://www.reddit.com/submit?title={{ page.title }}&url={{ share-url }}"
-      rel="noreferrer nofollow noopener"
-      target="_blank"
-      title="Reddit"
-      onclick="plausible('Share: Reddit')"
-    >
-      <img src="{{ '/images/reddit.svg' | prepend: site.baseurl }}" alt="Reddit" />
     </a>
 
     <a
