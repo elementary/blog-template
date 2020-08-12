@@ -1,7 +1,7 @@
 <div class="social">
   <h2>Join the Discussion on Social Media</h2>
 
-  {% if page.twitter or page.mastodon or page.reddit or page.facebook %}
+  {% if page.twitter or page.facebook %}
     <div class="official">
       <h3>Official Posts</h3>
 
@@ -40,7 +40,7 @@
       target="_blank"
       title="Twitter"
       onclick="plausible('Share: Twitter')"
-    >
+     >
       <img src="{{ '/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter" />
     </a>
 
