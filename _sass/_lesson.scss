@@ -609,3 +609,7 @@ article section:not([class]) {
 	max-width: var(--content-width);
 	margin: auto;
 }
+
+.codepen {
+	margin: 1em auto !important;
+}
