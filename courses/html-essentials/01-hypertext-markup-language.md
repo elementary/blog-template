@@ -6,10 +6,7 @@ summary: "Ano ang HTML, at ano ang lugar nito sa Web development?"
 course: html-essentials
 
 permalink: /courses/html-essentials/01-hypertext-markup-language/
-video: https://www.youtube.com/embed/nCDWzV9wzW4
-has_downloads: true
-code: https://github.com/antaresprogramming/code/
-next_lesson: 02-html-syntax/
+video: https://www.youtube.com/embed/mU9O2xYKfB8
 ---
 
 ## HyperText Markup Language
