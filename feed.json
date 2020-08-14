@@ -12,7 +12,7 @@ layout: uglify
     {% unless counter > 3 %}
     {
       "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
-      "title": {{ post.title | jsonify }},
+      "title": {{ post.title | strip_html | jsonify }},
       "pubDate": "{{ post.date | date_to_rfc822 }}",
       {% if post.description %}
       "description": {{ post.description | jsonify }},
