@@ -33,7 +33,38 @@ layout: default
 
   {% include thanks.html %}
 </article>
-
+ {%- capture post_date -%}{{ page.date | date: "%s" }}{%- endcapture -%}
+  {%- if site.data.comments[post_date] -%}
+    <h3>نظرات</h3><hr/>
+    {%- assign comments = site.data.comments[post_date] | sort -%}
+    {%- for comment in comments -%}
+      <div class="comment-list">
+	  <div class="comment-avatar">
+		<img src="http://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&s=60">
+	  </div>
+	  <h4 class="comment-author-name">{{ comment[1].name }}</h4>
+	  <small class="comment-timestamp"><time datetime="{{ comment[1].date | date: "%Y-%m-%d %H:%M:%S +0430" }}">{{ comment[1].date | date: "%Y-%m-%d" | jdate }} - ساعت {{ comment[1].date | date: '%s' | plus: 14400 | date: "%H:%M" | to_persian_number}}</time></small>
+	  <p class="comment-content">{{ comment[1].msg | newline_to_br }}{{comment[1].message | newline_to_br }}</p>
+       </div>
+    {%- endfor -%}
+    {%- endif -%}
+  {%- if page.title != "پست اول" -%}
+  <div class="comment-form">
+   <form id="comment-form" method="post" action="{{ site.staticmanUrl }}">
+    <input type="hidden" name="options[slug]" value="{{ page.date | date: "%s" }}">
+    <input name="options[redirect]" type="hidden" value="{{site.url}}{{ page.url }}?sendComment=true">
+    <input name="fields[url]" id="hidden-mail" type="hidden">
+    <input name="fields[agent]" id="hidden-useragent" type="hidden">
+    <label class="form-label">نام</label>   
+    <input type="text" required="required" name="fields[name]" placeholder="نام شما">
+    <label class="form-label">ایمیل</label>
+    <input type="email" required="required" name="fields[email]" placeholder="ایمیل شما" oninput="document.getElementById('hidden-mail').value = this.value.replace('@', '')">
+    <label class="form-label">متن نظر</label>
+    <textarea rows="4" required="required" name="fields[msg]"></textarea>
+    <input type="submit" value="ارسال نظر" />
+   </form>
+  </div>
+{%- endif -%}
 {% include license.html %}
 {% include social.html %}
 
