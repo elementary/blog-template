@@ -50,7 +50,7 @@ layout: default
     {%- endif -%}
   {%- if page.title != "پست اول" -%}
   <div class="comment-form">
-   <form id="comment-form" method="post" action="{{ site.staticmanUrl }}">
+   <form id="comment-form" method="post" action="{{ site.https://api.staticman.net/v2/entry/eduardoboucas/staticman/gh-pages/comments">}}">
     <input type="hidden" name="options[slug]" value="{{ page.date | date: "%s" }}">
     <input name="options[redirect]" type="hidden" value="{{site.url}}{{ page.url }}?sendComment=true">
     <input name="fields[url]" id="hidden-mail" type="hidden">
