@@ -1,0 +1,19 @@
+
+comments:
+  allowedFields: ["name", "email", "url", "agent", "msg", "message"]
+  branch: "master"
+  commitMessage: "new comment"
+  filename: "entry{@timestamp}"
+  format: "yaml"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+   
+  moderation: false
+  name: "asadiweb.ir"
+  path: "_data/comments/{options.slug}"
+  requiredFields: ["name", "email", "msg", "agent"]
+  transforms:
+    email: md5
