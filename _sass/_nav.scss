@@ -6,6 +6,7 @@ body > header {
   nav {
     display: flex;
     font-size: 0;
+    justify-content: space-between;
     overflow-x: auto;
     padding: 0 1rem;
 
@@ -55,13 +56,8 @@ body > header {
     }
   }
 
-  .primary {
-    justify-content: space-between;
-  }
-
   .secondary {
     background-color: var(--secondary-bg-color);
-    justify-content: space-between;
 
     a {
       color: var(--secondary-fg-color);
@@ -108,6 +104,7 @@ body > header {
         0 0 1px rgba(black, 0.3),
         0 3px 6px rgba(black, 0.16),
         0 3px 6px rgba(black, 0.23);
+      overflow: hidden;
       position: absolute;
       transform: translate(-300px, 32px);
       z-index: 99;
