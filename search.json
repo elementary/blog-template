@@ -5,6 +5,7 @@
     {
       "title" : "{{ post.title | escape }}",
       "description" : "{{ post.description | escape }}",
+      "content" : {{ post.content | jsonify }},
       "image" : "{{ post.image }}",
       "url" : "{{ site.baseurl }}{{ post.url }}",
       "category" : "{{ post.category }}",
