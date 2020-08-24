@@ -58,15 +58,17 @@ body > header {
 
   .secondary {
     background-color: var(--secondary-bg-color);
+    flex-wrap: wrap;
+    padding: 0.25rem 1rem;
 
     a {
       color: var(--secondary-fg-color);
       font-size: 0.7rem;
-      line-height: 3.6em;
     }
 
     #search-container {
       align-self: center;
+      margin: 0.25em 0;
     }
 
     svg {
