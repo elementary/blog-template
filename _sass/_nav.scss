@@ -61,12 +61,106 @@ body > header {
 
   .secondary {
     background-color: var(--secondary-bg-color);
-    justify-content: center;
+    justify-content: space-between;
 
     a {
       color: var(--secondary-fg-color);
       font-size: 0.7rem;
       line-height: 3.6em;
+    }
+
+    #search-container {
+      align-self: center;
+    }
+
+    svg {
+      height: 16px;
+      fill: var(--secondary-fg-color);
+      margin: 0.3rem;
+      position: absolute;
+    }
+
+    #search-input {
+      background-color: var(--silver-200);
+      border: none;
+      border-radius: 0.25em;
+      padding: 6px 12px;
+      text-indent: 1rem;
+      transition: all 200ms ease-in-out;
+      width: 300px;
+    }
+
+    #search-input:focus {
+      background-color: var(--bg-color);
+      box-shadow:
+        inset 0 -1px 0 0 rgba(256, 256, 256, 0.5),
+        0 0 1px rgba(0, 0, 0, 0.3),
+        0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.23);
+      outline: none;
+    }
+
+    #results-container {
+      background-color: var(--bg-color);
+      border-radius: 0.2rem;
+      box-shadow:
+        inset 0 -1px 0 0 rgba(256, 256, 256, 0.5),
+        0 0 1px rgba(0, 0, 0, 0.3),
+        0 3px 6px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.23);
+      position: absolute;
+      transform: translate(-300px, 32px);
+      z-index: 99;
+
+      li {
+        display: block;
+        width: 300px;
+
+        a {
+          color: var(--fg-color);
+          display: grid;
+          grid-column-gap: 12px;
+          grid-template-columns: 3em auto;
+          line-height: 1.25em;
+          margin-bottom: 6px;
+          margin-top: 6px;
+          padding: 6px 12px;
+
+          .featured-image {
+            background-color: var(--silver-200);
+            background-origin: border-box;
+            background-position: 50%;
+            background-size: cover;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.2rem;
+            box-shadow:
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+              inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+              0 1px 3px rgba(0, 0, 0, 0.05),
+              0 1px 2px rgba(0, 0, 0, 0.1);
+            grid-row: 1 / span 2;
+            height: 3em;
+            margin-right: 12px;
+            width: 3em;
+          }
+
+          #title {
+            grid-column-start: 2;
+          }
+
+          #description {
+            font-size: 0.8em;
+            grid-column-start: 2;
+            opacity: 0.8;
+          }
+
+        }
+
+        a:hover {
+          background-color: var(--secondary-bg-color);
+        }
+      }
     }
   }
 }
