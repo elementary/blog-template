@@ -33,6 +33,8 @@ Ang <dfn>Cascading Style Sheets</dfn> naman ang nagbibigay ng visual styling at 
 
 Ginagamit naman ang <dfn>JavaScript</dfn> para magdagdag ng interactivity na hindi pino-provide by default ng Web browsers. Hindi laging kailangan ang JavaScript, pero habang nagiging mas complex ang user interface ng Web pages, mas lalong nagiging kailangan ang JavaScript.
 
+<div class="js-checkpoint-marker" id="q1" data-checkpoint="1598631012023"></div>
+
 Kung galing ka sa ibang programming languages, puwede kang ma-confuse dito. <q>Bakit kailangang maraming programming language ang gagamitin? Bakit hindi puwedeng isa lang?</q> Iba kasi ang Web platform sa ibang mga software. Puwede kang gumawa ng Web site ngayon, at maaasahan mong gagana pa rin iyan sa susunod na limang taon kahit hindi ka magdagdag ng updates. Puwede kang mag-code ng Web site ngayon na gagana pa rin kahit sa mga lumang computers at browsers from ten years ago. Gumagana ang Web sa maraming computers at devices: Windows, mac, Linux, Android, iOS, eBook readers, TV, relo, mga home appliances, at kahit mga devices na hindi mo alam na nag-e-exist pala. Napakalawak ng range ng mga device na gumagamit ng HTML, CSS, at JavaScript, in some form or another. Iyan mismo ang dahilan kung bakit naimbento ang Web platform, ang makagawa ng way para makapag-share tayo ng information sa isa't isa kahit na magkakaiba tayo ng computers o device na ginagamit. 'Di ba ang angas niyan? Posible lang iyan dahil mayroon tayong tatlong programming languages, bawat isa ay may ginagawang isang part lang ng trabaho.
 
 Simple lang ang HTML sa structure nito. Wala itong programming logic, loops, at functions. Instead, tinatawag itong isang <dfn><i>declarative language</i></dfn>. <em>Dine-declare</em> lang ng HTML, sinasabi lang nito na <q>Paragraph ito, ito naman heading. Lagyan mo ng emphasis itong word na 'to. Gawin mong link ito. Maglagay ka ng button at text box dito.</q> Dahil sa simplicity nito, napaka-resilient ng HTML. Kapag may mali sa HTML, kapag may nawala o may namali ng spelling, <!-- sa video gawin mo 'tong conversational: "Eh, may kamukha naman, huhulaan ko na lang kung ano ibig sabihin nito, idi-display ko pa rin 'tong page na 'to." --> gagawin nito ang best nito para i-interpret ang gustong sabihin ng code at idi-display pa rin nito ang HTML page. Kayang tumagal ng HTML sa maraming errors, at makakapag-display pa rin ito ng output.
@@ -44,3 +46,18 @@ JavaScript ang may pinakamaraming capabilities sa tatlo. Marami itong kayang gaw
 Dahil may tatlong magkakaibang languages ang Web platform, may kakayahan tayo bilang developers na pagsama-samahin ang mga ito para sabay-sabay na mabigyan ang Web page natin ng resilience at maraming capabilities. Sa course na ito at sa mga susunod pa na tungkol sa CSS at JavaScript, laging tandaan na dapat mong unahin ang resilience, ang tibay, ng Web pages mo. Ito ang dapat mong unahin. Siguruhin na gagana sa pinakamaraming devices at computers ang Web site mo hangga't posible. At pagkatapos, saka ka magdagdag ng additional features. Kung puwede mong gawin ang isang functionality sa HTML, gawin mo iyon sa HTML. Kung hindi, saka mo lang gagamitin ang CSS at JavaScript.
 
 Madalas i-take for granted ang HTML. Karamihan sa mga nag-aaral ng Web development, pinapaspasan lang ang pag-aaral ng HTML. Worth it ang oras na gagamitin mo para pag-aralan ang lahat ng HTML elements at attributes para magamit mo nang buo ang lahat ng kaya nitong gawin.
+
+<script>
+const checkpoints = [
+  {
+    "id":"1598631012023",
+    "question": "Ano ang ibig sabihin ng <abbbr>HTML</abbr>?",
+    "choices": [
+      { content: "HyperText Markdown Language", isCorrect: false },
+      { content: "HyperText Markup Language", isCorrect: true },
+      { content: "Hot Tamale Markup Language", isCorrect: false },
+      { content: "How to Make Lumpia", isCorrect: false }
+    ]
+  }
+]
+</script>

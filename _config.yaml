@@ -19,7 +19,7 @@ authors:
     name: "Unknown Author"
 
 plugins:
-  - jekyll-feed
+  #- jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap

@@ -148,3 +148,162 @@ article a[target="_blank"] {
 	background-position: top 0.25rem right 0.25rem;
 	position: relative;
 }
+
+.checkpoint {
+  padding: 1rem;
+  
+  &__header {
+    background-color: #fd0;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    gap: 0.5rem;
+    
+    .checkpoint__title {
+      margin: 0;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+  
+  &__content {
+    background-color: #fd02;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #fd0;
+    border-radius: 0.25em;
+    border-top-left-radius: 0.25em;
+  }
+  
+  &__question {
+    margin: 0;
+    padding: 0 0.5rem;
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width: 400px) {
+      &__choices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+
+
+      .btn--checkpoint {
+        justify-self: stretch;
+        align-self: stretch;
+      }
+    }
+  }
+  
+  &.correct {
+    .btn[data-correct-answer] {
+      border: 1px solid #00C853;
+      background-color: #B9F6CA;
+      opacity: 1;
+    }
+    
+    .btn {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+  
+  &.wrong {
+    .btn.wrong {
+      border: 1px solid #FF1744;
+      background-color: #FF8A80;
+    }
+  }
+  
+  &:not(.correct) ~ * {
+    opacity: 0.25;
+    transition: opacity 300ms;
+  }
+  
+  .feedback {
+    opacity: 0;
+    pointer-events: none;
+    
+    &--correct {
+      color: #2E7D32;
+      border: 1px solid #2E7D32;
+      background-color: #69F0AE;
+    }
+    
+    &--wrong {
+      color: #C62828;
+      border: 1px solid #FF1744;
+      background-color: #FFCDD2;
+    }
+  }
+  
+  footer {
+    display: grid;
+    
+    .feedback {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      max-width: none;
+      padding: 0.5rem;
+      margin: 1rem;
+      position: relative;
+      top: -2rem;
+      
+      transition: top 300ms, opacity 300ms;
+    }
+  }
+  
+  .btn {
+    border: 0;
+    font-size: 0.9rem;
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: #eee;
+    border: 1px solid #0001;
+    box-shadow: 0 3px 10px #0002;
+    cursor: pointer;
+    white-space: revert;
+    transition: background 300ms, box-shadow 300ms;
+
+    &:focus,
+    &:hover {
+      background-color: #ddd;
+      background-color: var(--btn-hover)
+    }
+
+    &:focus {
+      box-shadow:
+        0 0 0 3px dodgerblue,
+        0 3px 10px 3px #0002;
+    }
+
+    &:active {
+      box-shadow: 0 0 5px #0003;
+      transition: box-shadow 30ms;
+    }
+
+    &--checkpoint {
+      display: block;
+      margin: 0.5rem;
+      background-color: #fd05;
+      border-color: #fd0c;
+      box-shadow: none;
+
+      --btn-hover: #fd0;
+
+      &:focus {
+        box-shadow: 0 3px 10px #0002;
+      }
+    }
+  }
+}
+
+.checkpoint.correct:focus-within .feedback--correct,
+.checkpoint.wrong:focus-within .feedback--wrong {
+  opacity: 1;
+  pointer-events: auto;
+  top: 1rem;
+}
