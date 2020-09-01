@@ -1,0 +1,16 @@
+---
+---
+[
+  {% for post in site.posts %}{% unless post.hidden %}
+    {
+      "title" : "{{ post.title | escape }}",
+      "description" : "{{ post.description | escape }}",
+      "content" : {{ post.content | jsonify }},
+      "image" : "{{ post.image }}",
+      "url" : "{{ site.baseurl }}{{ post.url }}",
+      "category" : "{{ post.category }}",
+      "tags" : "{{ post.tags | join: ', ' }}",
+      "date" : "{{ post.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endunless %}{% endfor %}
+]
