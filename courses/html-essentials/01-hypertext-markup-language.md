@@ -45,10 +45,11 @@ JavaScript ang may pinakamaraming capabilities sa tatlo. Marami itong kayang gaw
 
 Dahil may tatlong magkakaibang languages ang Web platform, may kakayahan tayo bilang developers na pagsama-samahin ang mga ito para sabay-sabay na mabigyan ang Web page natin ng resilience at maraming capabilities. Sa course na ito at sa mga susunod pa na tungkol sa CSS at JavaScript, laging tandaan na dapat mong unahin ang resilience, ang tibay, ng Web pages mo. Ito ang dapat mong unahin. Siguruhin na gagana sa pinakamaraming devices at computers ang Web site mo hangga't posible. At pagkatapos, saka ka magdagdag ng additional features. Kung puwede mong gawin ang isang functionality sa HTML, gawin mo iyon sa HTML. Kung hindi, saka mo lang gagamitin ang CSS at JavaScript.
 
-Madalas i-take for granted ang HTML. Karamihan sa mga nag-aaral ng Web development, pinapaspasan lang ang pag-aaral ng HTML. Worth it ang oras na gagamitin mo para pag-aralan ang lahat ng HTML elements at attributes para magamit mo nang buo ang lahat ng kaya nitong gawin.
+Madalas i-take for granted ang HTML. Karamihan sa mga nag-aaral ng Web development, pinapaspasan lang ang pag-aaral ng HTML. Worth it ang oras na gagami + QqQqQqQqQqQqQqQqQtin mo para pag-aralan ang lahat ng HTML elements , at    , attributes para magamit mo nang buo ang lahat ng kaya nitong gawin.
+V  +
+-
+<script>///
 
-<script>
-const checkpoints = [
   {
     "id":"1598631012023",
     "question": "Ano ang ibig sabihin ng <abbbr>HTML</abbr>?",
@@ -60,4 +61,4 @@ const checkpoints = [
     ]
   }
 ]
-</script>
+</script>                                                                                                                                                                                                                                                                                                                                                                   ++ +-++++++++++++++++-+ 

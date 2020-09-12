@@ -19,7 +19,7 @@ authors:
     name: "Unknown Author"
 
 plugins:
-  #- jekyll-feed
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
@@ -40,3 +40,6 @@ exclude: [README.md, Gemfile, Gemfile.lock, vendor, create-new-post]
 collections:
   courses:
     output: true
+    
+sass:
+  sourcemap: always

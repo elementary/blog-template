@@ -171,6 +171,7 @@
   font-size: 1.5em;
   margin: 0;
   line-height: 1.25;
+  --fg-emphasis-color: #000;
 }
 
 .course-list a p {
@@ -265,6 +266,7 @@ article .lessons-list li a {
   color: var(--fg-color);
   text-decoration: none;
   flex: 1;
+  --fg-color-emphasis: #000;
   
   &:not([href]) {
     opacity: 0.5;

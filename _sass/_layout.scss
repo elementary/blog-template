@@ -82,6 +82,7 @@ article {
     line-height: 1.45;
   }
 
+  pre:not([class]),
   iframe,
   & > address,
   dl,
@@ -100,6 +101,14 @@ article {
   }
 
   iframe { display: block; }
+
+  pre:not([class]) {
+	  white-space: unset;
+	  padding: 1rem;
+	  background-color: var(--black-500);
+	  color: var(--bg-color);
+	  border-radius: 0.25rem;
+  }
 
   svg,
   img,
