@@ -29,4 +29,10 @@ Kaya ang target audience ng Courses ay ang mga taong gaya ko rin. Karamihan sa m
 ## Support
 Libre ang Courses by Antares Programming. Pero hindi rin biro ang paggawa nito. Malaking trabaho ito. Kung gusto mong suportahan ang Antares Programming, puwede kang mag-donate dito via GCash. Tinatanggap namin kahit magkano. Sa hinaharap, magkakaroon din ang Antares Programming ng Patreon account.
 
+Puwede kang mag-donate sa aming GCash:
+
+<pre>
+0906 313 7462
+</pre>
+
 Bisitahin ang [Courses by Antares Programming](/courses/) ngayon.
