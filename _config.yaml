@@ -45,6 +45,8 @@ plugins:
 paginate: 7
 paginate_path: "/archive/:num/"
 
+show_top_thumbnail: false # Shows the image set in the front matter at the top of the posts
+
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
