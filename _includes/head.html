@@ -18,6 +18,7 @@
 
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
   <meta name="theme-color" content="{% if page.theme-color %}{{ page.theme-color }}{% else %}{{ site.theme-color }}{% endif %}" />
+  <meta name="color-scheme" content="light dark" />
 
   {% if page.image %}
     {% assign prefix = page.image | slice: 0, 4 %}
