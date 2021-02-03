@@ -107,7 +107,7 @@ function share() {
     navigator.share({
       title: "{{ page.title }}",
       text: "{{ page.description }}",
-      url: "{{ site.url }}{{ page.url }}",
+      url: "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
     })
     .then(() => console.log("Successful share"))
     .catch((error) => console.log("Error sharing", error));
