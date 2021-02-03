@@ -107,14 +107,13 @@ function share() {
     navigator.share({
       title: "{{ page.title }}",
       text: "{{ page.description }}",
-      url: "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+      url: "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
     })
-    .then(() => console.log("Successful share"))
     .catch((error) => console.log("Error sharing", error));
 
     return false;
   } else {
-    console.log("Sharing not supported");
+    console.log("Sharing not supported; falling back to link");
     return true;
   }
 }
