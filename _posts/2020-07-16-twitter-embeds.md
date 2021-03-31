@@ -13,6 +13,7 @@ We wanted to quote/embed a tweet in our blog, but don't like the idea of pulling
   avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
   id="1281816033343537152"
   timestamp="2020-07-10"
+  image="/images/pinebook/card.jpg"
   contents="Got my PINEBOOK Pro! Super duper first impressions: damn, this
     hardware quality is nice for the price. I would love to see what they could
     do around the $500–750 price, honestly. Performance is great; I would not
@@ -28,10 +29,44 @@ Turns into:
   avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
   id="1281816033343537152"
   timestamp="2020-07-10"
+  image="/images/pinebook/card.jpg"
   contents="Got my PINEBOOK Pro! Super duper first impressions: damn, this
     hardware quality is nice for the price. I would love to see what they could
     do around the $500–750 price, honestly. Performance is great; I would not
     guess it was ARM just from using it. It’s fanless!"
+%}
+
+### For Tweets with Video
+```liquid
+{% raw %}{% include twitter-card.html
+  name="Cassidy James Blaede"
+  account="CassidyJames"
+  avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
+  id="1281816033343537152"
+  timestamp="2020-07-10"
+  video="/images/pinebook/mov_bbb.mp4"
+  contents="Got my PINEBOOK Pro! Super duper first impressions: damn, this
+    hardware quality is nice for the price. I would love to see what they could
+    do around the $500–750 price, honestly. Performance is great; I would not
+    guess it was ARM just from using it. It’s fanless!
+    <br>Video courtesy of Big Buck Bunny"
+%}{% endraw %}
+```
+
+Turns into:
+
+{% include twitter-card.html
+  name="Cassidy James Blaede"
+  account="CassidyJames"
+  avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
+  id="1281816033343537152"
+  timestamp="2020-07-10"
+  video="/images/pinebook/mov_bbb.mp4"
+  contents="Got my PINEBOOK Pro! Super duper first impressions: damn, this
+    hardware quality is nice for the price. I would love to see what they could
+    do around the $500–750 price, honestly. Performance is great; I would not
+    guess it was ARM just from using it. It’s fanless!
+    <br>Video courtesy of Big Buck Bunny"
 %}
 
 This is all rendered and styled localy, ensuring we're not hitting Twitter's tracking code just to show some content. It also means quoted tweets will persist, even if removed from Twitter (since it's just local content). It's even light/dark style aware!
