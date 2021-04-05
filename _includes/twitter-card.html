@@ -4,7 +4,13 @@
 <div class="twitter-card">
   <header>
     <a class="account" href="{{ profile }}">
-      <img class="avatar" src="{{ include.avatar }}" />
+      {% assign prefix = include.avatar | slice: 0, 4 %}
+      {% if prefix == "http" %}
+        {% assign avatar = include.avatar %}
+      {% else %}
+        {% assign avatar = include.avatar | prepend: site.baseurl | prepend: site.url %}
+      {% endif %}
+      <img class="avatar" src="{{ avatar }}" />
       <strong>{{ include.name }}</strong>
       <p>@{{ include.account }}</p>
     </a>
@@ -25,14 +31,14 @@
       {% endif %}
       <img src="{{ image }}" />
     </a>
-  {% else.if include.video %}
+  {% elsif include.video %}
     {% assign prefix = include.video | slice: 0, 4 %}
     {% if prefix == "http" %}
       {% assign video = include.video %}
     {% else %}
       {% assign video = include.video | prepend: site.baseurl | prepend: site.url %}
     {% endif %}
-    <video width="600" controls>
+    <video width="600" controls loop>
       <source src="{{ video }}" type="video/mp4">
     </video>
   {% endif %}
