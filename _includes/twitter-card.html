@@ -8,14 +8,14 @@
       {% if prefix == "http" %}
         {% assign avatar = include.avatar %}
       {% else %}
-        {% assign avatar = include.avatar | prepend: site.baseurl | prepend: site.url %}
+        {% assign avatar = include.avatar | prepend: site.baseurl %}
       {% endif %}
       <img class="avatar" src="{{ avatar }}" />
       <strong>{{ include.name }}</strong>
       <p>@{{ include.account }}</p>
     </a>
     <a href="{{ permalink }}">
-      <img class="logo" src="/images/twitter.svg" />
+      <img class="logo" src="{{ site.baseurl }}/images/twitter.svg" />
     </a>
   </header>
 
@@ -27,7 +27,7 @@
       {% if prefix == "http" %}
         {% assign image = include.image %}
       {% else %}
-        {% assign image = include.image | prepend: site.baseurl | prepend: site.url %}
+        {% assign image = include.image | prepend: site.baseurl %}
       {% endif %}
       <img src="{{ image }}" />
     </a>
@@ -36,7 +36,7 @@
     {% if prefix == "http" %}
       {% assign video = include.video %}
     {% else %}
-      {% assign video = include.video | prepend: site.baseurl | prepend: site.url %}
+      {% assign video = include.video | prepend: site.baseurl %}
     {% endif %}
     <video width="600" controls loop>
       <source src="{{ video }}" type="video/mp4">
