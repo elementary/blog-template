@@ -24,6 +24,11 @@
     margin-bottom: 0.5em;
   }
 
+  img,
+  video {
+    border-radius: 0.5em;
+  }
+
   header {
     display: flex;
     justify-content: space-between;

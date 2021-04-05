@@ -16,11 +16,13 @@
   <p>{{ include.contents }}</p>
 
   {% if include.image %}
-  <img class="tweet-img" src="{{ include.image }}">
+    <a href="{{ permalink }}">
+      <img src="{{ include.image }}" />
+    </a>
   {% else.if include.video %}
-  <video width="600" controls>
-    <source src="{{ include.video }}" type="video/mp4">
-  </video>
+    <video width="600" controls>
+      <source src="{{ include.video }}" type="video/mp4">
+    </video>
   {% endif %}
 
   <footer>
