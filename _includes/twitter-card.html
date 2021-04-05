@@ -17,11 +17,23 @@
 
   {% if include.image %}
     <a href="{{ permalink }}">
-      <img src="{{ include.image }}" />
+      {% assign prefix = include.image | slice: 0, 4 %}
+      {% if prefix == "http" %}
+        {% assign image = include.image %}
+      {% else %}
+        {% assign image = include.image | prepend: site.baseurl | prepend: site.url %}
+      {% endif %}
+      <img src="{{ image }}" />
     </a>
   {% else.if include.video %}
+    {% assign prefix = include.video | slice: 0, 4 %}
+    {% if prefix == "http" %}
+      {% assign video = include.video %}
+    {% else %}
+      {% assign video = include.video | prepend: site.baseurl | prepend: site.url %}
+    {% endif %}
     <video width="600" controls>
-      <source src="{{ include.video }}" type="video/mp4">
+      <source src="{{ video }}" type="video/mp4">
     </video>
   {% endif %}
 
