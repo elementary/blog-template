@@ -15,6 +15,14 @@
 
   <p>{{ include.contents }}</p>
 
+  {% if include.image %}
+  <img class="tweet-img" src="{{ include.image }}">
+  {% else.if include.video %}
+  <video width="600" controls>
+    <source src="{{ include.video }}" type="video/mp4">
+  </video>
+  {% endif %}
+
   <footer>
     <a href="{{ permalink }}">
       <span>View on Twitter →</span>
