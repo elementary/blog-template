@@ -22,33 +22,11 @@
   <p>{{ include.contents }}</p>
 
   {% if include.image %}
-<<<<<<< HEAD
   <img class="tweet-img" src="{{ include.image }}">
   {% else.if include.video %}
   <video width="600" controls>
     <source src="{{ include.video }}" type="video/mp4">
   </video>
-=======
-    <a href="{{ permalink }}">
-      {% assign prefix = include.image | slice: 0, 4 %}
-      {% if prefix == "http" %}
-        {% assign image = include.image %}
-      {% else %}
-        {% assign image = include.image | prepend: site.baseurl %}
-      {% endif %}
-      <img src="{{ image }}" />
-    </a>
-  {% elsif include.video %}
-    {% assign prefix = include.video | slice: 0, 4 %}
-    {% if prefix == "http" %}
-      {% assign video = include.video %}
-    {% else %}
-      {% assign video = include.video | prepend: site.baseurl %}
-    {% endif %}
-    <video width="600" controls loop>
-      <source src="{{ video }}" type="video/mp4">
-    </video>
->>>>>>> df44988c807706820dd939987f77204bba0bcedf
   {% endif %}
 
   <footer>

@@ -36,51 +36,12 @@ turns into:
     guess it was ARM just from using it. It’s fanless!"
 %}
 
-<<<<<<< HEAD
 ### For Tweets with Video
-=======
-## Embedded Media
-
-You can pass in a path to a local or remote `image` to be embedded in the Tweet. Ideally this is a local asset to avoid hitting a third-party server.
-
-```liquid
-{% raw %}{% include twitter-card.html
-  name="Daniel Foré"
-  account="DanileFore"
-  avatar="/images/dan.jpg"
-  id="1379129474638258179"
-  timestamp="2020-07-10"
-  image="/images/tweet.jpg"
-  contents="Thanks to <a href='https://twitter.com/bluesabredavis'>@bluesabredavis</a>
-    you can now quickly switch audio input and output devices from the sound
-    indicator in elementary OS 6!"
-%}{% endraw %}
-```
-
-turns into:
-
-{% include twitter-card.html
-  name="Daniel Foré"
-  account="DanileFore"
-  avatar="/images/dan.jpg"
-  id="1379129474638258179"
-  timestamp="2021-04-05"
-  image="/images/tweet.jpg"
-  contents="Thanks to <a href='https://twitter.com/bluesabredavis'>@bluesabredavis</a>
-    you can now quickly switch audio input and output devices from the sound
-    indicator in elementary OS 6!"
-%}
-
-Similarly, you can pass in a path to a local or remote `video`. This must be in mp4 format.
-
-
->>>>>>> df44988c807706820dd939987f77204bba0bcedf
 ```liquid
 {% raw %}{% include twitter-card.html
   name="Cassidy James Blaede"
   account="CassidyJames"
   avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
-<<<<<<< HEAD
   id="1281816033343537152"
   timestamp="2020-07-10"
   video="/images/pinebook/mov_bbb.mp4"
@@ -93,22 +54,11 @@ Similarly, you can pass in a path to a local or remote `video`. This must be in 
 ```
 
 Turns into:
-=======
-  id="1369878542448619521"
-  timestamp="2021-03-10"
-  video="/images/tweet.mp4"
-  contents="And a rough demo from screenshots to show what I mean:"
-%}{% endraw %}
-```
-
-turns into:
->>>>>>> df44988c807706820dd939987f77204bba0bcedf
 
 {% include twitter-card.html
   name="Cassidy James Blaede"
   account="CassidyJames"
   avatar="https://gravatar.com/avatar/41275ecc8271aca852ce2c0ff72d2610?s=128"
-<<<<<<< HEAD
   id="1281816033343537152"
   timestamp="2020-07-10"
   video="/images/pinebook/mov_bbb.mp4"
@@ -120,16 +70,5 @@ turns into:
 %}
 
 This is all rendered and styled localy, ensuring we're not hitting Twitter's tracking code just to show some content. It also means quoted tweets will persist, even if removed from Twitter (since it's just local content). It's even light/dark style aware!
-=======
-  id="1369878542448619521"
-  timestamp="2021-03-10"
-  video="/images/tweet.mp4"
-  contents="And a rough demo from screenshots to show what I mean:"
-%}
-
----
-
-This is all rendered and styled locally, ensuring we're not hitting Twitter's tracking code just to show some content. It also means embedded tweets will persist, even if removed from Twitter (since it's just local content). It's even light/dark style aware!
->>>>>>> df44988c807706820dd939987f77204bba0bcedf
 
 It does not (yet) support showing quote tweets, verified badges, automatic @-mentions, threads, or multiple images. If/when the need arises for those, we can add them, though. Profile images must be manually passed in, as well—ideally included with the regular assets for a post so all assets are staying local to the domain.
