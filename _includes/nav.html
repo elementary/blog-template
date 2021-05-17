@@ -8,13 +8,17 @@
       <li><a href="https://elementary.io/support" target="_self">Support</a></li>
       <li><a href="https://developer.elementary.io" target="_self">Developer</a><</li>
       <li><a href="https://elementary.io/get-involved" target="_self">Get Involved</a></li>
-      <li><a href="https://elementary.io/store/" target="_self">Store</a></li>
+      <li><a href="https://store.elementary.io" target="_self">Store</a></li>
       <li><a href="{{ site.baseurl }}/">Blog</a></li>
     </ul>
 
     <ul>
       <li><a href="{{ site.baseurl }}/feed.xml" title="RSS Feed">
         {% include svg/rss-square.svg %}
+      </a></li>
+
+      <li><a href="https://youtube.com/user/elementaryproject" target="_blank" rel="noopener" title="Youtube">
+        {% include svg/youtube.svg %}
       </a></li>
 
       <li><a href="https://www.facebook.com/elementaryos" target="_blank" rel="noopener" title="Facebook">
@@ -43,9 +47,37 @@
     </ul>
   </nav>
   <nav class="secondary">
-    <a href="{{ site.baseurl }}/tags/#updates">OS Updates</a>
-    <a href="{{ site.baseurl }}/tags/#appcenter">AppCenter</a>
-    <a href="{{ site.baseurl }}/tags/#devs">Developers</a>
-    <a href="{{ site.baseurl }}/tags/#design">Design</a>
+    <div>
+      <a href="{{ site.baseurl }}/tags/#updates">OS Updates</a>
+      <a href="{{ site.baseurl }}/tags/#appcenter">AppCenter</a>
+      <a href="{{ site.baseurl }}/tags/#devs">Developers</a>
+      <a href="{{ site.baseurl }}/tags/#design">Design</a>
+    </div>
+
+    <div id="search-container" class="hidden">
+      {% include svg/edit-find-symbolic.svg %}
+      <input type="text" id="search-input" placeholder="Search Posts…">
+      <ul id="results-container"></ul>
+    </div>
+
+    <script src="/scripts/search.js"></script>
+
+    <script>
+      document.getElementById('search-container').classList.remove("hidden")
+
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        searchResultTemplate: `<li>
+          <a href="{url}">
+            <div class="featured-image" alt="Featured image" style="background-image: url({image});"></div>
+            <span id="title">{title}</span>
+            <span id="description">{description}</span>
+          </a>
+        </li>`,
+        resultsContainer: document.getElementById('results-container'),
+        noResultsText: ("No Result Found"),
+        json: '/search.json'
+      })
+    </script>
   </nav>
 </header>

@@ -1,0 +1,35 @@
+---
+---
+[
+  {% for post in site.posts %}
+    {% if site.authors[post.author].name %}
+      {% assign author=site.authors[post.author]  %}
+    {% else %}
+      {% assign author=site.authors["anonymous"] %}
+    {% endif %}
+
+    {% unless post.hidden %}
+      {
+        "title": "{{ post.title | escape }}",
+
+        {% if post.description %}
+          "description": "{{ post.description | escape }}",
+        {% else %}
+          "description": "{{ post.date | date: "%a, %b %e, %Y" }}",
+        {% endif %}
+
+        "content": {{ post.content | jsonify }},
+
+        {% if post.image %}
+          "image": "{{ post.image }}",
+        {% else %}
+          "image": "https://www.gravatar.com/avatar/{{ author.gravatar }}?s=84&d=blank",
+        {% endif %}
+
+        "url": "{{ site.baseurl }}{{ post.url }}",
+        "tags": "{{ post.tags | join: ', ' }}",
+        "date": "{{ post.date }}"
+      } {% unless forloop.last %},{% endunless %}
+    {% endunless %}
+  {% endfor %}
+]

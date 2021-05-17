@@ -69,25 +69,27 @@
 </div>
 {% endunless %}
 
-{% if page.sponsor.name %}
-  <div class="sponsor">
-    {% if page.sponsor.link && page.sponsor.image %}
-      <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
-    {% endif %}
-    {% if page.sponsor.image %}
-      <img
-        src="{{ page.sponsor.image }}"
-        alt="{{ page.sponsor.name }}"
-        {% if page.sponsor.image-2x %}
-          srcset="{{ page.sponsor.image-2x }} 2x"
-        {% endif %}
-      />
-    {% endif %}
-    {% if page.sponsor.link  && page.sponsor.image %}</a>{% endif %}
+<div class="sponsor">
+  {% if page.sponsor.name %}
+      {% if page.sponsor.link && page.sponsor.image %}
+        <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
+      {% endif %}
+      {% if page.sponsor.image %}
+        <img
+          src="{{ page.sponsor.image }}"
+          alt="{{ page.sponsor.name }}"
+          {% if page.sponsor.image-2x %}
+            srcset="{{ page.sponsor.image-2x }} 2x"
+          {% endif %}
+        />
+      {% endif %}
+      {% if page.sponsor.link  && page.sponsor.image %}</a>{% endif %}
 
-    <p>We'd like to specially thank
-    {% if page.sponsor.link %}
-      <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
-    {% endif %}{{ page.sponsor.name }}{% if page.sponsor.link %}</a>{% endif %} for sponsoring this blog post and helping to sponsor our work. {% if page.sponsor.hook %}{{ page.sponsor.hook }}{% endif %}</p>
-  </div>
-{% endif %}
+      <p>We'd like to specially thank
+      {% if page.sponsor.link %}
+        <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
+      {% endif %}{{ page.sponsor.name }}{% if page.sponsor.link %}</a>{% endif %} for <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">sponsoring</a> this blog post and supporting our work. {% if page.sponsor.hook %}{{ page.sponsor.hook }}{% endif %}</p>
+  {% else %}
+    <p>We’re <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">accepting limited sponsors</a> for the elementary Blog. View our <a href="{{ site.analytics }}" rel="noreferrer nofollow noopener" target="_blank">public analytics</a> and <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">reach out</a> if you or your company are interested.</p>
+  {% endif %}
+</div>
