@@ -61,9 +61,13 @@ figure {
   &.third {
     img,
     video {
-      cursor: zoom-in;
       margin: 1%;
       max-width: 31.33%;
+    }
+
+    &:not(.no-zoom) img,
+    &:not(.no-zoom) video {
+      cursor: zoom-in;
 
       &:focus {
         cursor: zoom-out;
@@ -89,9 +93,13 @@ figure {
   &.half {
     img,
     video {
-      cursor: zoom-in;
       margin: 1%;
       max-width: 48%;
+    }
+
+    &:not(.no-zoom) img,
+    &:not(.no-zoom) video {
+      cursor: zoom-in;
 
       &:focus {
         cursor: zoom-out;
