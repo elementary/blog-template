@@ -61,9 +61,13 @@ figure {
   &.third {
     img,
     video {
-      cursor: zoom-in;
       margin: 1%;
       max-width: 31.33%;
+    }
+
+    &:not(.no-zoom) img,
+    &:not(.no-zoom) video {
+      cursor: zoom-in;
 
       &:focus {
         cursor: zoom-out;
@@ -89,9 +93,13 @@ figure {
   &.half {
     img,
     video {
-      cursor: zoom-in;
       margin: 1%;
       max-width: 48%;
+    }
+
+    &:not(.no-zoom) img,
+    &:not(.no-zoom) video {
+      cursor: zoom-in;
 
       &:focus {
         cursor: zoom-out;
@@ -135,12 +143,16 @@ figure {
   }
 
   &.card {
+    border-radius: 0.25rem;
+
     img,
     video {
       background-color: var(--silver-100);
+      border-radius: 0.25rem;
       box-shadow:
         0 0 0 1px rgba(0, 0, 0, 0.05),
         0 3px 3px rgba(0, 0, 0, 0.22);
+      overflow: hidden;
 
       @media (prefers-color-scheme: dark) {
         background-color: var(--silver-900);
