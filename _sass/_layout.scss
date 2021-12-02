@@ -166,3 +166,7 @@ aside.outdated {
   width: 100vw;
   z-index: 1;
 }
+
+.constrained {
+  max-width: var(--content-width);
+}
