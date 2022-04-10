@@ -28,6 +28,15 @@ layout: default
   </header>
 
   <section>
+    {% if page.image %}
+      {% if site.show_top_thumbnail or page.show_top_thumbnail %}
+        {% unless page.show_top_thumbnail == false %}      
+          <figure class="post-thumbnail">
+            <img src="{{ page.image }}" alt="{{ page.image | split: '/' | last | split: '.' | first | replace: '-', ' ' }}" />
+          </figure>
+        {% endunless %}
+      {% endif %}
+    {% endif %}
     {{ content }}
   </section>
 
