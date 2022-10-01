@@ -1,0 +1,18 @@
+.embed {
+  height: 0;
+  margin: 2em auto;
+  overflow: hidden;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  position: relative;
+}
+
+.embed iframe,
+.embed object,
+.embed embed {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

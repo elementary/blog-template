@@ -81,6 +81,7 @@
           {% if page.sponsor.image-2x %}
             srcset="{{ page.sponsor.image-2x }} 2x"
           {% endif %}
+          class="constrained"
         />
       {% endif %}
       {% if page.sponsor.link  && page.sponsor.image %}</a>{% endif %}
@@ -90,6 +91,6 @@
         <a href="{{ page.sponsor.link }}" rel="noreferrer nofollow noopener" target="_blank">
       {% endif %}{{ page.sponsor.name }}{% if page.sponsor.link %}</a>{% endif %} for <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">sponsoring</a> this blog post and supporting our work. {% if page.sponsor.hook %}{{ page.sponsor.hook }}{% endif %}</p>
   {% else %}
-    <p>We’re <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">accepting limited sponsors</a> for the elementary Blog. View our <a href="{{ site.analytics }}" rel="noreferrer nofollow noopener" target="_blank">public analytics</a> and <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">reach out</a> if you or your company are interested.</p>
+    <p>We’re <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">accepting limited sponsors</a> for the elementary Blog. View our <a href="{{ site.analytics }}" rel="noreferrer nofollow noopener" target="_blank">public analytics</a> and <a href="{{ site.sponsor_inquiry }}" rel="noreferrer nofollow noopener" target="_blank">learn more</a> if you are interested.</p>
   {% endif %}
 </div>

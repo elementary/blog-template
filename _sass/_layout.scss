@@ -166,3 +166,11 @@ aside.outdated {
   width: 100vw;
   z-index: 1;
 }
+
+.sponsor {
+  margin-top: 2rem;
+}
+
+.constrained {
+  max-width: var(--content-width);
+}

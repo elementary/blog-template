@@ -1,6 +1,6 @@
 figure {
   font-size: 0; // fix whitespace causing percentage issues
-  margin: 2rem 0;
+  margin: 2rem auto;
   position: relative;
   text-align: center;
 
@@ -56,6 +56,43 @@ figure {
     margin: 1em auto 4em;
     opacity: 0.67;
     text-align: center;
+  }
+
+  &.quarter {
+    img,
+    video {
+      margin: 1%;
+      max-width: 23%;
+    }
+
+    &:not(.no-zoom) img,
+    &:not(.no-zoom) video {
+      cursor: zoom-in;
+
+      &:focus {
+        cursor: zoom-out;
+      }
+
+      &:nth-child(4n+1):active,
+      &:nth-child(4n+1):focus {
+        transform: translateX(100%) scale(4);
+      }
+
+      &:nth-child(4n+2):active,
+      &:nth-child(4n+2):focus {
+        transform: translateX(50%) scale(4);
+      }
+
+      &:nth-child(4n+3):active,
+      &:nth-child(4n+3):focus {
+        transform: translateX(-50%) scale(4);
+      }
+
+      &:nth-child(4n+4):active,
+      &:nth-child(4n+4):focus {
+        transform: translateX(-100%) scale(4);
+      }
+    }
   }
 
   &.third {
@@ -142,21 +179,25 @@ figure {
     }
   }
 
-  &.card {
-    border-radius: 0.25rem;
+  &.on-screen {
+    background-image: url('/images/notebook.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 0;
+    margin: 0 auto;
+    padding-bottom: 40%; // Keep aspect ratio
+    position: relative;
+    width: 100%;
 
-    img,
-    video {
-      background-color: var(--silver-100);
-      border-radius: 0.25rem;
-      box-shadow:
-        0 0 0 1px rgba(0, 0, 0, 0.05),
-        0 3px 3px rgba(0, 0, 0, 0.22);
+    > * {
+      border-radius: 3px;
+      left: 22.25%;
       overflow: hidden;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: var(--silver-900);
-      }
+      position: absolute;
+      top: 2.2%;
+      width: 55.5%;
     }
   }
 }

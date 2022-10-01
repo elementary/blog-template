@@ -1,0 +1,16 @@
+<picture>
+  {% if include.dark %}
+    <source srcset="/images/{{ page.slug }}/{{ include.dark }}" media="(prefers-color-scheme: dark)">
+  {% endif %}
+
+    <img
+      alt="{{ include.alt }}"
+      src="/images/{{ page.slug }}/{{ include.src }}"
+
+      {% if include.width %}
+        {% if include.height %}
+          width="{{ include.width }}" height="{{ include.height }}"
+        {% endif %}
+      {% endif %}
+    />
+</picture>
