@@ -47,7 +47,7 @@
 
   <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
   {% if jekyll.environment == "production" and site.url == "https://blog.elementary.io" %}
-    <script async defer data-domain="blog.elementary.io" src="https://stats.elementary.io/js/index.js"></script>
+    <script async defer data-domain="blog.elementary.io" src="https://plausible.io/js/script.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   {% else %}
     <script>window.plausible = function() { console.log("Plausible not enabled in development"); }</script>
