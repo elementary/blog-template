@@ -1,0 +1,32 @@
+---
+
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Deploy_Gem:
+    name: Deploy (Gem)
+    runs-on: ubunt-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+
+      - name: Setup Credentials
+        run: |
+          mkdir -p ~/.gem
+          echo ":rubygems_api_key: ${RUBYGEMS_API_KEY}" > ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+
+      - name: Build
+        run: gem build jekyll-theme-elementary-blog.gemspec
+
+      - name: Publish
+        run: gem push jekyll-theme-elementary-blog-*.gem
